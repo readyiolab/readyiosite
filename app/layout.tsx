@@ -3,9 +3,9 @@ import { Manrope } from "next/font/google"
 import Script from "next/script"
 
 import "./globals.css"
-import { AIChatbot } from "@/components/site/AIChatbot"
 import { Footer } from "@/components/site/Footer"
 import { JsonLd } from "@/components/site/JsonLd"
+import { LazyAIChatbot } from "@/components/site/LazyAIChatbot"
 import { Nav } from "@/components/site/Nav"
 import { Toaster } from "@/components/site/Toaster"
 import { SITE, SITE_URL } from "@/lib/site"
@@ -109,25 +109,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
+        <Script id="gtm-datalayer" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });`}
+        </Script>
       </head>
       <body>
-        <Script id="gtm" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`}
-        </Script>
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <div className="relative min-h-dvh bg-background text-foreground antialiased">
@@ -140,9 +128,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <Nav />
           <main id="main">{children}</main>
           <Footer />
-          <AIChatbot />
+          <LazyAIChatbot />
           <Toaster />
         </div>
+        <Script
+          id="gtm"
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+        />
       </body>
     </html>
   )

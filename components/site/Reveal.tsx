@@ -14,13 +14,25 @@ export function Reveal({
   className,
   as = "div",
   y = 24,
+  eager = false,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
   as?: "div" | "section" | "span" | "li";
   y?: number;
+  /** Above-the-fold content: animate with CSS on first paint instead of waiting for hydration. */
+  eager?: boolean;
 }) {
+  if (eager) {
+    const Tag = as;
+    return (
+      <Tag className={`animate-in fade-in slide-in-from-bottom-6 duration-700 ${className ?? ""}`}>
+        {children}
+      </Tag>
+    );
+  }
+
   const MotionTag = motion[as] as typeof motion.div;
   return (
     <MotionTag
