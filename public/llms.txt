@@ -1,0 +1,31 @@
+# Readyio
+
+> AI Website Design Company & Smart CRM Automation
+
+Readyio designs and builds high-converting custom websites, tailored CRM systems, and practical AI workflow automations through one accountable technology team.
+
+## Core Capabilities
+
+- **Custom Website Design & Web Applications**: Modern, responsive, high-performance web applications, customer portals, and landing pages designed for conversion and speed.
+- **CRM & Business Systems**: Custom internal platforms, sales pipelines, lead routing, customer databases, and integrations built around how teams actually operate.
+- **AI & Workflow Automation**: Production-grade AI chat and voice agents, automated lead follow-ups, document processing, and multi-tool workflow automations (n8n, Zapier, custom APIs).
+- **Tech Partner For Founders**: Turn ideas into working first-version products (MVPs), milestone-based development, and launch support.
+
+## Key Pages & Resources
+
+- Homepage: https://readyio.com/
+- Services Overview: https://readyio.com/services
+- For Founders & Startups: https://readyio.com/for-founders
+- Contact & Discovery Call: https://readyio.com/contact
+- Insights & Blog: https://readyio.com/blog
+- Full Blog Articles: https://blog.readyio.com/
+- Sitemap: https://readyio.com/sitemap.xml
+
+## Contact Information
+
+- Website: https://readyio.com
+- Email: hello@readyio.com
+- Phone: +91 90543 97134
+- Schedule a Consultation: https://calendly.com/jhanviraywork/30min
+- LinkedIn: https://linkedin.com/company/zuvigo
+- Instagram: https://www.instagram.com/zuvigofficial
