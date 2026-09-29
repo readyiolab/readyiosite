@@ -26,11 +26,7 @@ export function Reveal({
 }) {
   if (eager) {
     const Tag = as;
-    return (
-      <Tag className={`animate-in fade-in slide-in-from-bottom-6 duration-700 ${className ?? ""}`}>
-        {children}
-      </Tag>
-    );
+    return <Tag className={className}>{children}</Tag>;
   }
 
   const MotionTag = motion[as] as typeof motion.div;

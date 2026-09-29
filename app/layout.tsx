@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next"
 import { Manrope } from "next/font/google"
-import Script from "next/script"
 
 import "./globals.css"
 import { Footer } from "@/components/site/Footer"
+import { GoogleTagManager } from "@/components/site/GoogleTagManager"
 import { JsonLd } from "@/components/site/JsonLd"
 import { LazyAIChatbot } from "@/components/site/LazyAIChatbot"
 import { Nav } from "@/components/site/Nav"
@@ -110,10 +110,6 @@ export default function RootLayout({
     <html lang="en" className={manrope.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
-        <Script id="gtm-datalayer" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });`}
-        </Script>
       </head>
       <body>
         <JsonLd data={organizationJsonLd} />
@@ -131,11 +127,7 @@ window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });`}
           <LazyAIChatbot />
           <Toaster />
         </div>
-        <Script
-          id="gtm"
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
-        />
+        <GoogleTagManager gtmId={GTM_ID} />
       </body>
     </html>
   )

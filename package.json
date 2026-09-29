@@ -37,5 +37,10 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "> 0.5%",
+    "not dead"
+  ]
 }

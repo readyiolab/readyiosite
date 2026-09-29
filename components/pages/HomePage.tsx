@@ -1,7 +1,12 @@
+import dynamic from "next/dynamic";
 import { ArrowRight, Star } from "lucide-react";
 import { SITE } from "@/lib/site";
-import { Reveal } from "@/components/site/Reveal";
-import { HeroVisual, HomeSections } from "@/components/pages/HomePage.client";
+import { HeroVisual } from "@/components/pages/HeroVisual";
+
+const HomeSections = dynamic(
+  () => import("@/components/pages/HomePage.client").then((m) => m.HomeSections),
+  { ssr: true }
+);
 
 export function HomePage() {
   return (
@@ -70,9 +75,9 @@ function Hero() {
           </div>
 
           {/* Hero Visual Diagram (Connected Product Cards) */}
-          <Reveal eager>
+          <div className="relative">
             <HeroVisual />
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>

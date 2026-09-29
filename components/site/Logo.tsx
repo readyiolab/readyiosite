@@ -20,7 +20,7 @@ export function Logo({
           alt="Readyio"
           width={150}
           height={48}
-          loading="eager"
+          priority
           className="h-11 w-auto object-contain sm:h-12"
           style={{ width: "auto", height: "auto" }}
         />
@@ -39,7 +39,7 @@ export function Logo({
         alt="Readyio"
         width={150}
         height={48}
-        loading="eager"
+        priority
         className="h-11 w-auto max-h-12 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-12 sm:max-h-14"
         style={{ width: "auto", height: "auto" }}
       />
