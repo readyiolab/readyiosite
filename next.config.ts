@@ -16,7 +16,10 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   images: {
     qualities: [75],
-    remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "res.cloudinary.com" },
+      { protocol: "https", hostname: "**.digitaloceanspaces.com" },
+    ],
   },
   async headers() {
     return [
