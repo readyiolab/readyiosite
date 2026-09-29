@@ -2,6 +2,12 @@
 
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 export function GoogleTagManager({ gtmId }: { gtmId: string }) {
   useEffect(() => {
     // 1. Initialize dataLayer non-blockingly
