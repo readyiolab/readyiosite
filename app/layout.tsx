@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "D9f6h5lhFrpEi8E-OIyaeJBKEysFMmddnG8r_tBL_Qw",
+    google: "6oUpqXt4nAmtnKISTxC_rvPDg2V-rd7iWtN4PssSHcs",
   },
   openGraph: {
     siteName: SITE.name,
