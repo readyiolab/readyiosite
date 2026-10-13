@@ -1,207 +1,732 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Monitor,
+  LayoutGrid,
+  Cloud,
+  Zap,
+  FileText,
+  Mail,
+  PenLine,
+  GitBranch,
+  MonitorDown,
+  Menu,
+  X,
+  ExternalLink,
+  Layers,
+  Compass,
+  CheckCircle2,
+} from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { SITE, NAV_LINKS } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { Logo } from "./Logo";
+
+export const SOLUTIONS_ITEMS = [
+  {
+    title: "Website Development",
+    desc: "Modern, high-converting websites for growing businesses.",
+    badge: "High Performance",
+    href: "/solutions#websites",
+    icon: Monitor,
+  },
+  {
+    title: "Web Application Development",
+    desc: "Custom web applications tailored to your workflows.",
+    badge: "Custom Workflows",
+    href: "/solutions#web-apps",
+    icon: LayoutGrid,
+  },
+  {
+    title: "Cloud & Desktop Software Development",
+    desc: "Scalable cloud and desktop software solutions.",
+    badge: "Resilient Arch",
+    href: "/solutions#cloud-desktop",
+    icon: Cloud,
+  },
+  {
+    title: "Business & AI Automation",
+    desc: "Automate processes and unlock new efficiency with AI.",
+    badge: "AI Powered",
+    href: "/solutions#automation",
+    icon: Zap,
+  },
+];
+
+export const SOFTWARE_ITEMS = [
+  {
+    title: "PDF Suite",
+    desc: "Create, edit, convert and manage PDF documents.",
+    href: "https://pdf.zuvigo.com/",
+    icon: FileText,
+    badge: "Documents",
+    external: true,
+  },
+  {
+    title: "eSign",
+    desc: "Prepare, sign and manage electronic documents.",
+    href: "https://pdf.zuvigo.com/esign",
+    icon: PenLine,
+    badge: "Signatures",
+    external: true,
+  },
+  {
+    title: "Diagram Studio",
+    desc: "Flowcharts, process maps and diagrams.",
+    href: "https://pdf.zuvigo.com/diagrams",
+    icon: GitBranch,
+    badge: "Canvas",
+    external: true,
+  },
+  {
+    title: "Letters",
+    desc: "Create personalized letters and documents in bulk.",
+    href: "https://pdf.zuvigo.com/letters",
+    icon: Mail,
+    badge: "Bulk Mail",
+    external: true,
+  },
+  {
+    title: "Productivity Suite",
+    desc: "PDF, eSign, Diagrams, Letters and more in one workspace.",
+    href: "https://pdf.zuvigo.com/workspace",
+    icon: LayoutGrid,
+    flagship: true,
+    external: true,
+  },
+  {
+    title: "Desktop Software",
+    desc: "Downloadable PDF and diagram applications.",
+    href: "https://pdf.zuvigo.com/desktop",
+    icon: MonitorDown,
+    badge: "Offline",
+    external: true,
+  },
+];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [open, setOpen] = useState(false);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<"solutions" | "software" | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<"solutions" | "software" | null>(null);
   const pathname = usePathname();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  const toggleMobileSubmenu = (menu: "solutions" | "software") => {
+    setOpenMobileSubmenu((prev) => (prev === menu ? null : menu));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const scrollY = window.scrollY;
+      setScrolled(scrollY > 20);
+
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        setScrollProgress(Math.min(100, Math.max(0, (scrollY / totalHeight) * 100)));
+      }
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [lastPathname, setLastPathname] = useState(pathname);
-  if (pathname !== lastPathname) {
-    setLastPathname(pathname);
+  // Close on route change
+  useEffect(() => {
     setOpen(false);
-  }
-
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  const [currentHash, setCurrentHash] = useState("");
-
-  useEffect(() => {
-    const handleHash = () => {
-      setCurrentHash(window.location.hash);
-    };
-    handleHash();
-    window.addEventListener("hashchange", handleHash);
-    return () => window.removeEventListener("hashchange", handleHash);
+    setActiveDropdown(null);
+    setOpenMobileSubmenu(null);
   }, [pathname]);
 
-  const isLinkActive = (to: string) => {
-    if (to.startsWith("/#")) {
-      const hash = to.replace("/", "");
-      return pathname === "/" && currentHash === hash;
-    }
-    if (to === "/") {
-      return pathname === "/" && !currentHash;
-    }
-    return pathname === to || pathname.startsWith(to + "/");
+  // Click outside to close desktop dropdowns
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveDropdown(null);
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const handleOpen = (menu: "solutions" | "software") => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActiveDropdown(menu);
   };
+
+  const handleScheduleClose = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 180);
+  };
+
+  const handleImmediateClose = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActiveDropdown(null);
+  };
+
+  const isSolutionsActive = pathname.startsWith("/solutions") || pathname.startsWith("/services");
+  const isSoftwareActive = pathname.startsWith("/software");
+  const isCTAExplore = pathname.startsWith("/software");
 
   return (
     <>
+      {/* ================= DESKTOP & SCROLLED FLOATING HEADER ================= */}
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "border-b border-border/60 bg-background/80 backdrop-blur-md py-3 shadow-xs"
-            : "bg-transparent py-5"
-        }`}
+        ref={navRef}
+        className={`fixed inset-x-0 z-50 transition-all duration-500 ease-out ${scrolled
+            ? "top-3 sm:top-4 px-3 sm:px-6 pointer-events-none"
+            : "top-0 px-0 pointer-events-auto"
+          }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between container-p">
-          <Logo />
+        <div
+          className={`relative mx-auto transition-all duration-500 ease-out pointer-events-auto ${scrolled
+              ? "max-w-5xl rounded-full border border-white/80 bg-white/85 backdrop-blur-2xl py-2 sm:py-2.5 px-4 sm:px-6 shadow-[0_16px_36px_-10px_rgba(15,23,42,0.12),_0_0_0_1px_rgba(226,232,240,0.8)]"
+              : "max-w-7xl border-b border-gray-100/60 bg-white/75 backdrop-blur-md py-4 px-4 sm:px-6 lg:px-8"
+            }`}
+        >
 
-          <div className="flex items-center gap-8">
+
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div onMouseEnter={handleImmediateClose}>
+              <Logo />
+            </div>
+
+            {/* Center Navigation Links */}
             <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
-              {NAV_LINKS.map((l) => {
-                const active = isLinkActive(l.to);
-                return (
-                  <Link
-                    key={l.to}
-                    href={l.to}
-                    className={`relative px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors ${
-                      active
-                        ? "text-primary font-bold"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {l.label}
-                    {active && (
-                      <span className="absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-primary" />
-                    )}
-                  </Link>
-                );
-              })}
-            </nav>
-            <div className="flex items-center gap-2">
-              <a
-                href={SITE.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discuss Your Project via Calendly"
-                className="group hidden items-center gap-1.5 rounded-full bg-[#111827] px-5 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#6C5CE7] md:inline-flex"
+              {/* 1. SOLUTIONS DROPDOWN TRIGGER */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleOpen("solutions")}
+                onMouseLeave={handleScheduleClose}
               >
-                Discuss Your Project
-                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-              </a>
+                <Link
+                  href="/solutions"
+                  onClick={() => setActiveDropdown(null)}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all ${isSolutionsActive
+                      ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
+                      : activeDropdown === "solutions"
+                        ? "text-gray-950 bg-gray-100/70"
+                        : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
+                    }`}
+                >
+                  Solutions
+                  <ChevronDown
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180 text-[#2563EB]" : ""
+                      }`}
+                  />
+                </Link>
+
+                {/* Solutions Dropdown Menu */}
+                <AnimatePresence>
+                  {activeDropdown === "solutions" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                      transition={{ duration: 0.16, ease: "easeOut" }}
+                      className="absolute left-0 top-full pt-3 w-[400px] z-50"
+                    >
+                      <div className="rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.18),0_0_0_1px_rgba(15,23,42,0.04)]">
+                        <div className="flex items-center justify-between px-2 pb-2.5 mb-1.5 border-b border-gray-100">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                            Solutions &amp; Capabilities
+                          </span>
+                          <Link
+                            href="/solutions"
+                            onClick={() => setActiveDropdown(null)}
+                            className="text-xs font-semibold text-[#2563EB] hover:text-blue-700 transition-colors"
+                          >
+                            All solutions →
+                          </Link>
+                        </div>
+
+                        <div className="space-y-1">
+                          {SOLUTIONS_ITEMS.map((item) => {
+                            const Icon = item.icon;
+                            return (
+                              <Link
+                                key={item.title}
+                                href={item.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className="group flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
+                              >
+                                <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-blue-100/90 bg-blue-50/80 text-[#2563EB] shadow-2xs group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all">
+                                  <Icon className="h-4 w-4" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between">
+                                    <span className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors">
+                                      {item.title}
+                                    </span>
+                                    <ArrowRight className="h-3.5 w-3.5 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#2563EB] transition-all" />
+                                  </div>
+                                  <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
+                                    {item.desc}
+                                  </p>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+
+                        {/* Bottom highlight pill */}
+                        <div className="mt-2 pt-2 border-t border-gray-100/80 px-2">
+                          <Link
+                            href="/solutions"
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center justify-between text-[11px] font-medium text-gray-600 hover:text-[#2563EB] transition-colors"
+                          >
+                            <span className="flex items-center gap-1.5">
+                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                              Custom architecture &amp; engineering
+                            </span>
+                            <span className="font-semibold text-[#2563EB]">Learn more →</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* 2. SOFTWARE DROPDOWN TRIGGER */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleOpen("software")}
+                onMouseLeave={handleScheduleClose}
+              >
+                <Link
+                  href="/software"
+                  onClick={() => setActiveDropdown(null)}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all ${isSoftwareActive
+                      ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
+                      : activeDropdown === "software"
+                        ? "text-gray-950 bg-gray-100/70"
+                        : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
+                    }`}
+                >
+                  Software
+                  <ChevronDown
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${activeDropdown === "software" ? "rotate-180 text-[#2563EB]" : ""
+                      }`}
+                  />
+                </Link>
+
+                {/* Software Dropdown Menu */}
+                <AnimatePresence>
+                  {activeDropdown === "software" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                      transition={{ duration: 0.16, ease: "easeOut" }}
+                      className="absolute -left-20 sm:left-0 top-full pt-3 w-[480px] z-50"
+                    >
+                      <div className="rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-2xl p-3.5 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.18),0_0_0_1px_rgba(15,23,42,0.04)]">
+                        <div className="flex items-center justify-between px-2 pb-2.5 mb-1.5 border-b border-gray-100">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                            Productivity Software Suite
+                          </span>
+                          <Link
+                            href="/software"
+                            onClick={() => setActiveDropdown(null)}
+                            className="text-xs font-semibold text-[#2563EB] hover:text-blue-700 transition-colors"
+                          >
+                            Software overview →
+                          </Link>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-1.5">
+                          {SOFTWARE_ITEMS.map((item) => {
+                            const Icon = item.icon;
+                            return (
+                              <a
+                                key={item.title}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setActiveDropdown(null)}
+                                className="group flex items-start gap-2.5 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
+                              >
+                                <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-blue-100/90 bg-blue-50/80 text-[#2563EB] shadow-2xs group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all">
+                                  <Icon className="h-4 w-4" />
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                  <div className="flex items-center gap-1.5">
+                                    <span className="text-xs font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors truncate">
+                                      {item.title}
+                                    </span>
+                                    {item.flagship && (
+                                      <span className="shrink-0 text-[8px] font-extrabold uppercase bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-1.5 py-0.2 rounded-full shadow-2xs">
+                                        Flagship
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-[10px] text-gray-500 leading-snug mt-0.5 line-clamp-2">
+                                    {item.desc}
+                                  </p>
+                                </div>
+                              </a>
+                            );
+                          })}
+                        </div>
+
+                        {/* Bottom highlight banner */}
+                        <div className="mt-2.5 pt-2 border-t border-gray-100/80 px-2 flex items-center justify-between text-[11px]">
+                          <span className="text-gray-500">
+                            Cloud, desktop &amp; enterprise deployments
+                          </span>
+                          <a
+                            href="https://pdf.zuvigo.com/workspace"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-[#2563EB] hover:underline flex items-center gap-0.5"
+                          >
+                            Open Workspace <ExternalLink className="h-2.5 w-2.5" />
+                          </a>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Other standard nav links with smooth pill hover */}
+              <Link
+                href="/#work"
+                onMouseEnter={handleImmediateClose}
+                className="rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-100/60 transition-all"
+              >
+                Our Work
+              </Link>
+
+              <Link
+                href="/#about"
+                onMouseEnter={handleImmediateClose}
+                className="rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-100/60 transition-all"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/contact"
+                onMouseEnter={handleImmediateClose}
+                className="rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-100/60 transition-all"
+              >
+                Contact
+              </Link>
+            </nav>
+
+            {/* Right Action Button */}
+            <div
+              className="flex items-center gap-2.5"
+              onMouseEnter={handleImmediateClose}
+            >
+              {isCTAExplore ? (
+                <Link
+                  href="/software"
+                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
+                >
+                  <span className="relative flex items-center gap-1.5 rounded-full bg-[#0B0F19] px-4 sm:px-5 py-2 text-xs font-semibold text-white transition-colors group-hover:bg-[#070A12]">
+                    <span>Explore Software</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 text-blue-400 group-hover:text-white" />
+                  </span>
+                </Link>
+              ) : (
+                <Link
+                  href="/contact"
+                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
+                >
+                  <span className="relative flex items-center gap-1.5 rounded-full bg-[#0B0F19] px-4 sm:px-5 py-2 text-xs font-semibold text-white transition-colors group-hover:bg-[#070A12]">
+                    <span>Let&apos;s Talk</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 text-blue-400 group-hover:text-white" />
+                  </span>
+                </Link>
+              )}
+
+              {/* Mobile Menu Pill Button */}
               <button
                 type="button"
                 aria-label={open ? "Close menu" : "Open menu"}
-                aria-expanded={open}
-                onClick={() => setOpen((v) => !v)}
-                className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-foreground md:hidden"
+                onClick={() => setOpen(!open)}
+                className="flex items-center gap-1.5 rounded-full border border-slate-200/90 bg-white/90 px-3 py-1.5 text-xs font-semibold text-slate-800 shadow-2xs md:hidden"
               >
-                {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                {open ? (
+                  <>
+                    <X className="h-4 w-4" />
+                    <span>Close</span>
+                  </>
+                ) : (
+                  <>
+                    <Menu className="h-4 w-4" />
+                    <span>Menu</span>
+                  </>
+                )}
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* ================= UNIQUE MOBILE MENU SHEET ================= */}
       <AnimatePresence>
         {open && (
           <>
+            {/* Backdrop Blur Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs md:hidden"
+              className="fixed inset-0 z-50 bg-slate-950/40 backdrop-blur-md md:hidden"
             />
+
+            {/* Floating Sheet Container */}
             <motion.div
-              initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-background shadow-2xl md:hidden"
+              initial={{ opacity: 0, y: -20, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.98 }}
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="fixed inset-x-3 top-3 bottom-3 z-50 flex flex-col rounded-3xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-2xl md:hidden overflow-hidden"
             >
-              <div className="flex items-center justify-between border-b border-border p-5">
+              {/* Header inside Mobile Sheet */}
+              <div className="flex items-center justify-between border-b border-slate-100 p-4 sm:p-5">
                 <Logo />
                 <button
                   type="button"
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-slate-200 bg-slate-50 text-slate-700"
                 >
                   <X className="h-4 w-4" />
                 </button>
               </div>
 
-              <nav className="flex-1 overflow-y-auto p-6" aria-label="Mobile navigation">
-                <div className="flex flex-col gap-2">
-                  {NAV_LINKS.map((l, i) => {
-                    const active = isLinkActive(l.to);
-                    return (
-                      <motion.div
-                        key={l.to}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{
-                          opacity: 1,
-                          x: 0,
-                          transition: { delay: 0.1 + i * 0.05, duration: 0.3 },
-                        }}
-                      >
-                        <Link
-                          href={l.to}
-                          onClick={() => setOpen(false)}
-                          className={`flex items-center justify-between rounded-2xl px-5 py-4 text-base font-semibold transition-colors ${
-                            active
-                              ? "bg-primary/10 text-primary font-bold"
-                              : "text-foreground hover:bg-accent"
-                          }`}
-                        >
-                          {l.label}
-                          <ArrowRight className="h-4 w-4 text-muted-foreground" />
-                        </Link>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </nav>
+              {/* Mobile Navigation Menu List (Menu & Submenus) */}
+              <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-2">
+                
+                {/* 1. SOLUTIONS (MENU ITEM WITH SUBMENU) */}
+                <div className="rounded-2xl border border-slate-100 bg-slate-50/60 overflow-hidden transition-all">
+                  <div className="flex items-center justify-between p-3.5">
+                    <Link
+                      href="/solutions"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-[#2563EB]"
+                    >
+                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-100/70 text-[#2563EB]">
+                        <Monitor className="h-4 w-4" />
+                      </div>
+                      <span>Solutions</span>
+                    </Link>
+                    <button
+                      type="button"
+                      aria-label="Toggle Solutions submenu"
+                      onClick={() => toggleMobileSubmenu("solutions")}
+                      className="grid h-8 w-8 place-items-center rounded-lg hover:bg-slate-200/60 text-slate-500 transition-transform"
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          openMobileSubmenu === "solutions" ? "rotate-180 text-[#2563EB]" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
-              {/* CTA at bottom */}
-              <motion.div
-                className="relative border-t border-border p-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.4 } }}
-              >
-                <a
-                  href={SITE.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Discuss Your Project via Calendly"
-                  className="group flex items-center justify-center gap-2 rounded-full bg-[#111827] px-6 py-4 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#6C5CE7]"
+                  {/* Solutions Submenu Accordion */}
+                  <AnimatePresence>
+                    {openMobileSubmenu === "solutions" && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="border-t border-slate-200/70 bg-white p-3 space-y-1.5"
+                      >
+                        {SOLUTIONS_ITEMS.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={item.title}
+                              href={item.href}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
+                            >
+                              <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-blue-50 text-[#2563EB]">
+                                <Icon className="h-3.5 w-3.5" />
+                              </div>
+                              <div className="flex-1">
+                                <div className="text-xs font-bold text-slate-800">
+                                  {item.title}
+                                </div>
+                                <div className="text-[10px] text-slate-500 line-clamp-1">
+                                  {item.desc}
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        })}
+
+                        <div className="pt-2 border-t border-slate-100">
+                          <Link
+                            href="/solutions"
+                            onClick={() => setOpen(false)}
+                            className="flex items-center justify-between px-2.5 py-1.5 text-xs font-bold text-[#2563EB]"
+                          >
+                            <span>Explore all capabilities</span>
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* 2. SOFTWARE (MENU ITEM WITH SUBMENU) */}
+                <div className="rounded-2xl border border-slate-100 bg-slate-50/60 overflow-hidden transition-all">
+                  <div className="flex items-center justify-between p-3.5">
+                    <Link
+                      href="/software"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-[#2563EB]"
+                    >
+                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-purple-100/70 text-[#7C3AED]">
+                        <LayoutGrid className="h-4 w-4" />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span>Software</span>
+                        <span className="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#2563EB]">
+                          6 Apps
+                        </span>
+                      </div>
+                    </Link>
+                    <button
+                      type="button"
+                      aria-label="Toggle Software submenu"
+                      onClick={() => toggleMobileSubmenu("software")}
+                      className="grid h-8 w-8 place-items-center rounded-lg hover:bg-slate-200/60 text-slate-500 transition-transform"
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          openMobileSubmenu === "software" ? "rotate-180 text-[#7C3AED]" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
+
+                  {/* Software Submenu Accordion */}
+                  <AnimatePresence>
+                    {openMobileSubmenu === "software" && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="border-t border-slate-200/70 bg-white p-3 space-y-1.5"
+                      >
+                        {SOFTWARE_ITEMS.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <a
+                              key={item.title}
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setOpen(false)}
+                              className="flex items-center justify-between rounded-xl p-2.5 hover:bg-purple-50/40 transition-colors"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-purple-50 text-[#7C3AED]">
+                                  <Icon className="h-3.5 w-3.5" />
+                                </div>
+                                <div>
+                                  <div className="text-xs font-bold text-slate-800">
+                                    {item.title}
+                                  </div>
+                                  <div className="text-[10px] text-slate-500 line-clamp-1">
+                                    {item.desc}
+                                  </div>
+                                </div>
+                              </div>
+                              <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
+                            </a>
+                          );
+                        })}
+
+                        <div className="pt-2 border-t border-slate-100">
+                          <Link
+                            href="/software"
+                            onClick={() => setOpen(false)}
+                            className="flex items-center justify-between px-2.5 py-1.5 text-xs font-bold text-[#7C3AED]"
+                          >
+                            <span>View software suite</span>
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* 3. DIRECT MENU ITEMS */}
+                <div className="pt-2 space-y-1">
+                  <Link
+                    href="/#work"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-xl p-3.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
+                  >
+                    <span>Our Work</span>
+                    <ArrowRight className="h-4 w-4 text-slate-400" />
+                  </Link>
+                  <Link
+                    href="/#about"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-xl p-3.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
+                  >
+                    <span>About Zuvigo</span>
+                    <ArrowRight className="h-4 w-4 text-slate-400" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-xl p-3.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
+                  >
+                    <span>Contact</span>
+                    <ArrowRight className="h-4 w-4 text-slate-400" />
+                  </Link>
+                </div>
+
+              </div>
+
+              {/* Bottom Sticky CTA inside Mobile Sheet */}
+              <div className="p-4 border-t border-slate-100 bg-slate-50/80">
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0B0F19] py-3 text-sm font-semibold text-white shadow-md hover:bg-black transition-colors"
                 >
-                  Discuss Your Project
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-                <p className="mt-4 text-center text-xs text-muted-foreground">
-                  Free initial consultation · Response within one business day
-                </p>
-              </motion.div>
+                  <span>Let&apos;s Talk</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </motion.div>
           </>
         )}

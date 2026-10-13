@@ -116,7 +116,7 @@ export function HeroVisual() {
             {/* Background Building Image positioned on the right side */}
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 sm:w-7/12 overflow-hidden rounded-r-2xl">
               <Image
-                src="/hero-building.webp"
+                src="/ai-business-platform.jpg"
                 alt="Modern enterprise digital platform architecture"
                 className="h-full w-full object-cover object-center"
                 width={600}

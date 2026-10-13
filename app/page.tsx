@@ -3,15 +3,15 @@ import { JsonLd } from "@/components/site/JsonLd"
 import { pageMetadata } from "@/lib/metadata"
 import { SITE_URL } from "@/lib/site"
 
-const TITLE = "AI Website Design Company & Smart CRM Automation | readyio"
+const TITLE = "Websites, Applications & Software That Make Business Work Better | zuvigo"
 const DESCRIPTION =
-  "Build high-converting custom websites with AI workflows, seamless CRM integrations, and automated lead capture. Scalable solutions built for growth."
+  "Zuvigo builds modern websites, custom web applications, cloud and desktop software, business automation, and productivity tools for growing businesses."
 
 export const metadata = pageMetadata({
   title: TITLE,
   description: DESCRIPTION,
   path: "/",
-  imageAlt: "Readyio — AI Website Design Company & Smart CRM Automation",
+  imageAlt: "zuvigo — Websites, Applications and Software",
 })
 
 const webPageJsonLd = {
@@ -34,18 +34,18 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What services does Readyio specialize in?",
+      name: "What does Zuvigo specialize in?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Readyio is a full-stack digital partner specializing in custom website design, web applications, tailored CRM/ERP systems, and AI-driven automation workflows under one accountable team.",
+        text: "Zuvigo specializes in custom website design, web applications, cloud & desktop software, and business automation, alongside productivity software like PDF Suite and Diagram Studio.",
       },
     },
     {
       "@type": "Question",
-      name: "Why choose one accountable team instead of separate agencies for web, CRM, and AI?",
+      name: "Why choose Zuvigo for solutions and software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Splitting projects across multiple specialized vendors leads to translation loss, fragmented data pipelines, conflicting codebases, and endless coordination meetings. Readyio provides end-to-end delivery where your marketing site, sales CRM, and AI automations seamlessly communicate.",
+        text: "Zuvigo provides end-to-end delivery where your marketing site, custom web systems, software tools, and business automations seamlessly work together under one accountable technology partner.",
       },
     },
     {

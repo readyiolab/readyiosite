@@ -203,16 +203,14 @@ function BelowFoldTrustStrip() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto flex-shrink-0">
-              <a
-                href={SITE.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discuss Your Project via Calendly"
+              <Link
+                href="/contact"
+                aria-label="Let's Talk"
                 className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#6C5CE7] to-[#8075FF] px-8 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(108,92,231,0.5)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(108,92,231,0.7)] active:scale-95"
               >
-                <span>Discuss Your Project</span>
+                <span>Let&apos;s Talk</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1086,16 +1084,18 @@ function HomepageFAQ() {
 function FinalCTA() {
   return (
     <AuroraCTA
-      eyebrow="READYIO DIGITAL SYSTEMS"
+      eyebrow="LET'S BUILD SOMETHING GREAT"
       heading={
         <>
-          Build What Your Business <br className="hidden sm:inline" />
-          Needs Next.
+          Ready to discuss <br className="hidden sm:inline" />
+          your project?
         </>
       }
-      subtitle="Readyio builds high-performing websites, practical web applications, customized CRM platforms, and production AI automation — all through one accountable technology team."
-      buttonText="Discuss Your Project"
-      buttonHref={SITE.bookingUrl}
+      subtitle="Zuvigo builds modern websites, custom web applications, cloud & desktop software, and business automation — helping businesses work smarter, move faster, and achieve more."
+      buttonText="Let's Talk"
+      buttonHref="/contact"
+      secondaryButtonText="Send an Inquiry"
+      secondaryButtonHref="/contact"
     />
   );
 }

@@ -91,7 +91,7 @@ export function ContactPage() {
   return (
     <>
       {/* Main Reference Layout Frame */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+      <section className="pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="mx-auto max-w-7xl container-p">
           <Reveal>
             <div className="overflow-hidden rounded-[2.5rem] border border-border/80 bg-card p-6 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
@@ -194,14 +194,12 @@ export function ContactPage() {
                       </a>
                     )}
                     <a
-                      href={SITE.bookingUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Calendly Live Booking"
-                      title="Book a Discovery Call"
+                      href={`mailto:${SITE.email}`}
+                      aria-label="Direct Email"
+                      title="Send us an Email"
                       className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-accent hover:text-primary"
                     >
-                      <Calendar className="h-4 w-4" />
+                      <Mail className="h-4 w-4" />
                     </a>
                     <a
                       href={SITE.url}
@@ -334,19 +332,19 @@ export function ContactPage() {
         </div>
       </section>
 
-      {/* Direct Calendar Booking CTA Banner */}
+      {/* Direct Communication CTA Banner */}
       <AuroraCTA
         id="contact-calendar-cta"
-        eyebrow="INSTANT CALENDAR ACCESS"
+        eyebrow="DIRECT ENGINEERING ACCESS"
         heading={
           <>
             Prefer to Talk Directly <br className="hidden sm:inline" />
             With an Engineer?
           </>
         }
-        subtitle="Skip the back-and-forth email thread. Book a 30-minute discovery call directly on our live calendar — no sales pitches, just an honest technical roadmap."
-        buttonText="Claim Your Free 30-Min Call"
-        buttonHref={SITE.bookingUrl}
+        subtitle="Skip the sales runaround. Talk directly with our engineering team for actionable technical feasibility and a clear project delivery roadmap."
+        buttonText="Let's Talk"
+        buttonHref="#contact-form"
       />
     </>
   );

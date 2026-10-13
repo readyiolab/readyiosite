@@ -47,7 +47,7 @@ export function ForFoundersPage() {
 
 function FounderHero() {
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28">
+    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
       {/* Soft background aura */}
       <div
         aria-hidden

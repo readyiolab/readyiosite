@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowRight,
   BrainCircuit,
@@ -87,7 +88,7 @@ const SERVICES = [
 export function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-36 pb-16 md:pt-44 md:pb-24">
+      <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div aria-hidden className="absolute inset-0 -z-10 mesh-bg opacity-60" />
         <div className="mx-auto max-w-7xl container-p text-center">
           <SectionHeading
@@ -611,15 +612,13 @@ function ScopeEstimateCalculator() {
 
           {/* Action CTA Block */}
           <div className="mt-8 pt-5 border-t border-white/10 relative z-10">
-            <a
+            <Link
               href={`${SITE.bookingUrl}?a1=${encodeURIComponent(`${capability}-${scale}-${timeline}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group relative inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#6C5CE7] to-[#8075FF] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(108,92,231,0.5)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(108,92,231,0.7)] active:scale-95"
             >
-              <span>Lock In Scope On Discovery Call</span>
+              <span>Let&apos;s Talk About Scope</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </Link>
             <p className="mt-2.5 text-center text-[11px] text-gray-400">
               Response within 24 hours · Technical review with an engineering lead · Zero sales pressure
             </p>

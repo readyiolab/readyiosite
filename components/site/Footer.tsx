@@ -9,32 +9,31 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden pt-12 pb-8 sm:pt-16 sm:pb-12 bg-transparent text-foreground">
-      <div className="mx-auto max-w-7xl container-p">
-        
+    <footer className="relative overflow-hidden pt-12 pb-8 sm:pt-16 sm:pb-12 bg-white text-gray-900 border-t border-gray-100">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Floating Rounded Card matching reference design */}
-        <div className="relative z-10 rounded-[2.25rem] sm:rounded-[2.75rem] border border-border/80 bg-card p-8 sm:p-12 md:p-14 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-          
+        <div className="relative z-10 rounded-3xl border border-gray-100 bg-gray-50/50 p-8 sm:p-12 md:p-14 shadow-xs">
           {/* Main Top Grid */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_2fr] lg:gap-16">
-            
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_2fr] lg:gap-16">
             {/* Left Column: Brand, Tagline & Social Icons */}
             <div className="flex flex-col justify-between">
               <div>
                 <Logo />
-                <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground font-normal">
-                  Readyio builds high-converting websites, bespoke web applications, customized CRM platforms, and production AI automation — all through one accountable technology team.
+                <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-600">
+                  Zuvigo builds modern websites, custom web applications, cloud
+                  and desktop software, business automation, and productivity
+                  tools for growing businesses.
                 </p>
               </div>
 
-              {/* Social Media Icons matching the reference style */}
-              <div className="mt-8 flex items-center gap-4 text-foreground/80">
+              {/* Social Media Icons */}
+              <div className="mt-8 flex items-center gap-4 text-gray-600">
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter)"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-[#2563EB]"
                 >
                   <XIcon className="h-4 w-4" />
                 </a>
@@ -43,7 +42,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-[#2563EB]"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -52,7 +51,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-[#2563EB]"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -61,7 +60,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-[#2563EB]"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -70,143 +69,157 @@ export function Footer() {
 
             {/* Right Columns: 3 Navigation Link Columns */}
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-10">
-              
-              {/* Product */}
+              {/* Solutions */}
               <div>
-                <h3 className="font-heading text-sm font-bold tracking-tight text-foreground">
-                  Product
+                <h3 className="font-heading text-sm font-bold tracking-tight text-gray-900">
+                  Solutions
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-gray-600">
                   <li>
-                    <Link href="/services" className="transition-colors hover:text-primary">
-                      Web &amp; Product
+                    <Link href="/solutions#websites" className="transition-colors hover:text-[#2563EB]">
+                      Website Development
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services#crm" className="transition-colors hover:text-primary">
-                      CRM &amp; ERP Platforms
+                    <Link href="/solutions#web-apps" className="transition-colors hover:text-[#2563EB]">
+                      Web Applications
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services#ai" className="transition-colors hover:text-primary">
-                      AI &amp; Automation
+                    <Link href="/solutions#cloud-desktop" className="transition-colors hover:text-[#2563EB]">
+                      Cloud &amp; Desktop Software
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services#mobile" className="transition-colors hover:text-primary">
-                      Mobile Apps
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services#scope-calculator" className="transition-colors hover:text-primary">
-                      Scope Estimator
+                    <Link href="/solutions#automation" className="transition-colors hover:text-[#2563EB]">
+                      Business &amp; AI Automation
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Resources */}
+              {/* Software Suite (Direct Links) */}
               <div>
-                <h3 className="font-heading text-sm font-bold tracking-tight text-foreground">
-                  Resources
+                <h3 className="font-heading text-sm font-bold tracking-tight text-gray-900">
+                  Software
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                  <li>
-                    <Link href="/blog" className="transition-colors hover:text-primary">
-                      Insights &amp; Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/for-founders" className="transition-colors hover:text-primary">
-                      For Founders
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/#work" className="transition-colors hover:text-primary">
-                      Case Studies
-                    </Link>
-                  </li>
+                <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-gray-600">
                   <li>
                     <a
-                      href={SITE.bookingUrl}
+                      href="https://pdf.zuvigo.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors hover:text-primary"
+                      className="transition-colors hover:text-[#2563EB]"
                     >
-                      Discovery Call
+                      PDF Suite
                     </a>
                   </li>
                   <li>
-                    <Link href="/contact" className="transition-colors hover:text-primary">
-                      Technical Architecture
-                    </Link>
+                    <a
+                      href="https://pdf.zuvigo.com/workspace"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[#2563EB]"
+                    >
+                      Productivity Suite
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pdf.zuvigo.com/esign"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[#2563EB]"
+                    >
+                      eSign
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pdf.zuvigo.com/letters"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[#2563EB]"
+                    >
+                      Letters
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pdf.zuvigo.com/diagrams"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[#2563EB]"
+                    >
+                      Diagram Studio
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pdf.zuvigo.com/desktop"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[#2563EB]"
+                    >
+                      Desktop Software
+                    </a>
                   </li>
                 </ul>
               </div>
 
               {/* Company */}
               <div className="col-span-2 sm:col-span-1">
-                <h3 className="font-heading text-sm font-bold tracking-tight text-foreground">
+                <h3 className="font-heading text-sm font-bold tracking-tight text-gray-900">
                   Company
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-gray-600">
                   <li>
-                    <Link href="/#about" className="transition-colors hover:text-primary">
+                    <Link href="/#about" className="transition-colors hover:text-[#2563EB]">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="transition-colors hover:text-primary">
+                    <Link href="/#work" className="transition-colors hover:text-[#2563EB]">
+                      Our Work
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="transition-colors hover:text-[#2563EB]">
                       Contact
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href={`mailto:${SITE.email}`}
-                      className="transition-colors hover:text-primary"
+                    <Link
+                      href="/contact"
+                      className="transition-colors hover:text-[#2563EB]"
                     >
-                      Careers &amp; Network
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={`mailto:${SITE.email}`}
-                      className="transition-colors hover:text-primary"
-                    >
-                      Partner With Us
-                    </a>
+                      Let&apos;s Talk
+                    </Link>
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
 
-          {/* Divider & Bottom Row */}
-          <div className="mt-12 sm:mt-16 border-t border-border/70 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-            <p>© {currentYear} Readyio. All rights reserved.</p>
+          {/* Bottom Bar: Copyright & Legal Links */}
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200/60 pt-6 text-xs text-gray-500 sm:flex-row">
+            <div>
+              &copy; {currentYear} {SITE.name}. All rights reserved.
+            </div>
 
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8">
-              <Link href="/privacy" className="transition-colors hover:text-foreground hover:underline">
+            <div className="flex flex-wrap items-center gap-6">
+              <Link href="/privacy" className="transition-colors hover:text-[#2563EB]">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="transition-colors hover:text-foreground hover:underline">
-                Terms of Service
+              <Link href="/cookies" className="transition-colors hover:text-[#2563EB]">
+                Cookie Policy
               </Link>
-              <Link href="/cookies" className="transition-colors hover:text-foreground hover:underline">
-                Cookies Settings
+              <Link href="/terms" className="transition-colors hover:text-[#2563EB]">
+                Terms of Service
               </Link>
             </div>
           </div>
-
         </div>
-
-        {/* Giant Subtle Brand Watermark behind/underneath the card */}
-        <div aria-hidden className="relative -mt-6 sm:-mt-10 select-none pointer-events-none overflow-hidden opacity-[0.05] dark:opacity-[0.035] text-center">
-          <span className="font-heading text-[17vw] font-black tracking-tighter leading-none text-foreground block before:content-['Readyio']" />
-        </div>
-
       </div>
     </footer>
   );
