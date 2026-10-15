@@ -508,22 +508,22 @@ export function Nav() {
               className="fixed inset-0 z-50 bg-slate-950/40 backdrop-blur-md md:hidden"
             />
 
-            {/* Floating Sheet Container */}
+            {/* Left Side Slide-in Drawer Container */}
             <motion.div
-              initial={{ opacity: 0, y: -20, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.98 }}
-              transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed inset-x-3 top-3 bottom-3 z-50 flex flex-col rounded-3xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-2xl md:hidden overflow-hidden"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 300, mass: 0.8 }}
+              className="fixed inset-y-0 left-0 z-50 flex w-[85%] max-w-sm flex-col bg-white border-r border-slate-200/80 shadow-2xl md:hidden overflow-hidden"
             >
               {/* Header inside Mobile Sheet */}
-              <div className="flex items-center justify-between border-b border-slate-100 p-4 sm:p-5">
+              <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
                 <Logo />
                 <button
                   type="button"
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-slate-200 bg-slate-50 text-slate-700"
+                  className="grid h-8 w-8 place-items-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors"
                 >
                   <X className="h-4 w-4" />
                 </button>
