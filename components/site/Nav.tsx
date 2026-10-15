@@ -428,6 +428,14 @@ export function Nav() {
               </Link>
 
               <Link
+                href="/blog"
+                onMouseEnter={handleImmediateClose}
+                className="rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-100/60 transition-all"
+              >
+                Blog
+              </Link>
+
+              <Link
                 href="/contact"
                 onMouseEnter={handleImmediateClose}
                 className="rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-100/60 transition-all"
@@ -702,6 +710,14 @@ export function Nav() {
                     className="flex items-center justify-between rounded-xl p-3.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
                   >
                     <span>About Zuvigo</span>
+                    <ArrowRight className="h-4 w-4 text-slate-400" />
+                  </Link>
+                  <Link
+                    href="/blog"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-xl p-3.5 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
+                  >
+                    <span>Blog</span>
                     <ArrowRight className="h-4 w-4 text-slate-400" />
                   </Link>
                   <Link
