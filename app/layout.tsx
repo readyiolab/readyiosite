@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next"
-import { Manrope } from "next/font/google"
 
 import "./globals.css"
 import { Footer } from "@/components/site/Footer"
@@ -9,13 +8,6 @@ import { LazyAIChatbot } from "@/components/site/LazyAIChatbot"
 import { Nav } from "@/components/site/Nav"
 import { Toaster } from "@/components/site/Toaster"
 import { SITE, SITE_URL } from "@/lib/site"
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-  display: "swap",
-})
 
 const GTM_ID = "GTM-MGCXVKMP"
 const DEFAULT_TITLE = "Websites, Applications & Software That Make Business Work Better | Zuvigo"
@@ -107,8 +99,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={manrope.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
       </head>
       <body>
