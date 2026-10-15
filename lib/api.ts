@@ -2,7 +2,7 @@ const getApiBaseUrl = () => {
   const envUrl = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL;
   if (envUrl) return envUrl;
   if (typeof window !== "undefined" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-    return "https://api.zuvigo.com";
+    return "https://cms-api.zuvigo.com";
   }
   return "http://127.0.0.1:4000";
 };
