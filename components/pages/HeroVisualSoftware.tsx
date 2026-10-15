@@ -81,7 +81,7 @@ export function HeroVisualSoftware() {
         <PenLine className="h-4 w-4" />
       </motion.div>
 
-      {/* Floating Badge Node 3: Diagram Studio Node */}
+      {/* Floating Badge Node 3: VigoFlow Node */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -92,7 +92,7 @@ export function HeroVisualSoftware() {
       </motion.div>
 
       <div className="relative z-10 space-y-4">
-        {/* ================= 1. BACKGROUND BROWSER: PDFToolkit ================= */}
+        {/* ================= 1. BACKGROUND BROWSER: VigoPDF ================= */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export function HeroVisualSoftware() {
           <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-3 text-xs">
             <div className="flex items-center gap-3">
               <span className="font-extrabold text-[#2563EB] text-sm tracking-tight">
-                PDFToolkit
+                VigoPDF
               </span>
               <div className="hidden sm:flex items-center gap-2 text-[11px] font-medium text-gray-500">
                 <span className="text-gray-900 font-semibold px-2 py-0.5 rounded bg-gray-100">Home</span>
@@ -126,7 +126,7 @@ export function HeroVisualSoftware() {
             </a>
           </div>
 
-          {/* PDFToolkit Inner Layout */}
+          {/* VigoPDF Inner Layout */}
           <div className="grid grid-cols-12 gap-3">
             {/* Left Nav */}
             <div className="col-span-3 hidden sm:flex flex-col gap-1 text-[10px] text-gray-500 border-r border-gray-100 pr-2">
@@ -213,7 +213,7 @@ export function HeroVisualSoftware() {
           </div>
         </motion.div>
 
-        {/* ================= 2. FRONT FLOATING CARD: Diagram Studio ================= */}
+        {/* ================= 2. FRONT FLOATING CARD: VigoFlow ================= */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -224,7 +224,7 @@ export function HeroVisualSoftware() {
           <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
             <div className="flex items-center gap-2">
               <GitBranch className="h-3.5 w-3.5 text-[#2563EB]" />
-              <span className="text-[11px] font-bold text-gray-900">Diagram Studio</span>
+              <span className="text-[11px] font-bold text-gray-900">VigoFlow</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex -space-x-1.5">

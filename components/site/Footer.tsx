@@ -111,7 +111,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
                     >
-                      PDF Suite
+                      VigoPDF
                     </a>
                   </li>
                   <li>
@@ -141,7 +141,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
                     >
-                      Letters
+                      VigoLetters
                     </a>
                   </li>
                   <li>
@@ -151,7 +151,7 @@ export function Footer() {
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
                     >
-                      Diagram Studio
+                      VigoFlow
                     </a>
                   </li>
                   <li>

@@ -186,7 +186,7 @@ function CapabilitiesSection() {
                   Software — built by Zuvigo
                 </h3>
                 <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed max-w-md">
-                  Powerful productivity tools like PDF Suite, eSign, Diagram Studio
+                  Powerful productivity tools like VigoPDF, eSign, VigoFlow
                   and more, designed for modern teams.
                 </p>
               </div>

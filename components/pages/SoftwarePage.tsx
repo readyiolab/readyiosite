@@ -37,8 +37,8 @@ export function SoftwarePage() {
       {/* 3. THREE WAYS TO USE OUR SOFTWARE */}
       <DeploymentOptionsSection />
 
-      {/* 4. FEATURED PRODUCT: PDFToolkit */}
-      <FeaturedPdfToolkitSection />
+      {/* 4. FEATURED PRODUCT: VigoPDF */}
+      <FeaturedVigoPdfSection />
 
       {/* 5. ENTERPRISE SOFTWARE CTA */}
       <AuroraCTA
@@ -90,7 +90,7 @@ function SoftwareHero() {
             {/* Subtitle */}
             <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
               Zuvigo builds powerful software for modern teams. Our products
-              include PDF Suite, eSign, Diagram Studio, Letters, Productivity
+              include VigoPDF, eSign, VigoFlow, VigoLetters, Productivity
               Suite and Desktop Software — designed to help you work faster,
               simpler and more securely.
             </p>
@@ -134,7 +134,7 @@ function SoftwareHero() {
 function SixProductsSection() {
   const products = [
     {
-      title: "PDF Suite",
+      title: "VigoPDF",
       desc: "Create, edit, convert, merge, compress and manage PDF documents effortlessly.",
       badge: "Document Suite",
       icon: FileText,
@@ -150,7 +150,7 @@ function SixProductsSection() {
       flagship: false,
     },
     {
-      title: "Diagram Studio",
+      title: "VigoFlow",
       desc: "Interactive flowcharting, architectural diagrams, process mapping and mind maps.",
       badge: "Visual Canvas",
       icon: GitBranch,
@@ -158,7 +158,7 @@ function SixProductsSection() {
       flagship: false,
     },
     {
-      title: "Letters",
+      title: "VigoLetters",
       desc: "Generate personalized letters, contracts, and business documents in automated bulk.",
       badge: "Bulk Automation",
       icon: Mail,
@@ -167,7 +167,7 @@ function SixProductsSection() {
     },
     {
       title: "Productivity Suite",
-      desc: "PDF, eSign, diagrams, letters, and team collaboration united in one single workspace.",
+      desc: "VigoPDF, eSign, VigoFlow, VigoLetters, and team collaboration united in one single workspace.",
       badge: "All-In-One",
       icon: LayoutGrid,
       href: "https://pdf.zuvigo.com/workspace",
@@ -352,8 +352,8 @@ function DeploymentOptionsSection() {
   );
 }
 
-/* ---------------- 4. Featured Product: PDFToolkit ---------------- */
-function FeaturedPdfToolkitSection() {
+/* ---------------- 4. Featured Product: VigoPDF ---------------- */
+function FeaturedVigoPdfSection() {
   return (
     <section className="relative py-20 sm:py-28 border-t border-slate-100 bg-slate-50/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -362,7 +362,7 @@ function FeaturedPdfToolkitSection() {
             FEATURED PRODUCT
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
-            PDFToolkit
+            VigoPDF
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600">
             The complete PDF solution for modern teams
@@ -380,7 +380,7 @@ function FeaturedPdfToolkitSection() {
                 <span className="h-3 w-3 rounded-full bg-emerald-400" />
               </div>
               <span className="font-extrabold text-[#2563EB] text-base tracking-tight">
-                PDFToolkit
+                VigoPDF
               </span>
               <div className="hidden sm:flex items-center gap-2 font-medium text-slate-500 ml-4">
                 <span className="text-slate-900 font-semibold px-2.5 py-1 rounded-md bg-slate-100">
@@ -410,7 +410,7 @@ function FeaturedPdfToolkitSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full bg-[#2563EB] px-4 py-2 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition-colors"
             >
-              Open PDFToolkit
+              Open VigoPDF
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>

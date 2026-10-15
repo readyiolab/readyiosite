@@ -52,7 +52,7 @@ export function HeroVisualHome() {
           strokeDasharray="4 4"
         />
 
-        {/* Curved connecting line from right node to PDF Suite card */}
+        {/* Curved connecting line from right node to VigoPDF card */}
         <path
           d="M 570 140 C 540 180, 520 220, 460 250"
           fill="none"
@@ -239,7 +239,7 @@ export function HeroVisualHome() {
             </div>
           </motion.div>
 
-          {/* RIGHT CARD: PDF Suite (Direct Link to https://pdf.zuvigo.com/) */}
+          {/* RIGHT CARD: VigoPDF (Direct Link to https://pdf.zuvigo.com/) */}
           <motion.div
             initial={{ opacity: 0, x: 15 }}
             animate={{ opacity: 1, x: 0 }}
@@ -251,7 +251,7 @@ export function HeroVisualHome() {
               <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
                 <div className="flex items-center gap-1.5">
                   <FileText className="h-3.5 w-3.5 text-[#2563EB]" />
-                  <span className="text-[11px] font-bold text-gray-900">PDF Suite</span>
+                  <span className="text-[11px] font-bold text-gray-900">VigoPDF</span>
                 </div>
                 <div className="flex items-center gap-1 text-[9px] text-gray-400">
                   <span className="h-2 w-2 rounded-full bg-gray-200" />

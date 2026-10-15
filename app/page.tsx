@@ -37,7 +37,7 @@ const faqJsonLd = {
       name: "What does Zuvigo specialize in?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Zuvigo specializes in custom website design, web applications, cloud & desktop software, and business automation, alongside productivity software like PDF Suite and Diagram Studio.",
+        text: "Zuvigo specializes in custom website design, web applications, cloud & desktop software, and business automation, alongside productivity software like VigoPDF and VigoFlow.",
       },
     },
     {

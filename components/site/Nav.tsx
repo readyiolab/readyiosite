@@ -59,7 +59,7 @@ export const SOLUTIONS_ITEMS = [
 
 export const SOFTWARE_ITEMS = [
   {
-    title: "PDF Suite",
+    title: "VigoPDF",
     desc: "Create, edit, convert and manage PDF documents.",
     href: "https://pdf.zuvigo.com/",
     icon: FileText,
@@ -75,7 +75,7 @@ export const SOFTWARE_ITEMS = [
     external: true,
   },
   {
-    title: "Diagram Studio",
+    title: "VigoFlow",
     desc: "Flowcharts, process maps and diagrams.",
     href: "https://pdf.zuvigo.com/diagrams",
     icon: GitBranch,
@@ -83,7 +83,7 @@ export const SOFTWARE_ITEMS = [
     external: true,
   },
   {
-    title: "Letters",
+    title: "VigoLetters",
     desc: "Create personalized letters and documents in bulk.",
     href: "https://pdf.zuvigo.com/letters",
     icon: Mail,
@@ -92,7 +92,7 @@ export const SOFTWARE_ITEMS = [
   },
   {
     title: "Productivity Suite",
-    desc: "PDF, eSign, Diagrams, Letters and more in one workspace.",
+    desc: "VigoPDF, eSign, VigoFlow, VigoLetters and more in one workspace.",
     href: "https://pdf.zuvigo.com/workspace",
     icon: LayoutGrid,
     flagship: true,
