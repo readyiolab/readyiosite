@@ -95,7 +95,7 @@ export function ServicesPage() {
             eyebrow="Services"
             as="h1"
             title={<>Every system your business runs on — <span className="text-gradient">under one team</span>.</>}
-            subtitle="Pick one capability or lean on all four. Readyio scales with the scope."
+            subtitle="Pick one capability or lean on all four. Zuvigo scales with the scope."
           />
         </div>
       </section>

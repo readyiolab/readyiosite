@@ -24,7 +24,7 @@ export function pageMetadata({
     alternates: { canonical: path },
     openGraph: {
       type: "website",
-      siteName: "Readyio",
+      siteName: "Zuvigo",
       title: ogTitle,
       description: ogDescription,
       url: path,

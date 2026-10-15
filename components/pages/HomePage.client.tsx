@@ -42,7 +42,7 @@ export function HomeSections() {
       <ServicesSection />
       <ForFoundersBanner />
       <SelectedWork />
-      <WhyReadyio />
+      <WhyZuvigo />
       <ProcessSection />
       <HomepageFAQ />
       <FinalCTA />
@@ -329,7 +329,7 @@ function ServicesSection() {
                       <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
                       <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
                     </div>
-                    <span className="text-[10px] font-semibold text-gray-400">readyio.com</span>
+                    <span className="text-[10px] font-semibold text-gray-400">zuvigo.com</span>
                   </div>
                   <div className="my-auto space-y-2.5 py-1">
                     <div className="font-heading text-sm font-bold leading-snug text-white">
@@ -866,9 +866,9 @@ function WebsiteExperiences({
   );
 }
 
-/* ---------------- 5. Why Readyio ---------------- */
+/* ---------------- 5. Why Zuvigo ---------------- */
 
-function WhyReadyio() {
+function WhyZuvigo() {
   const POINTS = [
     {
       title: "Business-first thinking",
@@ -894,7 +894,7 @@ function WhyReadyio() {
         <Reveal>
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7]">
-              WHY READYIO
+              WHY ZUVIGO
             </span>
             <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Technology shaped around the business—not the other way around.
@@ -1001,12 +1001,12 @@ function HomepageFAQ() {
 
   const FAQS = [
     {
-      q: "What services does Readyio specialize in?",
-      a: "Readyio is a dedicated technology partner specializing in custom website design, high-performance web applications, tailored CRM/ERP systems, and AI-driven automation workflows. We handle architecture, UI/UX design, engineering, integration, and post-launch maintenance under one unified team.",
+      q: "What services does Zuvigo specialize in?",
+      a: "Zuvigo is a dedicated technology partner specializing in custom website design, high-performance web applications, tailored CRM/ERP systems, and AI-driven automation workflows. We handle architecture, UI/UX design, engineering, integration, and post-launch maintenance under one unified team.",
     },
     {
       q: "Why choose one accountable team instead of hiring multiple agencies?",
-      a: "Splitting projects across multiple specialized agencies leads to translation loss, disjointed user experiences, conflicting technical stacks, and endless vendor coordination. Readyio ensures your marketing site, sales CRM, and AI automations seamlessly synchronize without handoff friction.",
+      a: "Splitting projects across multiple specialized agencies leads to translation loss, disjointed user experiences, conflicting technical stacks, and endless vendor coordination. Zuvigo ensures your marketing site, sales CRM, and AI automations seamlessly synchronize without handoff friction.",
     },
     {
       q: "How long does a typical custom website or CRM implementation take?",
@@ -1017,7 +1017,7 @@ function HomepageFAQ() {
       a: "We integrate directly with your current technology stack (HubSpot, Salesforce, custom PostgreSQL/MongoDB databases, Google Workspace, Slack, n8n, etc.) or deploy custom AI agents that automate repetitive customer support, lead qualification, and reporting tasks with strict guardrails.",
     },
     {
-      q: "Can Readyio act as the technical partner for non-technical founders?",
+      q: "Can Zuvigo act as the technical partner for non-technical founders?",
       a: "Yes! Our 'For Founders' program is purpose-built for domain experts and entrepreneurs. We help you scope the right first version, choose the ideal tech stack, develop the product, and assist through launch without the overhead of hiring an in-house engineering team.",
     },
     {
@@ -1035,7 +1035,7 @@ function HomepageFAQ() {
               FREQUENTLY ASKED QUESTIONS
             </span>
             <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
-              Everything you need to know about working with Readyio.
+              Everything you need to know about working with Zuvigo.
             </h2>
             <p className="mt-4 mx-auto max-w-2xl text-base text-[#4B5563] dark:text-gray-300">
               Clear answers on how we design custom websites, build CRM infrastructure, and deploy AI workflows.

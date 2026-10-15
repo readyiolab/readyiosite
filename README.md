@@ -1,6 +1,6 @@
-# Readyio website (`readyio.com`)
+# Zuvigo website (`zuvigo.com`)
 
-Next.js 16 marketing site: home, services, for founders, contact, legal pages, HTML sitemap, and the **blog listing** at `/blog`. Individual articles live on `blog.readyio.com` (see `../readyiosite-blog`).
+Next.js 16 marketing site: home, services, for founders, contact, legal pages, HTML sitemap, and the **blog listing** at `/blog`. Individual articles live on `blog.zuvigo.com` (see `../readyiosite-blog`).
 
 Production deployment: see [`../deploy/DEPLOYMENT.md`](../deploy/DEPLOYMENT.md).
 
@@ -25,9 +25,9 @@ npm run dev               # http://localhost:8080
 
 | Variable | Dev (`.env.development`) | Prod (`.env.production`) | Used for |
 | --- | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | `https://readyio.com` | `https://readyio.com` | Canonical URLs, metadata, sitemap |
-| `NEXT_PUBLIC_API_URL` | `http://localhost:4000` | `https://api.readyio.com` | Contact form, newsletter, chatbot, booking (browser) |
-| `NEXT_PUBLIC_BLOG_URL` | `http://localhost:8081` | `https://blog.readyio.com` | Article links, `/blog/:slug` redirect |
+| `NEXT_PUBLIC_SITE_URL` | `https://zuvigo.com` | `https://zuvigo.com` | Canonical URLs, metadata, sitemap |
+| `NEXT_PUBLIC_API_URL` | `http://localhost:4000` | `https://api.zuvigo.com` | Contact form, newsletter, chatbot, booking (browser) |
+| `NEXT_PUBLIC_BLOG_URL` | `http://localhost:8081` | `https://blog.zuvigo.com` | Article links, `/blog/:slug` redirect |
 | `CMS_API_URL` | `http://localhost:4000/api` | `http://127.0.0.1:4000/api` | Server-side blog listing fetches |
 | `REVALIDATE_SECRET` | `.env.local` | `.env.local` | Protects `POST /api/revalidate` |
 
@@ -37,7 +37,7 @@ npm run dev               # http://localhost:8080
 
 - `/blog` fetches published articles from the CMS and caches them for 5 minutes (cache tag `articles`).
 - When an article changes, the API calls `POST /api/revalidate` with the `x-revalidate-secret` header, which clears the cache immediately.
-- `/blog/<slug>` permanently redirects to `https://blog.readyio.com/<slug>` (configured in `next.config.ts`).
+- `/blog/<slug>` permanently redirects to `https://blog.zuvigo.com/<slug>` (configured in `next.config.ts`).
 
 ## Structure
 

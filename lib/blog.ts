@@ -1,5 +1,5 @@
-// Server-side reads from the Readyio CMS API. Full articles live on the blog
-// subdomain; readyio.com only renders the listing.
+// Server-side reads from the Zuvigo CMS API. Full articles live on the blog
+// subdomain; zuvigo.com only renders the listing.
 
 const CMS_API_URL = (process.env.CMS_API_URL || "http://127.0.0.1:4000/api").replace(/\/$/, "");
 

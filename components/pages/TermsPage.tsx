@@ -16,11 +16,11 @@ export function TermsPage() {
               Terms of Service
             </h1>
             <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
-              Welcome to Readyio. Please read these terms carefully. They govern your access to our website, digital applications, and technology services.
+              Welcome to Zuvigo. Please read these terms carefully. They govern your access to our website, digital applications, and technology services.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#6B7280] dark:text-gray-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <span>Effective Date: Readyio Technologies | All Rights Reserved</span>
+              <span>Effective Date: Zuvigo Technologies | All Rights Reserved</span>
             </div>
           </div>
         </Reveal>
@@ -40,7 +40,7 @@ export function TermsPage() {
               </div>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  By accessing or using the website at <strong className="text-[#111827] dark:text-white">readyio.com</strong>, associated subdomains, or any digital services provided by <strong className="text-[#111827] dark:text-white">Readyio Technologies</strong>, you agree to be bound by these Terms of Service and all applicable laws and regulations.
+                  By accessing or using the website at <strong className="text-[#111827] dark:text-white">zuvigo.com</strong>, associated subdomains, or any digital services provided by <strong className="text-[#111827] dark:text-white">Zuvigo Technologies</strong>, you agree to be bound by these Terms of Service and all applicable laws and regulations.
                 </p>
                 <p>
                   If you do not agree with any of these terms, you are prohibited from using or accessing this site. Separate formal Master Service Agreements (MSA) or Statements of Work (SOW) govern paid client development engagements.
@@ -62,7 +62,7 @@ export function TermsPage() {
               </div>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  All materials, logos, content, code architecture, designs, brand marks, and visual assets on this site are owned by or licensed to Readyio Technologies and are protected by applicable intellectual property laws.
+                  All materials, logos, content, code architecture, designs, brand marks, and visual assets on this site are owned by or licensed to Zuvigo Technologies and are protected by applicable intellectual property laws.
                 </p>
                 <p>
                   <strong>Client Code Ownership:</strong> For custom software, websites, CRM systems, and AI workflows built for our clients, 100% IP and code ownership transfers to the client upon final milestone payment as specified in our individual project contracts.
@@ -135,7 +135,7 @@ export function TermsPage() {
               </div>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  Services provided by Readyio Technologies (including Web & App Development, Custom CRM Systems, AI Automations, and Founder MVPs) are executed under written Statements of Work (SOW).
+                  Services provided by Zuvigo Technologies (including Web & App Development, Custom CRM Systems, AI Automations, and Founder MVPs) are executed under written Statements of Work (SOW).
                 </p>
                 <p>
                   SOWs outline project scope, fixed milestone timelines, acceptance criteria, payment schedules, and ongoing support parameters.
@@ -157,7 +157,7 @@ export function TermsPage() {
                   </h2>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed text-[#4B5563] dark:text-gray-300">
-                  Website materials are provided &quot;as is&quot;. Readyio makes no warranties, expressed or implied, regarding site availability or accuracy of third-party external links.
+                  Website materials are provided &quot;as is&quot;. Zuvigo makes no warranties, expressed or implied, regarding site availability or accuracy of third-party external links.
                 </p>
               </div>
 
@@ -171,7 +171,7 @@ export function TermsPage() {
                   </h2>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed text-[#4B5563] dark:text-gray-300">
-                  Our applications may integrate third-party tools (e.g. Stripe, Twilio, Google Cloud). Readyio is not liable for service outages of external third-party infrastructure.
+                  Our applications may integrate third-party tools (e.g. Stripe, Twilio, Google Cloud). Zuvigo is not liable for service outages of external third-party infrastructure.
                 </p>
               </div>
             </div>
@@ -192,14 +192,14 @@ export function TermsPage() {
               </div>
               <div className="mt-4 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300 space-y-3">
                 <p>
-                  Readyio Technologies reserves the right to revise these Terms of Service at any time. Continued usage of our website after modifications constitutes acceptance of the revised terms.
+                  Zuvigo Technologies reserves the right to revise these Terms of Service at any time. Continued usage of our website after modifications constitutes acceptance of the revised terms.
                 </p>
                 <p>
                   For any legal inquiries or questions regarding these terms, contact our team at:
                 </p>
                 <div className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#F0EDF9] px-4 py-2 text-xs font-bold text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
                   <Mail className="h-4 w-4" />
-                  <span>hello@readyio.com</span>
+                  <span>hello@zuvigo.com</span>
                 </div>
               </div>
             </div>

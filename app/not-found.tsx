@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Page not found | Readyio",
+  title: "Page not found | Zuvigo",
   robots: { index: false, follow: true },
 }
 

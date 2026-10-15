@@ -63,7 +63,7 @@ export function AIChatbot() {
     {
       id: "init-1",
       sender: "ai",
-      text: "Hi! 👋 I'm Readyio's AI Assistant. How can I help you today? Ask me about our Web Apps, CRM Systems, AI Automation, or click below to book a free project consultation!",
+      text: "Hi!  I'm Zuvigo's AI Assistant. How can I help you today? Ask me about our Web Apps, CRM Systems, AI Automation, or click below to book a free project consultation!",
       time: "Just now",
     },
   ]);
@@ -309,7 +309,7 @@ export function AIChatbot() {
                 </div>
                 <div>
                   <h3 className="font-heading text-xs font-extrabold text-white flex items-center gap-1.5">
-                    Readyio AI Assistant
+                    Zuvigo AI Assistant
                   </h3>
                   <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-medium">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />

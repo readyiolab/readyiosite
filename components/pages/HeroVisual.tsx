@@ -140,7 +140,7 @@ export function HeroVisual() {
                 href={SITE.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Get Started with Readyio project discussion"
+                aria-label="Get Started with Zuvigo project discussion"
                 className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#6C5CE7] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:bg-[#5B4BC4] active:scale-95"
               >
                 Get Started

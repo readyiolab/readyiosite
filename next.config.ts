@@ -1,6 +1,6 @@
 import type { NextConfig } from "next"
 
-const BLOG_URL = (process.env.NEXT_PUBLIC_BLOG_URL || "https://blog.readyio.com").replace(/\/$/, "")
+const BLOG_URL = (process.env.NEXT_PUBLIC_BLOG_URL || "https://blog.zuvigo.com").replace(/\/$/, "")
 const isDev = process.env.NODE_ENV !== "production"
 
 const contentSecurityPolicy = [

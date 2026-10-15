@@ -16,11 +16,11 @@ export function PrivacyPage() {
               Privacy & Cookie Policy
             </h1>
             <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
-              Readyio respects your privacy and is committed to safeguarding the security of your personal data. Below is our detailed policy regarding cookies, data usage, and user rights.
+              Zuvigo respects your privacy and is committed to safeguarding the security of your personal data. Below is our detailed policy regarding cookies, data usage, and user rights.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#6B7280] dark:text-gray-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <span>Effective Date: May 25, 2018 | Last Updated: Readyio Technologies</span>
+              <span>Effective Date: May 25, 2018 | Last Updated: Zuvigo Technologies</span>
             </div>
           </div>
         </Reveal>
@@ -40,10 +40,10 @@ export function PrivacyPage() {
               </div>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  <strong className="text-[#111827] dark:text-white">Readyio</strong> respects your privacy and is committed to safeguarding the security of your personal data. We respect your need to understand how information is collected, used, disclosed, transferred, and stored. Thus, we have developed this Cookie and Privacy Policy to familiarize you with our practices. We advise you to carefully read this policy together with our Website Privacy Notice.
+                  <strong className="text-[#111827] dark:text-white">Zuvigo</strong> respects your privacy and is committed to safeguarding the security of your personal data. We respect your need to understand how information is collected, used, disclosed, transferred, and stored. Thus, we have developed this Cookie and Privacy Policy to familiarize you with our practices. We advise you to carefully read this policy together with our Website Privacy Notice.
                 </p>
                 <p>
-                  <strong>Scope:</strong> This policy is applicable to all individuals who visit our website (readyio.com) and to all information collected by means of cookies or digital interactions across our platforms.
+                  <strong>Scope:</strong> This policy is applicable to all individuals who visit our website (zuvigo.com) and to all information collected by means of cookies or digital interactions across our platforms.
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function PrivacyPage() {
                     (a) First-Party & Third-Party Cookies
                   </span>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#4B5563] dark:text-gray-300">
-                    First-party cookies are stored directly by Readyio, while third-party cookies are stored by trusted external providers (e.g., analytics services).
+                    First-party cookies are stored directly by Zuvigo, while third-party cookies are stored by trusted external providers (e.g., analytics services).
                   </p>
                 </div>
 
@@ -153,7 +153,7 @@ export function PrivacyPage() {
               </div>
               <div className="mt-4 space-y-4 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  To help us maintain and improve our services, Readyio&apos;s website, online services, applications, and communications may use cookies and related technologies:
+                  To help us maintain and improve our services, Zuvigo&apos;s website, online services, applications, and communications may use cookies and related technologies:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
                   <li>
@@ -218,14 +218,14 @@ export function PrivacyPage() {
               </div>
               <div className="mt-4 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300 space-y-3">
                 <p>
-                  Readyio reserves the right to update or modify this Privacy & Cookie Policy. Any substantial updates will be communicated via email or through a prominent update notification on our website.
+                  Zuvigo reserves the right to update or modify this Privacy & Cookie Policy. Any substantial updates will be communicated via email or through a prominent update notification on our website.
                 </p>
                 <p>
                   If you have questions or wish to exercise your data privacy rights, please reach out to us at:
                 </p>
                 <div className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#F0EDF9] px-4 py-2 text-xs font-bold text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
                   <Mail className="h-4 w-4" />
-                  <span>hello@readyio.com</span>
+                  <span>hello@zuvigo.com</span>
                 </div>
               </div>
             </div>

@@ -799,7 +799,7 @@ function FounderDiscovery() {
   );
 }
 
-/* ---------------- 6. Why Founders Work With Readyio ---------------- */
+/* ---------------- 6. Why Founders Work With Zuvigo ---------------- */
 
 function WhyFoundersWorkWithUs() {
   const POINTS = [
@@ -891,7 +891,7 @@ function WhoThisIsFor() {
               WHO THIS IS FOR
             </span>
             <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-5xl dark:text-white">
-              Readyio is a good fit for founders who:
+              Zuvigo is a good fit for founders who:
             </h2>
           </div>
         </Reveal>

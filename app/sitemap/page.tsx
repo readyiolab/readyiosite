@@ -8,8 +8,8 @@ import { FOOTER_LINKS, NAV_LINKS, blogPostUrl } from "@/lib/site"
 export const revalidate = 300
 
 export const metadata = pageMetadata({
-  title: "Sitemap | Readyio",
-  description: "All pages on the Readyio website.",
+  title: "Sitemap | Zuvigo",
+  description: "All pages on the Zuvigo website.",
   path: "/sitemap",
 })
 
@@ -25,7 +25,7 @@ export default async function SitemapPage() {
   return (
     <section className="pt-36 pb-24 md:pt-44">
       <div className="mx-auto max-w-5xl container-p">
-        <SectionHeading eyebrow="Sitemap" as="h1" title="Every page on Readyio" align="left" />
+        <SectionHeading eyebrow="Sitemap" as="h1" title="Every page on Zuvigo" align="left" />
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           <Col title="Site">
             <Link href="/" className={linkClass}>Home</Link>

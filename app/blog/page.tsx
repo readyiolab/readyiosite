@@ -9,11 +9,11 @@ import { SITE, SITE_URL, blogPostUrl } from "@/lib/site"
 export const revalidate = 300
 
 export const metadata = pageMetadata({
-  title: "Blog — insights on product, AI, CRM & shipping | Readyio",
+  title: "Blog — insights on product, AI, CRM & shipping | Zuvigo",
   description:
-    "Practical writing from the Readyio team on product, AI, CRM/ERP, and the craft of shipping systems that last.",
+    "Practical writing from the Zuvigo team on product, AI, CRM/ERP, and the craft of shipping systems that last.",
   path: "/blog",
-  ogTitle: "Readyio Blog — Product, AI, CRM & Engineering Insights",
+  ogTitle: "Zuvigo Blog — Product, AI, CRM & Engineering Insights",
 })
 
 export default async function BlogPage() {
@@ -41,7 +41,7 @@ export default async function BlogPage() {
         <div aria-hidden className="absolute inset-0 -z-10 mesh-bg opacity-50" />
         <div className="mx-auto max-w-4xl container-p text-center">
           <SectionHeading
-            eyebrow="Readyio Journal"
+            eyebrow="Zuvigo Journal"
             as="h1"
             title={
               <>
@@ -55,14 +55,14 @@ export default async function BlogPage() {
       <BlogListing posts={posts} categories={categories} />
       <AuroraCTA
         id="blog-cta"
-        eyebrow="READYIO LABS"
+        eyebrow="ZUVIGO LABS"
         heading={
           <>
             Ready to Turn Ideas <br className="hidden sm:inline" />
             Into Production?
           </>
         }
-        subtitle="Turn engineering insights into real products. Partner with Readyio to build high-converting websites, bespoke web applications, and automated workflows."
+        subtitle="Turn engineering insights into real products. Partner with Zuvigo to build high-converting websites, bespoke web applications, and automated workflows."
         buttonText="Start a Conversation"
         buttonHref="/contact"
       />

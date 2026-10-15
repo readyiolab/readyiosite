@@ -16,11 +16,11 @@ export function CookiePolicyPage() {
               Cookie Policy
             </h1>
             <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
-              Readyio Technologies respects your privacy and is committed to safeguarding the security of your personal data. Read below to understand how cookies are collected and managed.
+              Zuvigo Technologies respects your privacy and is committed to safeguarding the security of your personal data. Read below to understand how cookies are collected and managed.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#6B7280] dark:text-gray-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <span>Effective Date: May 25, 2018 | Readyio Technologies</span>
+              <span>Effective Date: May 25, 2018 | Zuvigo Technologies</span>
             </div>
           </div>
         </Reveal>
@@ -35,7 +35,7 @@ export function CookiePolicyPage() {
               </h2>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  <strong>Readyio Technologies</strong> uses cookies and other technologies to enhance your experience when you use our website. We have developed this cookie policy to familiarize you with our practices. We advise you to carefully read this policy together with our Website Privacy Notice.
+                  <strong>Zuvigo Technologies</strong> uses cookies and other technologies to enhance your experience when you use our website. We have developed this cookie policy to familiarize you with our practices. We advise you to carefully read this policy together with our Website Privacy Notice.
                 </p>
                 <p>
                   <strong>Scope:</strong> This policy is applicable to all individuals who visit our website and to all information collected by means of cookies.
@@ -73,7 +73,7 @@ export function CookiePolicyPage() {
                     (a) First Party vs Third Party
                   </span>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#4B5563] dark:text-gray-300">
-                    First party cookies are stored by Readyio; third party cookies are stored by external service providers (e.g. analytics).
+                    First party cookies are stored by Zuvigo; third party cookies are stored by external service providers (e.g. analytics).
                   </p>
                 </div>
 
@@ -133,7 +133,7 @@ export function CookiePolicyPage() {
               </h2>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                 <p>
-                  Readyio&apos;s website, online services, applications, and communications may use cookies to gather anonymous information related to website usage to measure effectiveness, manage entry/exit points, track clickstream data, and evaluate search behavior.
+                  Zuvigo&apos;s website, online services, applications, and communications may use cookies to gather anonymous information related to website usage to measure effectiveness, manage entry/exit points, track clickstream data, and evaluate search behavior.
                 </p>
                 <p>
                   Automatic log files collect Internet Protocol (IP) addresses, browser type/language, ISP, referring pages, OS, date/time stamps, and clickstream data to analyze demographic trends and optimize user experiences.
@@ -172,7 +172,7 @@ export function CookiePolicyPage() {
                 7. Changes & Contact
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
-                Readyio reserves the right to update this policy periodically. Continued use of the website after modifications constitutes consent to the modified policy. For any questions, email us at <strong className="text-[#6C5CE7]">hello@readyio.com</strong>.
+                Zuvigo reserves the right to update this policy periodically. Continued use of the website after modifications constitutes consent to the modified policy. For any questions, email us at <strong className="text-[#6C5CE7]">hello@zuvigo.com</strong>.
               </p>
             </div>
           </Reveal>

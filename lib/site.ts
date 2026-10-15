@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "zuvigo",
+  name: "Zuvigo",
   url: "https://zuvigo.com",
   tagline: "Websites, applications and software that make business work better",
   description:

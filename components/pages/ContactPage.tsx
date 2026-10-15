@@ -211,7 +211,7 @@ export function ContactPage() {
                   </div>
                 </div>
 
-                {/* Right Column: Signature Readyio Brand Colored Card matching reference */}
+                {/* Right Column: Signature Zuvigo Brand Colored Card matching reference */}
                 <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#7464F2] via-[#6C5CE7] to-[#5949CE] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
                   {/* Subtle ambient light bleed for depth */}
                   <div

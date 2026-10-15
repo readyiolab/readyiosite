@@ -18,14 +18,14 @@ const manrope = Manrope({
 })
 
 const GTM_ID = "GTM-MGCXVKMP"
-const DEFAULT_TITLE = "Websites, Applications & Software That Make Business Work Better | zuvigo"
-const OG_IMAGE_ALT = "zuvigo — Websites, Applications and Software"
+const DEFAULT_TITLE = "Websites, Applications & Software That Make Business Work Better | Zuvigo"
+const OG_IMAGE_ALT = "Zuvigo — Websites, Applications and Software"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: DEFAULT_TITLE,
   description: SITE.description,
-  authors: [{ name: "zuvigo" }],
+  authors: [{ name: "Zuvigo" }],
   robots: {
     index: true,
     follow: true,
