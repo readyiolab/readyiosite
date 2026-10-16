@@ -38,7 +38,7 @@ export function HeroVisual() {
         viewBox="0 0 600 480"
       >
         <defs>
-          <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="2" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
@@ -48,7 +48,7 @@ export function HeroVisual() {
         <path
           d="M 300 230 L 300 258"
           fill="none"
-          stroke="#7C3AED"
+          stroke="#2563EB"
           strokeWidth="2"
         />
 
@@ -56,7 +56,7 @@ export function HeroVisual() {
         <path
           d="M 300 258 Q 300 268 290 268 L 155 268 Q 145 268 145 278 L 145 292"
           fill="none"
-          stroke="#7C3AED"
+          stroke="#2563EB"
           strokeWidth="2"
         />
 
@@ -64,7 +64,7 @@ export function HeroVisual() {
         <path
           d="M 300 258 Q 300 268 310 268 L 445 268 Q 455 268 455 278 L 455 292"
           fill="none"
-          stroke="#7C3AED"
+          stroke="#2563EB"
           strokeWidth="2"
         />
 
@@ -72,18 +72,18 @@ export function HeroVisual() {
         <path
           d="M 145 292 L 100 292 Q 82 292 82 274 L 82 135 Q 82 120 100 120 L 132 120"
           fill="none"
-          stroke="#7C3AED"
+          stroke="#2563EB"
           strokeWidth="2"
         />
 
         {/* Target Junction Node in the gap */}
-        <circle cx="300" cy="258" r="6" fill="#FFFFFF" stroke="#7C3AED" strokeWidth="2.5" />
-        <circle cx="300" cy="258" r="2.5" fill="#7C3AED" />
+        <circle cx="300" cy="258" r="6" fill="#FFFFFF" stroke="#2563EB" strokeWidth="2.5" />
+        <circle cx="300" cy="258" r="2.5" fill="#2563EB" />
 
         {/* Connection endpoint dots */}
-        <circle cx="132" cy="120" r="3.5" fill="#7C3AED" />
-        <circle cx="145" cy="292" r="3.5" fill="#7C3AED" />
-        <circle cx="455" cy="292" r="3.5" fill="#7C3AED" />
+        <circle cx="132" cy="120" r="3.5" fill="#2563EB" />
+        <circle cx="145" cy="292" r="3.5" fill="#2563EB" />
+        <circle cx="455" cy="292" r="3.5" fill="#2563EB" />
       </svg>
 
       <div className="relative z-10 flex flex-col gap-14">
@@ -91,7 +91,7 @@ export function HeroVisual() {
         <motion.div
           whileHover={{ y: -3 }}
           transition={{ duration: 0.2 }}
-          className="relative mx-auto w-full max-w-lg rounded-3xl border border-[#E5E0F8] bg-white p-5 shadow-[0_12px_40px_rgba(108,92,231,0.08)] dark:border-gray-800 dark:bg-gray-900"
+          className="relative mx-auto w-full max-w-lg rounded-3xl border border-blue-100 bg-white p-5 shadow-[0_12px_40px_rgba(37,99,235,0.08)] dark:border-gray-800 dark:bg-gray-900"
         >
           {/* Header */}
           <div className="flex items-center justify-between pb-3">
@@ -112,11 +112,11 @@ export function HeroVisual() {
           </div>
 
           {/* Inner Content Area */}
-          <div className="relative mt-1 overflow-hidden rounded-2xl bg-[#F4F3F8] p-5 dark:bg-gray-800/70 sm:p-6">
+          <div className="relative mt-1 overflow-hidden rounded-2xl bg-blue-50/40 p-5 dark:bg-gray-800/70 sm:p-6">
             {/* Background Building Image positioned on the right side */}
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 sm:w-7/12 overflow-hidden rounded-r-2xl">
               <Image
-                src="/ai-business-platform.jpg"
+                src="/ai-business-platform.webp"
                 alt="Modern enterprise digital platform architecture"
                 className="h-full w-full object-cover object-center"
                 width={600}
@@ -125,12 +125,12 @@ export function HeroVisual() {
                 sizes="(max-width: 640px) 50vw, 300px"
               />
               {/* Gradient blend overlay to ensure left text is perfectly clear and legible */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#F4F3F8] via-[#F4F3F8]/80 to-transparent dark:from-gray-800 dark:via-gray-800/80 dark:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/90 via-blue-50/70 to-transparent dark:from-gray-800 dark:via-gray-800/80 dark:to-transparent" />
             </div>
 
             {/* Left Content Area */}
             <div className="relative z-10 max-w-[65%] sm:max-w-[60%]">
-              <div className="font-heading text-xl font-extrabold leading-tight text-[#111827] sm:text-2xl dark:text-white">
+              <div className="font-heading text-xl font-bold leading-tight text-[#111827] sm:text-2xl dark:text-white">
                 Elevate your business online
               </div>
               <p className="mt-2 text-xs leading-relaxed text-[#4B5563] sm:text-sm dark:text-gray-300">
@@ -141,7 +141,7 @@ export function HeroVisual() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Get Started with Zuvigo project discussion"
-                className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#6C5CE7] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:bg-[#5B4BC4] active:scale-95"
+                className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#2563EB] px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:bg-[#1D4ED8] active:scale-95"
               >
                 Get Started
               </a>
@@ -155,7 +155,7 @@ export function HeroVisual() {
           <motion.div
             whileHover={{ y: -3 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col justify-between rounded-3xl border border-[#E5E0F8] bg-white p-4 shadow-[0_12px_40px_rgba(108,92,231,0.08)] dark:border-gray-800 dark:bg-gray-900"
+            className="flex flex-col justify-between rounded-3xl border border-blue-100 bg-white p-4 shadow-[0_12px_40px_rgba(37,99,235,0.08)] dark:border-gray-800 dark:bg-gray-900"
           >
             <div>
               {/* Header */}
@@ -169,7 +169,7 @@ export function HeroVisual() {
               </div>
 
               {/* Inner Kanban Grid */}
-              <div className="mt-1 rounded-2xl bg-[#F4F3F8] p-3.5 dark:bg-gray-800/70 text-[11px]">
+              <div className="mt-1 rounded-2xl bg-blue-50/40 p-3.5 dark:bg-gray-800/70 text-[11px]">
                 <div className="grid grid-cols-3 gap-2">
                   {/* Column 1: New Leads */}
                   <div>
@@ -179,7 +179,7 @@ export function HeroVisual() {
                     <div className="mt-2.5 space-y-2 text-[10px] text-[#4B5563] dark:text-gray-300">
                       {leadList.map((lead, idx) => (
                         <div key={idx} className="flex items-center gap-1.5">
-                          <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#6C5CE7]" />
+                          <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#2563EB]" />
                           <span className="truncate">{lead.name}</span>
                         </div>
                       ))}
@@ -193,7 +193,7 @@ export function HeroVisual() {
                     </span>
                     <div className="mt-2.5 space-y-2 text-[10px] text-[#4B5563] dark:text-gray-300">
                       <div className="flex items-center gap-1.5">
-                        <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#6C5CE7]" />
+                        <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#2563EB]" />
                         <span className="truncate">Nova Solutions</span>
                       </div>
                       <div className="flex items-center gap-1.5">
@@ -227,9 +227,9 @@ export function HeroVisual() {
             <button
               type="button"
               onClick={handleAddLead}
-              className="mt-3.5 flex items-center gap-1.5 px-1 text-xs font-bold text-[#6C5CE7] transition-colors hover:text-[#5B4BC4]"
+              className="mt-3.5 flex items-center gap-1.5 px-1 text-xs font-bold text-[#2563EB] transition-colors hover:text-[#1D4ED8]"
             >
-              <div className="grid h-4 w-4 place-items-center rounded-full border border-[#6C5CE7]">
+              <div className="grid h-4 w-4 place-items-center rounded-full border border-[#2563EB]">
                 <Plus className="h-2.5 w-2.5" />
               </div>
               <span>Add Lead</span>
@@ -240,7 +240,7 @@ export function HeroVisual() {
           <motion.div
             whileHover={{ y: -3 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col justify-between rounded-3xl border border-[#E5E0F8] bg-white p-4 shadow-[0_12px_40px_rgba(108,92,231,0.08)] dark:border-gray-800 dark:bg-gray-900"
+            className="flex flex-col justify-between rounded-3xl border border-blue-100 bg-white p-4 shadow-[0_12px_40px_rgba(37,99,235,0.08)] dark:border-gray-800 dark:bg-gray-900"
           >
             <div>
               {/* Header */}
@@ -254,13 +254,13 @@ export function HeroVisual() {
               </div>
 
               {/* Inner Response Box */}
-              <div className="mt-1 rounded-2xl bg-[#F4F3F8] p-4 text-xs leading-relaxed text-[#4B5563] dark:bg-gray-800/70 dark:text-gray-300">
+              <div className="mt-1 rounded-2xl bg-blue-50/40 p-4 text-xs leading-relaxed text-[#4B5563] dark:bg-gray-800/70 dark:text-gray-300">
                 {aiText}
               </div>
             </div>
 
             {/* Bottom Input Box */}
-            <div className="mt-4 flex items-center gap-2 rounded-2xl bg-[#F4F3F8] pl-3.5 pr-1.5 py-1.5 border border-transparent focus-within:border-[#6C5CE7]/30 dark:bg-gray-800/70">
+            <div className="mt-4 flex items-center gap-2 rounded-2xl bg-blue-50/40 pl-3.5 pr-1.5 py-1.5 border border-transparent focus-within:border-[#2563EB]/40 dark:bg-gray-800/70">
               <input
                 type="text"
                 id="hero-ai-query"
@@ -276,7 +276,7 @@ export function HeroVisual() {
                 type="button"
                 onClick={handleAiAsk}
                 aria-label="Send query to AI Assistant"
-                className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-xl bg-[#6C5CE7] text-white shadow-sm transition-all hover:bg-[#5B4BC4] active:scale-95"
+                className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-xl bg-[#2563EB] text-white shadow-sm transition-all hover:bg-[#1D4ED8] active:scale-95"
               >
                 <Send className="h-3.5 w-3.5" />
               </button>

@@ -21,11 +21,6 @@ import { AuroraCTA } from "@/components/site/AuroraCTA";
 import { motion } from "framer-motion";
 import { SITE } from "@/lib/site";
 import Image from "next/image";
-import panelProduct from "@/assets/panel-product.jpg";
-import panelCrm from "@/assets/panel-crm.jpg";
-import panelAi from "@/assets/panel-ai.jpg";
-import panelMobile from "@/assets/panel-mobile.jpg";
-
 const SERVICES = [
   {
     id: "web",
@@ -33,7 +28,7 @@ const SERVICES = [
     tag: "Web & Product",
     title: "Websites & products people actually use",
     intro: "From high-converting marketing sites to full custom web applications, we design and build for performance, SEO, and revenue.",
-    image: panelProduct,
+    image: "/isometric-software-dev.webp",
     deliverables: [
       "Brand-aligned marketing sites",
       "Headless commerce & storefronts",
@@ -47,7 +42,7 @@ const SERVICES = [
     tag: "CRM & ERP",
     title: "Internal platforms shaped around how your team really works",
     intro: "We build custom CRM, ERP and internal tools that model your actual process — not the process your software vendor wishes you had.",
-    image: panelCrm,
+    image: "/isometric-saas-tools.webp",
     deliverables: [
       "Custom CRM with your real pipeline",
       "ERP for daily operations",
@@ -61,7 +56,7 @@ const SERVICES = [
     tag: "AI & Automation",
     title: "AI agents & automation that survive real customers",
     intro: "We ship AI in production — with retrieval, guardrails, and observability — so you get the win without the incident.",
-    image: panelAi,
+    image: "/isometric-ai-automation.webp",
     deliverables: [
       "AI chat & voice agents",
       "Workflow automation (n8n, Zapier, custom)",
@@ -70,17 +65,17 @@ const SERVICES = [
     ],
   },
   {
-    id: "mobile",
-    icon: Smartphone,
-    tag: "Mobile Apps",
-    title: "Native-feeling apps on iOS & Android",
-    intro: "Cross-platform mobile from a single codebase — with the polish, gestures and performance users expect.",
-    image: panelMobile,
+    id: "cloud",
+    icon: Layers,
+    tag: "Cloud & Infrastructure",
+    title: "High-throughput cloud architecture and resilient microservices",
+    intro: "Scalable cloud infrastructure, automated failover, and microservices engineered for 99.99% uptime and zero maintenance headaches.",
+    image: "/isometric-cloud-infra.webp",
     deliverables: [
-      "iOS & Android from one codebase",
-      "Native modules where they matter",
-      "App Store & Play submission",
-      "Ongoing scaling & maintenance",
+      "Multi-region cloud infrastructure",
+      "Automated CI/CD & zero downtime deployments",
+      "Enterprise security shields & compliance",
+      "Ongoing 24/7 observability & scaling",
     ],
   },
 ];
@@ -158,13 +153,14 @@ export function ServicesPage() {
                 <Reveal delay={0.15}>
                   <div className="relative">
                     <div aria-hidden className="absolute -inset-8 -z-10 rounded-[3rem] bg-primary/10 blur-3xl" />
-                    <div className="glass overflow-hidden rounded-3xl p-2 shadow-[var(--shadow-elevated)]">
+                    <div className="glass overflow-hidden rounded-3xl p-2 shadow-[var(--shadow-elevated)] border border-slate-200/80 bg-white">
                       <Image
                         src={s.image}
                         alt={s.title}
-                        className="aspect-square w-full rounded-2xl object-cover"
+                        width={700}
+                        height={700}
+                        className="aspect-square w-full rounded-2xl object-contain bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 p-4"
                         sizes="(min-width: 1024px) 40vw, 100vw"
-                        placeholder="blur"
                       />
                     </div>
                   </div>
@@ -184,7 +180,7 @@ export function ServicesPage() {
                 <Calculator className="h-3.5 w-3.5" />
                 Interactive Scoping
               </div>
-              <h2 className="mt-4 font-heading text-3xl font-extrabold tracking-tight md:text-4xl text-foreground">
+              <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight md:text-4xl text-foreground">
                 Project Scope & Quick Estimate Calculator
               </h2>
               <p className="mt-3 text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
@@ -408,7 +404,7 @@ function ScopeEstimateCalculator() {
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-bold truncate">{item.label}</span>
                         {item.highlight && (
-                          <span className="rounded-full bg-primary/20 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-primary">
+                          <span className="rounded-full bg-primary/20 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-primary">
                             Flagship
                           </span>
                         )}
@@ -469,7 +465,7 @@ function ScopeEstimateCalculator() {
                     <div>
                       <div className="flex items-center justify-between gap-1">
                         <span
-                          className={`rounded-full px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider ${active
+                          className={`rounded-full px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider ${active
                               ? "bg-primary text-primary-foreground"
                               : "bg-accent text-muted-foreground"
                             }`}
@@ -525,15 +521,15 @@ function ScopeEstimateCalculator() {
         </div>
 
         {/* Right Output Blueprint Cockpit Card */}
-        <div className="lg:col-span-5 relative overflow-hidden rounded-3xl border border-[#6C5CE7]/30 bg-gradient-to-br from-[#0F0C20] via-[#161233] to-[#251B4E] p-6 sm:p-8 text-white shadow-[0_20px_50px_rgba(108,92,231,0.25)] flex flex-col justify-between h-full">
+        <div className="lg:col-span-5 relative overflow-hidden rounded-3xl border border-blue-500/30 bg-gradient-to-br from-[#0B1221] via-[#0F172A] to-[#1E293B] p-6 sm:p-8 text-white shadow-[0_20px_50px_rgba(37,99,235,0.25)] flex flex-col justify-between h-full">
           {/* Subtle Ambient Glow */}
-          <div className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#6C5CE7]/30 blur-2xl" />
+          <div className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#2563EB]/25 blur-2xl" />
           <div className="pointer-events-none absolute -left-12 -bottom-12 h-44 w-44 rounded-full bg-[#10B981]/20 blur-2xl" />
 
           <div className="relative z-10 space-y-6">
             {/* Header Badge */}
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-[#C4B5FD]">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-blue-300">
                 Calculated Scope Blueprint
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/20 px-3 py-1 text-[11px] font-bold text-emerald-300 backdrop-blur-sm border border-emerald-500/30">
@@ -546,8 +542,8 @@ function ScopeEstimateCalculator() {
             <div>
               <span className="text-xs font-medium text-gray-300">Estimated Sprint Duration:</span>
               <div className="mt-1 flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-black font-heading tracking-tight text-white flex items-center gap-2">
-                  <Clock className="h-7 w-7 text-[#A78BFA]" />
+                <span className="text-3xl sm:text-4xl font-bold font-heading tracking-tight text-white flex items-center gap-2">
+                  <Clock className="h-7 w-7 text-blue-400" />
                   {currentEst.time}
                 </span>
               </div>
@@ -559,7 +555,7 @@ function ScopeEstimateCalculator() {
                   <span className="text-emerald-300 font-mono text-[10px]">Staging Preview Weekly</span>
                 </div>
                 <div className="grid grid-cols-3 gap-1.5 text-[10px] text-center font-medium">
-                  <div className="rounded-lg bg-white/10 p-1.5 text-[#C4B5FD] border border-[#6C5CE7]/30">
+                  <div className="rounded-lg bg-white/10 p-1.5 text-blue-300 border border-blue-500/30">
                     {currentEst.phase1}
                   </div>
                   <div className="rounded-lg bg-white/10 p-1.5 text-gray-200 border border-white/10">
@@ -584,11 +580,11 @@ function ScopeEstimateCalculator() {
 
             {/* Team Pod Breakdown */}
             <div className="rounded-2xl border border-white/10 bg-white/5 p-3.5">
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#C4B5FD] block mb-1">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-300 block mb-1">
                 Dedicated Engineering Pod
               </span>
               <p className="text-xs text-gray-200 flex items-center gap-2">
-                <Users className="h-4 w-4 text-[#A78BFA] flex-shrink-0" />
+                <Users className="h-4 w-4 text-blue-400 flex-shrink-0" />
                 <span>{capInfo.team}</span>
               </p>
             </div>
@@ -614,7 +610,7 @@ function ScopeEstimateCalculator() {
           <div className="mt-8 pt-5 border-t border-white/10 relative z-10">
             <Link
               href={`${SITE.bookingUrl}?a1=${encodeURIComponent(`${capability}-${scale}-${timeline}`)}`}
-              className="group relative inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#6C5CE7] to-[#8075FF] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(108,92,231,0.5)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(108,92,231,0.7)] active:scale-95"
+              className="group relative inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-6 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(37,99,235,0.6)] active:scale-95"
             >
               <span>Let&apos;s Talk About Scope</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

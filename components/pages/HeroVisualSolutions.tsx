@@ -19,7 +19,7 @@ export function HeroVisualSolutions() {
       {/* Background Ambient Glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-purple-300/20 to-indigo-400/20 blur-3xl opacity-80"
+        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
 
       {/* SVG Connecting Circuit Lines */}
@@ -30,8 +30,8 @@ export function HeroVisualSolutions() {
       >
         <defs>
           <linearGradient id="solGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#818CF8" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#A855F7" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#2563EB" stopOpacity="0.8" />
           </linearGradient>
         </defs>
 
@@ -53,7 +53,7 @@ export function HeroVisualSolutions() {
         />
 
         {/* Central junction dot */}
-        <circle cx="330" cy="240" r="3.5" fill="#6366F1" />
+        <circle cx="330" cy="240" r="3.5" fill="#2563EB" />
       </svg>
 
       {/* Floating Badge Node 1: "Websites" */}
@@ -61,9 +61,9 @@ export function HeroVisualSolutions() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
-        className="absolute top-4 left-16 z-20 hidden sm:flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-md border border-purple-100 backdrop-blur-xs"
+        className="absolute top-4 left-16 z-20 hidden sm:flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-md border border-blue-100 backdrop-blur-xs"
       >
-        <div className="grid h-5 w-5 place-items-center rounded-full bg-purple-50 text-[#7C3AED]">
+        <div className="grid h-5 w-5 place-items-center rounded-full bg-blue-50 text-[#2563EB]">
           <Globe className="h-3 w-3" />
         </div>
         <span>Websites</span>
@@ -128,7 +128,7 @@ export function HeroVisualSolutions() {
             {/* AI Cloud Solutions Architecture Screen */}
             <div className="relative h-28 w-full overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group">
               <Image
-                src="/ai-cloud-solutions.jpg"
+                src="/ai-cloud-solutions.webp"
                 alt="AI Cloud Architecture"
                 fill
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -157,7 +157,7 @@ export function HeroVisualSolutions() {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
               <div className="flex items-center gap-1.5">
-                <span className="text-[11px] font-extrabold tracking-tight text-gray-900">zuvigo</span>
+                <span className="text-[11px] font-bold tracking-tight text-gray-900">zuvigo</span>
                 <span className="text-[11px] text-gray-400">·</span>
                 <span className="text-[11px] font-medium text-gray-600">Project Overview</span>
               </div>
@@ -188,7 +188,7 @@ export function HeroVisualSolutions() {
                     <div className="text-[11px] font-bold text-gray-900">8</div>
                     <div className="text-[8px] text-gray-500 truncate">Team Members</div>
                   </div>
-                  <div className="rounded-lg bg-purple-50/60 border border-purple-100/60 p-1">
+                  <div className="rounded-lg bg-sky-50/60 border border-sky-100/60 p-1">
                     <div className="text-[11px] font-bold text-gray-900">24</div>
                     <div className="text-[8px] text-gray-500 truncate">Tasks Done</div>
                   </div>

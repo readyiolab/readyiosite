@@ -37,6 +37,9 @@ export function SolutionsPage() {
       {/* 2. FOUR SOLUTIONS ROW WITH RICH HIGHLIGHTS */}
       <FourSolutionsRow />
 
+      {/* 2.5 ENGINEERING & ARCHITECTURE SHOWCASE */}
+      <EngineeringShowcaseSection />
+
       {/* 3. WHAT WE BUILD (2x3 GRID WITH ACCENTS) */}
       <WhatWeBuildSection />
 
@@ -60,7 +63,7 @@ function SolutionsHero() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/4 right-10 -z-10 h-72 w-72 rounded-full bg-purple-200/30 blur-3xl"
+        className="pointer-events-none absolute top-1/4 right-10 -z-10 h-72 w-72 rounded-full bg-blue-200/30 blur-3xl"
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -68,15 +71,15 @@ function SolutionsHero() {
           {/* Left Text */}
           <div className="relative z-10">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200/90 bg-gradient-to-r from-purple-50 to-indigo-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#7C3AED] shadow-2xs">
-              <span className="h-2 w-2 rounded-full bg-[#7C3AED] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-gradient-to-r from-blue-50 to-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2563EB] shadow-2xs">
+              <span className="h-2 w-2 rounded-full bg-[#2563EB] animate-pulse" />
               SOLUTIONS BUILT FOR YOUR BUSINESS
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[52px] xl:text-[58px]">
+            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[52px] xl:text-[58px]">
               Custom digital solutions for{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 bg-clip-text text-transparent">
                 real business needs.
               </span>
             </h1>
@@ -92,7 +95,7 @@ function SolutionsHero() {
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
               >
                 <span className="flex items-center gap-2 rounded-full bg-[#0B0F19] px-7 py-3.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -214,6 +217,149 @@ function FourSolutionsRow() {
   );
 }
 
+/* ---------------- 2.5 Engineering & Architecture Showcase ---------------- */
+function EngineeringShowcaseSection() {
+  return (
+    <section className="relative py-16 sm:py-24 border-t border-slate-100 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mb-14">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+            ENGINEERED FOR SCALE
+          </span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+            Robust architecture &amp; intelligent systems
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+            Every solution we build is backed by industrial-grade cloud infrastructure and modern AI capabilities designed to evolve with your business.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card 1: Cloud & API Microservices */}
+          <div className="group flex flex-col justify-between rounded-3xl border border-slate-200/90 bg-gradient-to-b from-white via-slate-50/20 to-white p-7 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-300">
+            <div className="relative mb-6 h-60 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
+              <Image
+                src="/isometric-api-infrastructure.webp"
+                alt="Cloud database, REST APIs, and microservices architecture"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 33vw"
+              />
+            </div>
+
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+                APIS &amp; DATA SYSTEMS
+              </span>
+              <h3 className="mt-1 text-xl font-bold tracking-tight text-gray-950">
+                Cloud Architecture &amp; Scalable APIs
+              </h3>
+              <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-gray-600">
+                Multi-region cloud clusters, real-time REST/GraphQL APIs, and high-throughput databases built for 99.99% uptime.
+              </p>
+
+              <ul className="mt-5 space-y-2 text-xs text-slate-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Automated container scaling</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Real-time traffic load balancing</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Sub-millisecond query caching</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Card 2: Cyber Security & Authentication */}
+          <div className="group flex flex-col justify-between rounded-3xl border border-blue-200/90 bg-gradient-to-b from-white via-blue-50/20 to-white p-7 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-300">
+            <div className="relative mb-6 h-60 w-full overflow-hidden rounded-2xl border border-blue-100/70 bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
+              <Image
+                src="/isometric-cyber-security.webp"
+                alt="Biometric verification, cybersecurity shield, and encrypted authentication"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 33vw"
+              />
+            </div>
+
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+                CYBERSECURITY &amp; COMPLIANCE
+              </span>
+              <h3 className="mt-1 text-xl font-bold tracking-tight text-gray-950">
+                Enterprise Security &amp; Biometrics
+              </h3>
+              <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-gray-600">
+                Zero-trust authentication, biometric identity gates, and SHA-256 cryptographic audit trails to protect your operations.
+              </p>
+
+              <ul className="mt-5 space-y-2 text-xs text-slate-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Zero-Trust RBAC &amp; SSO</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Biometric authentication gates</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>SOC-2 &amp; GDPR compliance ready</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Card 3: AI & Autonomous Workflows */}
+          <div className="group flex flex-col justify-between rounded-3xl border border-slate-200/90 bg-gradient-to-b from-white via-blue-50/20 to-white p-7 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-300">
+            <div className="relative mb-6 h-60 w-full overflow-hidden rounded-2xl border border-blue-100/60 bg-gradient-to-b from-blue-50/30 via-white to-slate-50/30">
+              <Image
+                src="/isometric-ai-automation.webp"
+                alt="AI automation, smart bots, and automated pipeline illustration"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 33vw"
+              />
+            </div>
+
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
+                WORKFLOW AUTOMATION
+              </span>
+              <h3 className="mt-1 text-xl font-bold tracking-tight text-gray-950">
+                Intelligent AI &amp; Automation
+              </h3>
+              <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-gray-600">
+                Eliminate manual overhead with custom autonomous agents, document intelligence, and multi-system automation.
+              </p>
+
+              <ul className="mt-5 space-y-2 text-xs text-slate-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Autonomous AI review guards</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Instant CRM &amp; ERP syncing</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                  <span>Real-time anomaly self-healing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- 3. What We Build Section (Rich 2x3 Grid) ---------------- */
 function WhatWeBuildSection() {
   const cards = [
@@ -264,7 +410,7 @@ function WhatWeBuildSection() {
             <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2563EB] border border-blue-100/70">
               WHAT WE BUILD
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               Digital solutions for every stage of your business.
             </h2>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-md">
@@ -348,10 +494,10 @@ function HowWeWorkSection() {
     <section id="how-we-work" className="relative py-20 sm:py-28 border-t border-slate-100 bg-slate-50/40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#7C3AED]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
             HOW WE WORK
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
             A clear, proven process from idea to impact.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -367,18 +513,18 @@ function HowWeWorkSection() {
             return (
               <div
                 key={s.num}
-                className="group relative rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-md"
+                className="group relative rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <span className="text-lg font-black tracking-tight text-purple-600/70 font-mono">
+                    <span className="text-lg font-bold tracking-tight text-[#2563EB]/70 font-mono">
                       {s.num}
                     </span>
-                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-purple-50 text-[#7C3AED] border border-purple-100 group-hover:scale-105 transition-transform">
+                    <div className="grid h-9 w-9 place-items-center rounded-xl bg-blue-50 text-[#2563EB] border border-blue-100 group-hover:scale-105 transition-transform">
                       <Icon className="h-4 w-4" />
                     </div>
                   </div>
-                  <h4 className="text-base font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors">
+                  <h4 className="text-base font-bold text-gray-900 group-hover:text-[#2563EB] transition-colors">
                     {s.title}
                   </h4>
                   <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">

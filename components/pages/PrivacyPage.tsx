@@ -8,11 +8,11 @@ export function PrivacyPage() {
         {/* Page Header */}
         <Reveal>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#6C5CE7]/30 bg-[#F0EDF9] px-4 py-1 text-xs font-bold uppercase tracking-widest text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-widest text-[#2563EB] dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-300">
               <ShieldCheck className="h-3.5 w-3.5" />
               LEGAL & COMPLIANCE
             </span>
-            <h1 className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h1 className="mt-4 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Privacy & Cookie Policy
             </h1>
             <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
@@ -31,7 +31,7 @@ export function PrivacyPage() {
           <Reveal>
             <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <FileText className="h-5 w-5" />
                 </div>
                 <h2 className="font-heading text-xl font-bold text-[#111827] dark:text-white">
@@ -53,7 +53,7 @@ export function PrivacyPage() {
           <Reveal>
             <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Cookie className="h-5 w-5" />
                 </div>
                 <h2 className="font-heading text-xl font-bold text-[#111827] dark:text-white">
@@ -75,7 +75,7 @@ export function PrivacyPage() {
           <Reveal>
             <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Settings className="h-5 w-5" />
                 </div>
                 <h2 className="font-heading text-xl font-bold text-[#111827] dark:text-white">
@@ -144,7 +144,7 @@ export function PrivacyPage() {
           <Reveal>
             <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Eye className="h-5 w-5" />
                 </div>
                 <h2 className="font-heading text-xl font-bold text-[#111827] dark:text-white">
@@ -175,7 +175,7 @@ export function PrivacyPage() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                     <BarChart2 className="h-5 w-5" />
                   </div>
                   <h2 className="font-heading text-lg font-bold text-[#111827] dark:text-white">
@@ -189,7 +189,7 @@ export function PrivacyPage() {
 
               <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                     <Lock className="h-5 w-5" />
                   </div>
                   <h2 className="font-heading text-lg font-bold text-[#111827] dark:text-white">
@@ -208,7 +208,7 @@ export function PrivacyPage() {
             <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center justify-between border-b border-gray-100 pb-4 dark:border-gray-800">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                     <RefreshCw className="h-5 w-5" />
                   </div>
                   <h2 className="font-heading text-xl font-bold text-[#111827] dark:text-white">
@@ -223,7 +223,7 @@ export function PrivacyPage() {
                 <p>
                   If you have questions or wish to exercise your data privacy rights, please reach out to us at:
                 </p>
-                <div className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#F0EDF9] px-4 py-2 text-xs font-bold text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                <div className="mt-3 inline-flex items-center gap-2 rounded-xl bg-blue-50 px-4 py-2 text-xs font-bold text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Mail className="h-4 w-4" />
                   <span>hello@zuvigo.com</span>
                 </div>

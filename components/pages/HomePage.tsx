@@ -38,7 +38,7 @@ function HeroSection() {
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
         <Image
-          src="/saas-growth-dashboard.png"
+          src="/saas-growth-dashboard.webp"
           alt="SaaS Growth Dashboard Background"
           fill
           priority
@@ -53,7 +53,7 @@ function HeroSection() {
       {/* Top subtle radiant background mesh */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[500px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-50/70 via-indigo-50/40 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[500px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-50/70 via-blue-50/30 to-transparent blur-3xl"
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -61,13 +61,13 @@ function HeroSection() {
           {/* Left Text Column */}
           <div className="relative z-10">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200/80 bg-purple-50/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#7C3AED]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-blue-50/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
               TECHNOLOGY FOR A BRIGHTER TOMORROW
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[52px] xl:text-[58px]">
+            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.15] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
               Websites, applications and software that make business{" "}
               <span className="text-[#2563EB]">work better.</span>
             </h1>
@@ -83,7 +83,7 @@ function HeroSection() {
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <Link
                 href="/solutions"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 to-blue-500 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
               >
                 <span className="flex items-center gap-2 rounded-full bg-[#0B0F19] px-7 py-3.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -101,18 +101,7 @@ function HeroSection() {
               </Link>
             </div>
 
-            {/* Client Rating */}
-            <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-gray-500">
-              <div className="flex items-center text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="font-semibold text-gray-800">4.9 / 5</span>
-              <span>client rating</span>
-              <span className="text-gray-300">|</span>
-              <span>Trusted by growing businesses worldwide</span>
-            </div>
+
           </div>
 
           {/* Right Hero Graphic Mockup */}
@@ -136,7 +125,7 @@ function CapabilitiesSection() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               OUR CAPABILITIES
             </span>
-            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Two ways we help businesses
             </h2>
           </div>
@@ -146,53 +135,84 @@ function CapabilitiesSection() {
           </p>
         </div>
 
-        {/* 2 Split Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* 2 Split Showcase Cards with 3D Isometric Illustrations */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1: Solutions */}
           <Link
             href="/solutions"
-            className="group relative flex items-center justify-between rounded-2xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.12)]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
           >
-            <div className="flex items-start gap-4 sm:gap-5">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50/70 text-[#2563EB] shadow-xs group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all">
-                <Monitor className="h-7 w-7" />
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#2563EB] transition-colors">
+            {/* Top Visual Showcase */}
+            <div className="relative mb-6 h-64 sm:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/50 via-white to-slate-50/30">
+              <Image
+                src="/isometric-software-dev.webp"
+                alt="Solutions — 3D isometric custom software development, cloud servers, and analytics"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+
+            </div>
+
+            {/* Content Details */}
+            <div>
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
                   Solutions — built for your business
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed max-w-md">
-                  Custom websites, web applications, cloud and desktop software,
-                  and business automation tailored to your goals.
-                </p>
               </div>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Custom websites, scalable web applications, cloud infrastructure, and autonomous AI integrations engineered around your exact operational workflows.
+              </p>
+
+
             </div>
-            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] group-hover:translate-x-1 transition-all">
-              <ChevronRight className="h-5 w-5" />
+
+            {/* Card Action Link */}
+            <div className="mt-7 flex items-center justify-between border-t border-slate-100 pt-5 text-sm font-bold text-[#2563EB]">
+              <span>Explore Custom Solutions</span>
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </Link>
 
           {/* Card 2: Software */}
           <Link
             href="/software"
-            className="group relative flex items-center justify-between rounded-2xl border border-purple-200/80 bg-gradient-to-br from-white via-purple-50/20 to-indigo-50/20 p-7 sm:p-9 shadow-[0_4px_20px_rgba(124,58,237,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-300 hover:shadow-[0_20px_40px_-15px_rgba(124,58,237,0.15)]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_10px_30px_rgba(37,99,235,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
           >
-            <div className="flex items-start gap-4 sm:gap-5">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-purple-100 bg-gradient-to-br from-purple-50 to-indigo-50 text-[#7C3AED] shadow-xs group-hover:scale-105 group-hover:bg-[#7C3AED] group-hover:text-white group-hover:border-[#7C3AED] transition-all">
-                <Box className="h-7 w-7" />
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors">
+            {/* Top Visual Showcase */}
+            <div className="relative mb-6 h-64 sm:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
+              <Image
+                src="/isometric-saas-tools.webp"
+                alt="Software — 3D isometric productivity tools, VigoPDF, digital contracts and eSign"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+
+            </div>
+
+            {/* Content Details */}
+            <div>
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
                   Software — built by Zuvigo
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed max-w-md">
-                  Powerful productivity tools like VigoPDF, eSign, VigoFlow
-                  and more, designed for modern teams.
-                </p>
               </div>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                Ready-to-deploy software products including VigoPDF, digital eSign, and document automation workflows designed to empower modern business teams.
+              </p>
+
             </div>
-            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white border border-purple-100 text-[#7C3AED] group-hover:bg-[#7C3AED] group-hover:text-white group-hover:border-[#7C3AED] group-hover:translate-x-1 transition-all">
-              <ChevronRight className="h-5 w-5" />
+
+            {/* Card Action Link */}
+            <div className="mt-7 flex items-center justify-between border-t border-slate-100 pt-5 text-sm font-bold text-[#2563EB]">
+              <span>Explore Software Suite</span>
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-blue-50 text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </Link>
         </div>
@@ -206,95 +226,133 @@ function SolutionsOverviewSection() {
   const cards = [
     {
       title: "Website Development",
-      desc: "Modern, high-converting websites for growing businesses.",
-      badge: "High-Performance",
+      desc: "High-converting, responsive websites engineered for ultra-fast speeds, SEO authority, and seamless user experiences.",
       icon: Monitor,
       href: "/solutions#websites",
+      isPrimary: true,
     },
     {
       title: "Web Application Development",
-      desc: "Custom web applications tailored to your workflows.",
-      badge: "Custom SaaS",
+      desc: "Custom SaaS applications, client portals, and bespoke web software built to streamline complex business operations.",
       icon: Box,
       href: "/solutions#web-apps",
+      isPrimary: false,
     },
     {
-      title: "Cloud & Desktop Software Development",
-      desc: "Scalable cloud and desktop software solutions.",
-      badge: "Resilient Arch",
+      title: "Cloud & Desktop Software",
+      desc: "Scalable cloud infrastructure, desktop software, and high-throughput microservices architected for 99.99% uptime.",
       icon: Cloud,
       href: "/solutions#cloud-desktop",
+      isPrimary: false,
     },
     {
       title: "Business & AI Automation",
-      desc: "Automate processes and unlock new efficiency with AI.",
-      badge: "AI Powered",
+      desc: "Autonomous AI workflows, custom integrations, and smart automations that eliminate manual tasks and accelerate growth.",
       icon: Zap,
       href: "/solutions#automation",
+      isPrimary: false,
     },
   ];
 
   return (
-    <section className="relative py-20 sm:py-24 border-t border-slate-100 bg-white">
+    <section className="relative py-20 sm:py-24 lg:py-28 border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-start">
-          {/* Left Column */}
-          <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+        {/* Header matching reference image: Title & Subtitle on left, Pill Button on right */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#2563EB]">
               SOLUTIONS
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-snug">
+            <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-950 leading-[1.15]">
               Custom development for real business impact
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
               We design and build technology solutions that solve real problems,
-              streamline operations and help your business grow.
+              streamline operations, and help your business grow.
             </p>
-            <div className="pt-3">
-              <Link
-                href="/solutions"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0B0F19] px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-black transition-colors"
-              >
-                Explore all solutions
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
           </div>
 
-          {/* Right 4-Card Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {cards.map((c) => {
-              const Icon = c.icon;
+          <div className="shrink-0 self-start md:self-end">
+            <Link
+              href="/solutions"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0B1221] px-6 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-[#2563EB] transition-all duration-300"
+            >
+              Explore all solutions
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* 4 Cards Grid matching reference image */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((c) => {
+            const Icon = c.icon;
+            if (c.isPrimary) {
               return (
                 <Link
                   key={c.title}
                   href={c.href}
-                  className="group rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md flex flex-col justify-between"
+                  className="group relative flex flex-col justify-between rounded-3xl bg-[#0B1221] p-7 sm:p-8 text-white shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-950/20 border border-slate-800 min-h-[380px] sm:min-h-[420px]"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="grid h-11 w-11 place-items-center rounded-xl border border-blue-100 bg-blue-50/70 text-[#2563EB] group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
-                        {c.badge}
-                      </span>
+                    {/* Minimal outline icon */}
+                    <div className="text-white/90 group-hover:text-white transition-colors">
+                      <Icon className="h-8 w-8 stroke-[1.75]" />
                     </div>
-                    <h4 className="text-base font-bold text-gray-900 group-hover:text-[#2563EB] transition-colors">
+
+                    {/* Card Title */}
+                    <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-white">
                       {c.title}
-                    </h4>
-                    <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    </h3>
+
+                    {/* Description */}
+                    <p className="mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
                       {c.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-[#2563EB]">
-                    <span>Learn more</span>
-                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+
+                  {/* Bottom Pill Button */}
+                  <div className="mt-8 pt-2">
+                    <span className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs sm:text-sm font-semibold text-gray-950 shadow-xs group-hover:bg-slate-100 transition-colors">
+                      Learn More
+                    </span>
                   </div>
                 </Link>
               );
-            })}
-          </div>
+            }
+
+            return (
+              <Link
+                key={c.title}
+                href={c.href}
+                className="group relative flex flex-col justify-between rounded-3xl bg-[#F8FAFC] p-7 sm:p-8 text-gray-900 shadow-xs border border-slate-200/90 transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-200/60 min-h-[380px] sm:min-h-[420px]"
+              >
+                <div>
+                  {/* Minimal outline icon */}
+                  <div className="text-gray-900 group-hover:text-[#2563EB] transition-colors">
+                    <Icon className="h-8 w-8 stroke-[1.75]" />
+                  </div>
+
+                  {/* Card Title */}
+                  <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
+                    {c.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-600">
+                    {c.desc}
+                  </p>
+                </div>
+
+                {/* Bottom Pill Button */}
+                <div className="mt-8 pt-2">
+                  <span className="inline-flex items-center justify-center rounded-full bg-[#0B1221] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs group-hover:bg-[#2563EB] transition-colors">
+                    Learn More
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

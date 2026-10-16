@@ -24,7 +24,7 @@ export function HeroVisualSoftware() {
       {/* Background Ambient Glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-purple-300/20 to-indigo-400/20 blur-3xl opacity-80"
+        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
 
       {/* SVG Connecting Circuit Lines */}
@@ -35,8 +35,8 @@ export function HeroVisualSoftware() {
       >
         <defs>
           <linearGradient id="softGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#818CF8" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#A855F7" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#2563EB" stopOpacity="0.8" />
           </linearGradient>
         </defs>
 
@@ -58,7 +58,7 @@ export function HeroVisualSoftware() {
         />
 
         {/* Center dot */}
-        <circle cx="340" cy="220" r="3.5" fill="#6366F1" />
+        <circle cx="340" cy="220" r="3.5" fill="#2563EB" />
       </svg>
 
       {/* Floating Badge Node 1: PDF Document Icon */}
@@ -76,7 +76,7 @@ export function HeroVisualSoftware() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.25 }}
-        className="absolute top-28 left-20 z-20 hidden sm:flex items-center justify-center h-9 w-9 rounded-full bg-white shadow-md border border-purple-100 text-purple-600"
+        className="absolute top-28 left-20 z-20 hidden sm:flex items-center justify-center h-9 w-9 rounded-full bg-white shadow-md border border-blue-100 text-[#2563EB]"
       >
         <PenLine className="h-4 w-4" />
       </motion.div>
@@ -102,7 +102,7 @@ export function HeroVisualSoftware() {
           {/* Top Bar with Tabs and Share */}
           <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-3 text-xs">
             <div className="flex items-center gap-3">
-              <span className="font-extrabold text-[#2563EB] text-sm tracking-tight">
+              <span className="font-bold text-[#2563EB] text-sm tracking-tight">
                 VigoPDF
               </span>
               <div className="hidden sm:flex items-center gap-2 text-[11px] font-medium text-gray-500">
@@ -111,7 +111,7 @@ export function HeroVisualSoftware() {
                 <span className="hover:text-gray-900 cursor-pointer">Convert</span>
                 <span className="hover:text-gray-900 cursor-pointer">Organize</span>
                 <span className="hover:text-gray-900 cursor-pointer">Sign</span>
-                <span className="hover:text-gray-900 cursor-pointer text-[#7C3AED] flex items-center gap-0.5">
+                <span className="hover:text-gray-900 cursor-pointer text-[#2563EB] flex items-center gap-0.5">
                   <Bot className="h-3 w-3" /> AI Tools
                 </span>
               </div>
@@ -135,7 +135,7 @@ export function HeroVisualSoftware() {
               <span className="px-1.5 py-0.5 hover:text-gray-800">Starred</span>
               <span className="px-1.5 py-0.5 hover:text-gray-800">Shared</span>
               <span className="px-1.5 py-0.5 hover:text-gray-800">Templates</span>
-              <span className="px-1.5 py-0.5 text-purple-600 font-semibold">AI Assistant</span>
+              <span className="px-1.5 py-0.5 text-[#2563EB] font-semibold">AI Assistant</span>
             </div>
 
             {/* Center Document Mockup */}
@@ -147,7 +147,7 @@ export function HeroVisualSoftware() {
                 </p>
                 <div className="mt-2 relative h-20 w-full overflow-hidden rounded-lg border border-gray-100 group">
                   <Image
-                    src="/ai-document-suite.jpg"
+                    src="/ai-document-suite.webp"
                     alt="AI Document Suite"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -157,7 +157,7 @@ export function HeroVisualSoftware() {
                   <motion.div
                     animate={{ y: ["-100%", "200%"] }}
                     transition={{ duration: 3.8, repeat: Infinity, ease: "linear" }}
-                    className="pointer-events-none absolute inset-x-0 h-6 bg-gradient-to-b from-transparent via-purple-400/25 to-transparent"
+                    className="pointer-events-none absolute inset-x-0 h-6 bg-gradient-to-b from-transparent via-blue-400/25 to-transparent"
                   />
                 </div>
               </div>
@@ -229,7 +229,7 @@ export function HeroVisualSoftware() {
             <div className="flex items-center gap-2">
               <div className="flex -space-x-1.5">
                 <span className="h-4 w-4 rounded-full bg-blue-400 border border-white" />
-                <span className="h-4 w-4 rounded-full bg-purple-400 border border-white" />
+                <span className="h-4 w-4 rounded-full bg-sky-400 border border-white" />
               </div>
               <a
                 href="https://pdf.zuvigo.com/diagrams"
@@ -253,7 +253,7 @@ export function HeroVisualSoftware() {
               <span className="text-gray-400">→</span>
 
               {/* Decision */}
-              <div className="rounded-lg bg-indigo-50 border border-indigo-200 px-3 py-1.5 text-indigo-900 shadow-xs">
+              <div className="rounded-lg bg-blue-50 border border-blue-200 px-3 py-1.5 text-blue-900 shadow-xs">
                 User authenticated?
               </div>
 

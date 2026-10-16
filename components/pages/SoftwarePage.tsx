@@ -62,7 +62,7 @@ function SoftwareHero() {
       {/* Radiant ambient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[1100px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-100/60 via-purple-50/40 to-transparent blur-3xl opacity-80"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[1100px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-100/60 via-sky-50/40 to-transparent blur-3xl opacity-80"
       />
       <div
         aria-hidden
@@ -74,15 +74,15 @@ function SoftwareHero() {
           {/* Left Text */}
           <div className="relative z-10">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200/90 bg-gradient-to-r from-purple-50 to-indigo-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#7C3AED] shadow-2xs">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-gradient-to-r from-blue-50 to-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2563EB] shadow-2xs">
               <span className="text-[11px]">💬</span>
               SOFTWARE BUILT BY ZUVIGO
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-4xl font-extrabold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
+            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
               Practical software for documents, workflows{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 bg-clip-text text-transparent">
                 and everyday productivity.
               </span>
             </h1>
@@ -101,7 +101,7 @@ function SoftwareHero() {
                 href="https://pdf.zuvigo.com/workspace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.6)] active:scale-[0.98]"
+                className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.6)] active:scale-[0.98]"
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 <span>Explore Productivity Suite</span>
@@ -190,7 +190,7 @@ function SixProductsSection() {
           <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2563EB] border border-blue-100/70">
             OUR SOFTWARE
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
             Six products. One connected experience.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -210,7 +210,7 @@ function SixProductsSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group relative flex items-start justify-between rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_-12px_rgba(37,99,235,0.18)] ${p.flagship
-                  ? "border-purple-200/90 bg-gradient-to-br from-white via-purple-50/20 to-indigo-50/30 shadow-[0_8px_25px_rgba(124,58,237,0.08)]"
+                  ? "border-blue-200/90 bg-gradient-to-br from-white via-blue-50/20 to-sky-50/30 shadow-[0_8px_25px_rgba(37,99,235,0.08)]"
                   : "border-slate-200/80 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:border-blue-300"
                   }`}
               >
@@ -224,7 +224,7 @@ function SixProductsSection() {
                         {p.title}
                       </h3>
                       {p.flagship ? (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 px-2.5 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white shadow-xs">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white shadow-xs">
                           ✦ FLAGSHIP
                         </span>
                       ) : (
@@ -287,17 +287,50 @@ function DeploymentOptionsSection() {
   return (
     <section className="relative py-20 sm:py-28 border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+        <div className="max-w-2xl mb-12">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
             THREE WAYS TO USE OUR SOFTWARE
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
             Built for how you work
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
             Choose the deployment option that fits your team's needs. Same
             powerful software, your way.
           </p>
+        </div>
+
+        {/* Unified Ecosystem Showcase Banner with 3D Isometric SaaS & Tools Illustration */}
+        <div className="mb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-blue-200/90 bg-gradient-to-br from-white via-blue-50/25 to-sky-50/20 p-6 sm:p-10 shadow-md">
+          <div className="lg:col-span-6 relative h-64 sm:h-80 w-full overflow-hidden rounded-2xl border border-blue-100 bg-white">
+            <Image
+              src="/isometric-saas-tools.webp"
+              alt="Connected SaaS productivity tools, PDF editor, digital contracts, and eSign workflows"
+              fill
+              className="object-contain p-3"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#2563EB] shadow-xs border border-blue-100">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+              INTEGRATED PRODUCTIVITY
+            </div>
+          </div>
+          <div className="lg:col-span-6">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+              ONE CONNECTED ECOSYSTEM
+            </span>
+            <h3 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Seamlessly switch between browser, desktop &amp; private cloud
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-gray-600">
+              Whether you are converting confidential client proposals in VigoPDF, sending binding contracts via eSign, or orchestrating automated multi-step logic in VigoFlow — your assets remain synchronized with military-grade encryption.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+              <span className="rounded-full bg-white border border-blue-100 px-3 py-1 shadow-2xs">Zero Document Lag</span>
+              <span className="rounded-full bg-white border border-blue-100 px-3 py-1 shadow-2xs">SOC-2 Type Ready</span>
+              <span className="rounded-full bg-white border border-blue-100 px-3 py-1 shadow-2xs">Native Offline Engines</span>
+            </div>
+          </div>
         </div>
 
         {/* 3 Cards */}
@@ -361,7 +394,7 @@ function FeaturedVigoPdfSection() {
           <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2563EB] border border-blue-100/70">
             FEATURED PRODUCT
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
             VigoPDF
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600">
@@ -379,7 +412,7 @@ function FeaturedVigoPdfSection() {
                 <span className="h-3 w-3 rounded-full bg-amber-400" />
                 <span className="h-3 w-3 rounded-full bg-emerald-400" />
               </div>
-              <span className="font-extrabold text-[#2563EB] text-base tracking-tight">
+              <span className="font-bold text-[#2563EB] text-base tracking-tight">
                 VigoPDF
               </span>
               <div className="hidden sm:flex items-center gap-2 font-medium text-slate-500 ml-4">
@@ -398,7 +431,7 @@ function FeaturedVigoPdfSection() {
                 <span className="px-2 py-1 hover:text-slate-900 cursor-pointer">
                   Sign
                 </span>
-                <span className="px-2 py-1 text-purple-600 flex items-center gap-1 font-semibold bg-purple-50 rounded-md">
+                <span className="px-2 py-1 text-[#2563EB] flex items-center gap-1 font-semibold bg-blue-50 rounded-md">
                   AI Tools
                 </span>
               </div>
@@ -430,10 +463,10 @@ function FeaturedVigoPdfSection() {
 
               <div className="relative h-64 sm:h-80 w-full overflow-hidden rounded-xl border border-slate-200/80 bg-slate-900 shadow-inner group">
                 <Image
-                  src="/ai-document-suite.jpg"
-                  alt="AI Document Intelligence preview"
+                  src="/isometric-cyber-security.webp"
+                  alt="Cryptographic signature and biometric verification preview"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain p-3 transition-transform duration-700 group-hover:scale-105"
                   sizes="600px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-between">
@@ -455,9 +488,9 @@ function FeaturedVigoPdfSection() {
             </div>
 
             {/* AI Assistant Drawer Pane */}
-            <div className="lg:col-span-4 rounded-2xl border border-purple-200/80 bg-gradient-to-b from-purple-50/50 to-white p-5 space-y-4 shadow-xs">
-              <div className="flex items-center justify-between pb-2.5 border-b border-purple-100">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-[#7C3AED]">
+            <div className="lg:col-span-4 rounded-2xl border border-blue-200/80 bg-gradient-to-b from-blue-50/50 to-white p-5 space-y-4 shadow-xs">
+              <div className="flex items-center justify-between pb-2.5 border-b border-blue-100">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[#2563EB]">
                   <Bot className="h-4 w-4" />
                   AI Document Assistant
                 </div>
@@ -468,11 +501,11 @@ function FeaturedVigoPdfSection() {
               </div>
 
               <div className="space-y-2.5 text-xs">
-                <div className="rounded-xl bg-white p-3 border border-purple-100/90 shadow-2xs text-gray-700 leading-relaxed">
+                <div className="rounded-xl bg-white p-3 border border-blue-100/90 shadow-2xs text-gray-700 leading-relaxed">
                   I analyzed this agreement. Key clauses: 99.9% uptime SLA,
                   data residency compliance, and bi-weekly sprint deliverables.
                 </div>
-                <div className="rounded-xl bg-white p-3 border border-purple-100/90 shadow-2xs text-gray-700 leading-relaxed">
+                <div className="rounded-xl bg-white p-3 border border-blue-100/90 shadow-2xs text-gray-700 leading-relaxed">
                   Would you like to auto-fill the signature placeholders or export
                   an executive summary?
                 </div>

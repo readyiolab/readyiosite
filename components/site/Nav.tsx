@@ -376,7 +376,7 @@ export function Nav() {
                                       {item.title}
                                     </span>
                                     {item.flagship && (
-                                      <span className="shrink-0 text-[8px] font-extrabold uppercase bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-1.5 py-0.2 rounded-full shadow-2xs">
+                                      <span className="shrink-0 text-[8px] font-semibold uppercase bg-gradient-to-r from-blue-600 to-blue-500 text-white px-1.5 py-0.2 rounded-full shadow-2xs">
                                         Flagship
                                       </span>
                                     )}
@@ -452,7 +452,7 @@ export function Nav() {
               {isCTAExplore ? (
                 <Link
                   href="/software"
-                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
+                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
                 >
                   <span className="relative flex items-center gap-1.5 rounded-full bg-[#0B0F19] px-4 sm:px-5 py-2 text-xs font-semibold text-white transition-colors group-hover:bg-[#070A12]">
                     <span>Explore Software</span>
@@ -462,7 +462,7 @@ export function Nav() {
               ) : (
                 <Link
                   href="/contact"
-                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
+                  className="group relative hidden items-center gap-2 overflow-hidden rounded-full p-[1px] bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 shadow-[0_4px_16px_rgba(37,99,235,0.22)] transition-all duration-300 hover:shadow-[0_6px_25px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] md:inline-flex"
                 >
                   <span className="relative flex items-center gap-1.5 rounded-full bg-[#0B0F19] px-4 sm:px-5 py-2 text-xs font-semibold text-white transition-colors group-hover:bg-[#070A12]">
                     <span>Let&apos;s Talk</span>
@@ -616,7 +616,7 @@ export function Nav() {
                       onClick={() => setOpen(false)}
                       className="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-[#2563EB]"
                     >
-                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-purple-100/70 text-[#7C3AED]">
+                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-100/70 text-[#2563EB]">
                         <LayoutGrid className="h-4 w-4" />
                       </div>
                       <div className="flex items-center gap-2">
@@ -634,7 +634,7 @@ export function Nav() {
                     >
                       <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${
-                          openMobileSubmenu === "software" ? "rotate-180 text-[#7C3AED]" : ""
+                          openMobileSubmenu === "software" ? "rotate-180 text-[#2563EB]" : ""
                         }`}
                       />
                     </button>
@@ -659,10 +659,10 @@ export function Nav() {
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={() => setOpen(false)}
-                              className="flex items-center justify-between rounded-xl p-2.5 hover:bg-purple-50/40 transition-colors"
+                              className="flex items-center justify-between rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
                             >
                               <div className="flex items-center gap-3">
-                                <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-purple-50 text-[#7C3AED]">
+                                <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-blue-50 text-[#2563EB]">
                                   <Icon className="h-3.5 w-3.5" />
                                 </div>
                                 <div>
@@ -683,7 +683,7 @@ export function Nav() {
                           <Link
                             href="/software"
                             onClick={() => setOpen(false)}
-                            className="flex items-center justify-between px-2.5 py-1.5 text-xs font-bold text-[#7C3AED]"
+                            className="flex items-center justify-between px-2.5 py-1.5 text-xs font-bold text-[#2563EB]"
                           >
                             <span>View software suite</span>
                             <ArrowRight className="h-3.5 w-3.5" />

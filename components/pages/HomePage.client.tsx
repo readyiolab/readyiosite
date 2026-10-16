@@ -94,7 +94,7 @@ function MetricCounter({
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       // easeOutExpo for natural decelerating count-up
       const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       const currentVal = ease * target;
@@ -113,7 +113,7 @@ function MetricCounter({
   }, [started, target, duration]);
 
   return (
-    <span ref={ref} className="tabular-nums font-black">
+    <span ref={ref} className="tabular-nums font-bold">
       {prefix}
       {count.toFixed(decimals)}
       {suffix}
@@ -125,13 +125,13 @@ function MetricCounter({
 
 function BelowFoldTrustStrip() {
   return (
-    <section className="relative border-y border-[#E5E0F8] bg-white py-12 dark:border-gray-800 dark:bg-gray-950/70">
+    <section className="relative border-y border-blue-100 bg-white py-12 dark:border-gray-800 dark:bg-gray-950/70">
       <div className="mx-auto max-w-7xl container-p">
         {/* Metric Badges Grid with Smooth Live Counters */}
         <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {/* Card 1: 100+ */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#6C5CE7]/30 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#6C5CE7]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#6C5CE7] dark:text-[#A78BFA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={100} decimals={0} suffix="+" />
             </div>
             <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
@@ -143,8 +143,8 @@ function BelowFoldTrustStrip() {
           </div>
 
           {/* Card 2: 99.4% */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#6C5CE7]/30 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#6C5CE7]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#6C5CE7] dark:text-[#A78BFA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={99.4} decimals={1} suffix="%" />
             </div>
             <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
@@ -156,8 +156,8 @@ function BelowFoldTrustStrip() {
           </div>
 
           {/* Card 3: 4.9 / 5 */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#6C5CE7]/30 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#6C5CE7]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#6C5CE7] dark:text-[#A78BFA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={4.9} decimals={1} suffix=" / 5" />
             </div>
             <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
@@ -169,8 +169,8 @@ function BelowFoldTrustStrip() {
           </div>
 
           {/* Card 4: 1 Team */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#6C5CE7]/30 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#6C5CE7]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#6C5CE7] dark:text-[#A78BFA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={1} decimals={0} suffix=" Team" />
             </div>
             <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
@@ -183,18 +183,18 @@ function BelowFoldTrustStrip() {
         </div>
 
         {/* Action Callout Bar - Lovable, Premium High-Converting Banner */}
-        <div className="mt-10 relative overflow-hidden rounded-3xl border border-[#6C5CE7]/30 bg-gradient-to-br from-[#0F0C20] via-[#181335] to-[#251B4E] p-6 sm:p-8 lg:p-10 text-white shadow-[0_20px_50px_rgba(108,92,231,0.25)]">
+        <div className="mt-10 relative overflow-hidden rounded-3xl border border-[#2563EB]/30 bg-gradient-to-br from-[#0B1221] via-[#0F172A] to-[#1E293B] p-6 sm:p-8 lg:p-10 text-white shadow-[0_20px_50px_rgba(37,99,235,0.20)]">
           {/* Ambient background glows */}
-          <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#6C5CE7]/30 blur-3xl" />
+          <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#2563EB]/25 blur-3xl" />
           <div className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-[#10B981]/20 blur-3xl" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="space-y-3 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#6C5CE7]/40 bg-white/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest text-[#C4B5FD] backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#2563EB]/40 bg-blue-500/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest text-blue-300 backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 HIGH-CONVERTING ARCHITECTURE
               </div>
-              <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white leading-tight">
+              <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-tight">
                 Turn your web traffic into qualified leads with smart CRM &amp; AI automation.
               </h2>
               <p className="text-sm sm:text-base text-gray-300 max-w-2xl leading-relaxed">
@@ -206,7 +206,7 @@ function BelowFoldTrustStrip() {
               <Link
                 href="/contact"
                 aria-label="Let's Talk"
-                className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#6C5CE7] to-[#8075FF] px-8 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(108,92,231,0.5)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(108,92,231,0.7)] active:scale-95"
+                className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-8 py-4 text-sm font-bold text-white shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(37,99,235,0.6)] active:scale-95"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -233,10 +233,10 @@ function ServicesSection() {
         {/* Section Header */}
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               WHAT WE BUILD
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Three technology solutions. One accountable team.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
@@ -248,11 +248,11 @@ function ServicesSection() {
         {/* Business Journey summary badge */}
         <Reveal delay={0.1}>
           <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#111827] shadow-sm dark:border-gray-800 dark:bg-gray-900 dark:text-white">
-            <span className="text-[#6C5CE7]">Attract</span>
+            <span className="text-[#2563EB]">Attract</span>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <span className="text-[#6C5CE7]">Organize</span>
+            <span className="text-[#2563EB]">Organize</span>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <span className="text-[#6C5CE7]">Automate</span>
+            <span className="text-[#2563EB]">Automate</span>
           </div>
         </Reveal>
 
@@ -261,7 +261,7 @@ function ServicesSection() {
           {/* Horizontal connecting line behind cards (desktop) */}
           <div
             aria-hidden
-            className="pointer-events-none absolute top-12 left-10 right-10 hidden h-0.5 bg-gradient-to-r from-[#6C5CE7]/30 via-[#7C3AED]/40 to-[#6C5CE7]/30 lg:block"
+            className="pointer-events-none absolute top-12 left-10 right-10 hidden h-0.5 bg-gradient-to-r from-[#2563EB]/30 via-[#3B82F6]/40 to-[#2563EB]/30 lg:block"
           />
 
           {/* Card 01: ATTRACT */}
@@ -274,17 +274,17 @@ function ServicesSection() {
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30">
                       <Globe2 className="h-6 w-6" />
                     </div>
-                    <span className="font-heading text-3xl font-extrabold text-[#6C5CE7]/80">01</span>
+                    <span className="font-heading text-3xl font-bold text-[#2563EB]/80">01</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
                       ATTRACT
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-extrabold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
                       Websites & Web Applications
                     </h3>
                     <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
@@ -298,15 +298,15 @@ function ServicesSection() {
 
                 <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-[92px] flex flex-col justify-around">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>Business and lead-generation websites</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>E-commerce and customer portals</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>Custom web applications</span>
                   </li>
                 </ul>
@@ -315,7 +315,7 @@ function ServicesSection() {
               <div className="mt-8 flex flex-col justify-end">
                 <Link
                   href="/services"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#6C5CE7] px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#5B4BC4]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#1D4ED8]"
                 >
                   Explore Websites & Web Applications
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -336,7 +336,7 @@ function ServicesSection() {
                       Modern websites that convert visitors into customers.
                     </div>
                     <div className="flex items-center gap-2">
-                      <button type="button" className="rounded-lg bg-[#6C5CE7] px-3 py-1.5 text-[10px] font-bold text-white shadow-sm">
+                      <button type="button" className="rounded-lg bg-[#2563EB] px-3 py-1.5 text-[10px] font-bold text-white shadow-sm">
                         Get Started
                       </button>
                       <span className="text-[10px] font-semibold text-emerald-400">↑ 148% Growth</span>
@@ -361,17 +361,17 @@ function ServicesSection() {
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#F0EDF9] text-[#2563EB] dark:bg-[#6C5CE7]/20">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30">
                       <Users className="h-6 w-6" />
                     </div>
-                    <span className="font-heading text-3xl font-extrabold text-[#2563EB]/80">02</span>
+                    <span className="font-heading text-3xl font-bold text-[#2563EB]/80">02</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-[#2563EB]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
                       ORGANIZE
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-extrabold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
                       CRM & Business Systems
                     </h3>
                     <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
@@ -385,15 +385,15 @@ function ServicesSection() {
 
                 <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-[92px] flex flex-col justify-around">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>CRM setup and customization</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>Lead and customer management</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#6C5CE7]" />
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>Workflow integrations and dashboards</span>
                   </li>
                 </ul>
@@ -420,7 +420,7 @@ function ServicesSection() {
                     <div className="rounded-xl bg-gray-800/80 p-2 border border-gray-700/50">
                       <span className="text-[9px] font-semibold text-gray-400">New Lead</span>
                       <div className="mt-1 font-bold text-white">Acme Corp</div>
-                      <div className="mt-0.5 text-[9px] font-bold text-[#6C5CE7]">$14.2k</div>
+                      <div className="mt-0.5 text-[9px] font-bold text-[#2563EB]">$14.2k</div>
                     </div>
                     <div className="rounded-xl bg-gray-800/80 p-2 border border-gray-700/50">
                       <span className="text-[9px] font-semibold text-gray-400">Proposal</span>
@@ -452,17 +452,17 @@ function ServicesSection() {
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#F0EDF9] text-[#10B981] dark:bg-[#6C5CE7]/20">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-[#10B981] dark:bg-emerald-950/30">
                       <Cpu className="h-6 w-6" />
                     </div>
-                    <span className="font-heading text-3xl font-extrabold text-[#10B981]/80">03</span>
+                    <span className="font-heading text-3xl font-bold text-[#10B981]/80">03</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-[#10B981]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#10B981]">
                       AUTOMATE
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-extrabold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
                       AI & Automation
                     </h3>
                     <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
@@ -554,13 +554,13 @@ function ForFoundersBanner() {
             {/* Background radial ambient glow */}
             <div
               aria-hidden
-              className="pointer-events-none absolute right-1/4 top-1/2 -z-10 h-72 w-96 -translate-y-1/2 rounded-full bg-[#6C5CE7]/20 blur-3xl"
+              className="pointer-events-none absolute right-1/4 top-1/2 -z-10 h-72 w-96 -translate-y-1/2 rounded-full bg-[#2563EB]/20 blur-3xl"
             />
 
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.3fr]">
               {/* Left Content */}
               <div>
-                <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+                <h2 className="font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                   From idea to<br className="hidden sm:block" /> working product.
                 </h2>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-300 md:text-base">
@@ -572,7 +572,7 @@ function ForFoundersBanner() {
                     href={SITE.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-xl bg-[#6C5CE7] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_rgba(108,92,231,0.4)] transition-all hover:bg-[#5B4BC4] active:scale-95"
+                    className="inline-flex items-center justify-center rounded-xl bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_rgba(37,99,235,0.4)] transition-all hover:bg-[#1D4ED8] active:scale-95"
                   >
                     Discuss Your Idea
                   </a>
@@ -584,14 +584,14 @@ function ForFoundersBanner() {
                 {/* Connecting Line passing behind the circles (desktop & tablet) */}
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute top-12 left-12 right-12 hidden sm:block h-[2px] bg-gradient-to-r from-[#6C5CE7] via-[#7C3AED] to-[#6C5CE7] shadow-[0_0_12px_#6C5CE7]"
+                  className="pointer-events-none absolute top-12 left-12 right-12 hidden sm:block h-[2px] bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#2563EB] shadow-[0_0_12px_#2563EB]"
                 />
 
                 {/* Node 1: Idea */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#6C5CE7] bg-[#171A2E] text-white shadow-[0_0_24px_rgba(108,92,231,0.5)]">
+                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
                     <Lightbulb className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#6C5CE7] ring-4 ring-[#0D1322] shadow-[0_0_8px_#6C5CE7]" />
+                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     Idea
@@ -603,9 +603,9 @@ function ForFoundersBanner() {
 
                 {/* Node 2: First version */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#6C5CE7] bg-[#171A2E] text-white shadow-[0_0_24px_rgba(108,92,231,0.5)]">
+                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
                     <Globe2 className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#6C5CE7] ring-4 ring-[#0D1322] shadow-[0_0_8px_#6C5CE7]" />
+                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     First version
@@ -617,9 +617,9 @@ function ForFoundersBanner() {
 
                 {/* Node 3: Launch */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#6C5CE7] bg-[#171A2E] text-white shadow-[0_0_24px_rgba(108,92,231,0.5)]">
+                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
                     <Rocket className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#6C5CE7] ring-4 ring-[#0D1322] shadow-[0_0_8px_#6C5CE7]" />
+                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     Launch
@@ -652,10 +652,10 @@ function SelectedWork() {
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#2563EB]">
               SELECTED WORK
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-[2.75rem] md:leading-[1.15] dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-[2.75rem] md:leading-[1.15] dark:text-white">
               More Than Websites. Systems Built for Growth.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#4B5563] dark:text-gray-300">
@@ -675,11 +675,10 @@ function SelectedWork() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
-                  activeTab === tab.id
-                    ? "bg-[#6C5CE7] text-white shadow-md shadow-[#6C5CE7]/25"
-                    : "border border-gray-200 bg-white text-[#4B5563] hover:border-[#6C5CE7]/40 hover:text-[#6C5CE7] dark:border-gray-700 dark:bg-transparent dark:text-gray-300"
-                }`}
+                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${activeTab === tab.id
+                  ? "bg-[#2563EB] text-white shadow-md shadow-[#2563EB]/25"
+                  : "border border-gray-200 bg-white text-[#4B5563] hover:border-[#2563EB]/40 hover:text-[#2563EB] dark:border-gray-700 dark:bg-transparent dark:text-gray-300"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -704,11 +703,11 @@ function SelectedWork() {
                   </div>
                   <div className="flex flex-col justify-center py-2 lg:pr-4">
                     {featured.label && (
-                      <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#6C5CE7]">
+                      <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#2563EB]">
                         {featured.label}
                       </span>
                     )}
-                    <h3 className="mt-2 font-heading text-3xl font-extrabold tracking-tight text-[#111827] dark:text-white">
+                    <h3 className="mt-2 font-heading text-3xl font-bold tracking-tight text-[#111827] dark:text-white">
                       {featured.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
@@ -718,7 +717,7 @@ function SelectedWork() {
                       {featured.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-[#6C5CE7]/25 bg-[#F0EDF9] px-3 py-1 text-[11px] font-semibold text-[#6C5CE7] dark:border-[#6C5CE7]/40 dark:bg-[#6C5CE7]/15 dark:text-[#A78BFA]"
+                          className="rounded-full border border-[#2563EB]/25 bg-blue-50 px-3 py-1 text-[11px] font-semibold text-[#2563EB] dark:border-[#2563EB]/40 dark:bg-blue-900/20 dark:text-[#60A5FA]"
                         >
                           {tag}
                         </span>
@@ -728,7 +727,7 @@ function SelectedWork() {
                       href={featured.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#6C5CE7] px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#6C5CE7]/25 transition-all hover:bg-[#5B4BD5]"
+                      className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#2563EB]/25 transition-all hover:bg-[#1D4ED8]"
                     >
                       View Case Study
                       <ArrowRight className="h-4 w-4" />
@@ -774,11 +773,11 @@ function PlatformCard({ project }: { project: Project }) {
       </div>
       <div className="flex flex-col justify-center">
         {project.label && (
-          <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#6C5CE7]">
+          <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#2563EB]">
             {project.label}
           </span>
         )}
-        <h3 className="mt-1.5 font-heading text-xl font-extrabold text-[#111827] dark:text-white">
+        <h3 className="mt-1.5 font-heading text-xl font-bold text-[#111827] dark:text-white">
           {project.title}
         </h3>
         <p className="mt-2 text-xs leading-relaxed text-[#4B5563] dark:text-gray-300 sm:text-[13px]">
@@ -788,7 +787,7 @@ function PlatformCard({ project }: { project: Project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[11px] font-semibold text-[#6C5CE7] dark:text-[#A78BFA]"
+              className="text-[11px] font-semibold text-[#2563EB] dark:text-[#60A5FA]"
             >
               {tag}
             </span>
@@ -810,14 +809,14 @@ function WebsiteExperiences({
     <div className={expanded ? "mt-10" : "mt-16"}>
       <Reveal>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <h3 className="font-heading text-xl font-extrabold text-[#111827] sm:text-2xl dark:text-white">
+          <h3 className="font-heading text-xl font-bold text-[#111827] sm:text-2xl dark:text-white">
             Selected Website Experiences
           </h3>
           {onViewAll && (
             <button
               type="button"
               onClick={onViewAll}
-              className="inline-flex items-center gap-1 text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-[#5B4BD5]"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-[#2563EB] transition-colors hover:text-[#1D4ED8]"
             >
               View all website projects
               <ArrowRight className="h-3.5 w-3.5" />
@@ -833,7 +832,7 @@ function WebsiteExperiences({
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFB] transition-all hover:border-[#6C5CE7]/30 hover:bg-white hover:shadow-md dark:border-gray-800 dark:bg-gray-950/40 dark:hover:bg-gray-900"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFB] transition-all hover:border-[#2563EB]/30 hover:bg-white hover:shadow-md dark:border-gray-800 dark:bg-gray-950/40 dark:hover:bg-gray-900"
             >
               <div className="overflow-hidden bg-gray-100 dark:bg-gray-800">
                 <Image
@@ -845,7 +844,7 @@ function WebsiteExperiences({
                 />
               </div>
               <div className="relative flex flex-1 flex-col p-5">
-                <h4 className="font-heading text-lg font-extrabold text-[#111827] dark:text-white">
+                <h4 className="font-heading text-lg font-bold text-[#111827] dark:text-white">
                   {project.title}
                 </h4>
                 <p className="mt-0.5 text-sm font-medium text-[#6B7280] dark:text-gray-400">
@@ -854,7 +853,7 @@ function WebsiteExperiences({
                 <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
                   {project.description}
                 </p>
-                <span className="mt-4 ml-auto grid h-8 w-8 place-items-center rounded-full bg-[#F0EDF9] text-[#6C5CE7] transition-transform group-hover:translate-x-0.5 dark:bg-[#6C5CE7]/20">
+                <span className="mt-4 ml-auto grid h-8 w-8 place-items-center rounded-full bg-blue-50 text-[#2563EB] transition-transform group-hover:translate-x-0.5 dark:bg-blue-900/30">
                   <ArrowRight className="h-4 w-4" />
                 </span>
               </div>
@@ -889,14 +888,14 @@ function WhyZuvigo() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-[#F0EDF9]/40 dark:bg-gray-900/40">
+    <section id="about" className="py-20 md:py-28 bg-blue-50/40 dark:bg-gray-900/40">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7]">
+          <div className="max-w-3xl mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               WHY ZUVIGO
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Technology shaped around the business—not the other way around.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
@@ -905,22 +904,44 @@ function WhyZuvigo() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {POINTS.map((pt, idx) => (
-            <Reveal key={pt.title} delay={idx * 0.1}>
-              <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-[#6C5CE7]/40 dark:border-gray-800 dark:bg-gray-900">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#6C5CE7]/10 text-[#6C5CE7] dark:bg-[#6C5CE7]/20">
-                  <ShieldCheck className="h-5 w-5" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Left Visual Illustration Showcase */}
+          <div className="lg:col-span-5">
+            <Reveal delay={0.1}>
+              <div className="group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl dark:border-gray-800 dark:bg-gray-900">
+                <div className="relative h-72 sm:h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-b from-blue-50/40 via-white to-blue-50/20">
+                  <Image
+                    src="/isometric-cloud-infra.webp"
+                    alt="Cloud infrastructure, reliable servers and security architecture"
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-[#111827] dark:text-white">
-                  {pt.title}
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400">
-                  {pt.desc}
-                </p>
+
+
               </div>
             </Reveal>
-          ))}
+          </div>
+
+          {/* Right 4 Points Grid */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {POINTS.map((pt, idx) => (
+              <Reveal key={pt.title} delay={idx * 0.1}>
+                <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-[#2563EB]/40 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#2563EB]/10 text-[#2563EB] dark:bg-blue-900/30">
+                    <ShieldCheck className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 font-heading text-lg font-bold text-[#111827] dark:text-white">
+                    {pt.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400">
+                    {pt.desc}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -952,7 +973,7 @@ function ProcessSection() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <h2 className="text-center font-heading text-3xl font-extrabold text-[#111827] sm:text-4xl lg:text-5xl dark:text-white">
+          <h2 className="text-center font-heading text-3xl font-bold text-[#111827] sm:text-4xl lg:text-5xl dark:text-white">
             Simple, transparent delivery.
           </h2>
         </Reveal>
@@ -964,7 +985,7 @@ function ProcessSection() {
               <div key={s.title} className="flex items-center gap-4">
                 <Reveal delay={idx * 0.15}>
                   <div className="flex items-center gap-4">
-                    <div className="grid h-14 w-14 flex-shrink-0 place-items-center rounded-2xl bg-[#F0EDF9] text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA] shadow-xs">
+                    <div className="grid h-14 w-14 flex-shrink-0 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-[#60A5FA] shadow-xs">
                       <IconComp className="h-6 w-6 stroke-[2]" />
                     </div>
                     <div>
@@ -981,8 +1002,8 @@ function ProcessSection() {
                 {/* Dotted Connector between steps */}
                 {idx < STEPS.length - 1 && (
                   <div className="hidden items-center gap-2 pl-3 md:flex">
-                    <span className="h-2 w-2 rounded-full bg-[#6C5CE7]" />
-                    <div className="h-0.5 w-12 border-t-2 border-dotted border-[#6C5CE7]/40 lg:w-20" />
+                    <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
+                    <div className="h-0.5 w-12 border-t-2 border-dotted border-[#2563EB]/40 lg:w-20" />
                   </div>
                 )}
               </div>
@@ -1031,10 +1052,10 @@ function HomepageFAQ() {
       <div className="mx-auto max-w-5xl container-p">
         <Reveal>
           <div className="text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Everything you need to know about working with Zuvigo.
             </h2>
             <p className="mt-4 mx-auto max-w-2xl text-base text-[#4B5563] dark:text-gray-300">
@@ -1048,7 +1069,7 @@ function HomepageFAQ() {
             const isOpen = openIndex === i;
             return (
               <Reveal key={faq.q} delay={i * 0.05}>
-                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFB] transition-colors hover:border-[#6C5CE7]/30 dark:border-gray-800 dark:bg-gray-900/60">
+                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFB] transition-colors hover:border-[#2563EB]/30 dark:border-gray-800 dark:bg-gray-900/60">
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
@@ -1057,9 +1078,8 @@ function HomepageFAQ() {
                   >
                     <span>{faq.q}</span>
                     <span
-                      className={`ml-4 grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-[#F0EDF9] text-[#6C5CE7] transition-transform duration-200 dark:bg-[#6C5CE7]/20 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`ml-4 grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-blue-50 text-[#2563EB] transition-transform duration-200 dark:bg-blue-900/30 ${isOpen ? "rotate-180" : ""
+                        }`}
                     >
                       <ChevronDown className="h-4 w-4" />
                     </span>
@@ -1084,18 +1104,12 @@ function HomepageFAQ() {
 function FinalCTA() {
   return (
     <AuroraCTA
-      eyebrow="LET'S BUILD SOMETHING GREAT"
-      heading={
-        <>
-          Ready to discuss <br className="hidden sm:inline" />
-          your project?
-        </>
-      }
-      subtitle="Zuvigo builds modern websites, custom web applications, cloud & desktop software, and business automation — helping businesses work smarter, move faster, and achieve more."
-      buttonText="Let's Talk"
+      heading="Ready to make everyday business clearer and easier?"
+      subtitle="Zuvigo brings together modern engineering, intuitive design, and smart automation into tailored solutions designed for real business impact."
+      buttonText="Get in touch"
       buttonHref="/contact"
-      secondaryButtonText="Send an Inquiry"
-      secondaryButtonHref="/contact"
+      secondaryButtonText="Learn more"
+      secondaryButtonHref="/solutions"
     />
   );
 }

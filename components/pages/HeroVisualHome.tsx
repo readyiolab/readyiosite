@@ -27,7 +27,7 @@ export function HeroVisualHome() {
       {/* Background Ambient Glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-indigo-300/20 to-purple-400/20 blur-3xl opacity-80"
+        className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
 
       {/* SVG Connecting Circuit Lines */}
@@ -75,7 +75,7 @@ export function HeroVisualHome() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
-        className="absolute -top-1 left-24 z-20 hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-white shadow-md border border-indigo-100 text-[#2563EB]"
+        className="absolute -top-1 left-24 z-20 hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-white shadow-md border border-blue-100 text-[#2563EB]"
       >
         <Globe className="h-5 w-5" />
       </motion.div>
@@ -85,7 +85,7 @@ export function HeroVisualHome() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
-        className="absolute top-16 -right-2 z-20 hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-white shadow-md border border-indigo-100 text-indigo-600"
+        className="absolute top-16 -right-2 z-20 hidden sm:flex items-center justify-center h-10 w-10 rounded-full bg-white shadow-md border border-blue-100 text-[#2563EB]"
       >
         <FileText className="h-5 w-5" />
       </motion.div>
@@ -134,7 +134,7 @@ export function HeroVisualHome() {
             {/* AI Modern Platform Screen */}
             <div className="relative h-28 w-full overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group">
               <Image
-                src="/ai-business-platform.jpg"
+                src="/ai-business-platform.webp"
                 alt="AI Platform Engineering"
                 fill
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -163,7 +163,7 @@ export function HeroVisualHome() {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
               <div className="flex items-center gap-1.5">
-                <span className="text-[11px] font-extrabold tracking-tight text-gray-900">zuvigo</span>
+                <span className="text-[11px] font-bold tracking-tight text-gray-900">zuvigo</span>
                 <span className="text-[11px] text-gray-400">·</span>
                 <span className="text-[11px] font-medium text-gray-600">Project Dashboard</span>
               </div>
@@ -195,7 +195,7 @@ export function HeroVisualHome() {
                     <div className="text-[11px] font-bold text-gray-900">8</div>
                     <div className="text-[8px] text-gray-500 truncate">Team Members</div>
                   </div>
-                  <div className="rounded-lg bg-purple-50/60 border border-purple-100/60 p-1">
+                  <div className="rounded-lg bg-sky-50/60 border border-sky-100/60 p-1">
                     <div className="text-[11px] font-bold text-gray-900">24</div>
                     <div className="text-[8px] text-gray-500 truncate">Tasks Done</div>
                   </div>

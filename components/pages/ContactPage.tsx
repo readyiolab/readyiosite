@@ -82,7 +82,7 @@ export function ContactPage() {
     } catch (err) {
       toast.error(
         (err instanceof Error && err.message) ||
-          "An unexpected error occurred. Please try again."
+        "An unexpected error occurred. Please try again."
       );
       setStatus("idle");
     }
@@ -96,7 +96,7 @@ export function ContactPage() {
           <Reveal>
             <div className="overflow-hidden rounded-[2.5rem] border border-border/80 bg-card p-6 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
               <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[1.1fr_1.6fr] lg:gap-14">
-                
+
                 {/* Left Column: Brand, Contact Channels & Socials */}
                 <div className="flex flex-col justify-between py-2 sm:py-4">
                   {/* Top: Brand Logo */}
@@ -211,8 +211,8 @@ export function ContactPage() {
                   </div>
                 </div>
 
-                {/* Right Column: Signature Zuvigo Brand Colored Card matching reference */}
-                <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#7464F2] via-[#6C5CE7] to-[#5949CE] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
+                {/* Right Column: Signature Zuvigo Royal Blue Brand Colored Card */}
+                <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E40AF] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
                   {/* Subtle ambient light bleed for depth */}
                   <div
                     aria-hidden="true"
@@ -221,10 +221,10 @@ export function ContactPage() {
 
                   {/* Form Heading */}
                   <div className="relative z-10">
-                    <h2 className="font-heading text-3xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
+                    <h2 className="font-heading text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
                       Got ideas? We&apos;ve got the skills. Let&apos;s team up.
                     </h2>
-                    <p className="mt-3 text-sm text-purple-100 sm:text-base leading-relaxed">
+                    <p className="mt-3 text-sm text-blue-100 sm:text-base leading-relaxed">
                       Tell us more about yourself and what you&apos;ve got in mind.
                     </p>
 
@@ -274,7 +274,7 @@ export function ContactPage() {
 
                       {/* "How can we help?" Section */}
                       <div className="pt-4">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-purple-200">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">
                           How can we help?
                         </p>
                         <div className="mt-4 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
@@ -288,11 +288,10 @@ export function ContactPage() {
                                 className="flex items-center gap-3 text-left cursor-pointer select-none group"
                               >
                                 <div
-                                  className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border transition-all duration-200 ${
-                                    isSelected
-                                      ? "bg-white border-white text-[#6C5CE7]"
+                                  className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border transition-all duration-200 ${isSelected
+                                      ? "bg-white border-white text-[#2563EB]"
                                       : "border-white/45 group-hover:border-white bg-transparent"
-                                  }`}
+                                    }`}
                                 >
                                   {isSelected && <Check className="h-3.5 w-3.5 stroke-[3]" />}
                                 </div>

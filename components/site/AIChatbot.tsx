@@ -35,12 +35,12 @@ function AIBotAvatar({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   return (
     <div className={`relative flex items-center justify-center flex-shrink-0 ${containerSize}`}>
       {/* Animated Pulse Aura */}
-      <span className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#6C5CE7] to-[#7C3AED] opacity-70 blur-xs animate-pulse" />
+      <span className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#3B82F6] opacity-70 blur-xs animate-pulse" />
 
       <motion.div
         animate={{ y: [0, -2, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        className={`relative grid h-full w-full place-items-center rounded-2xl bg-gradient-to-br from-[#6C5CE7] via-[#7C3AED] to-[#4F46E5] text-white shadow-md shadow-[#6C5CE7]/30 border border-white/20`}
+        className={`relative grid h-full w-full place-items-center rounded-2xl bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E40AF] text-white shadow-md shadow-[#2563EB]/30 border border-white/20`}
       >
         <Bot className={`${iconSize} drop-shadow-xs`} />
       </motion.div>
@@ -272,7 +272,7 @@ export function AIChatbot() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(true)}
-              className="relative flex items-center gap-3 rounded-full bg-gradient-to-r from-[#0D0A22] via-[#170E3B] to-[#6C5CE7] p-2 pr-5 text-white shadow-[0_10px_35px_rgba(108,92,231,0.45)] border border-white/10 transition-all hover:shadow-[0_14px_40px_rgba(108,92,231,0.65)]"
+              className="relative flex items-center gap-3 rounded-full bg-gradient-to-r from-[#0B1221] via-[#0F172A] to-[#2563EB] p-2 pr-5 text-white shadow-[0_10px_35px_rgba(37,99,235,0.40)] border border-white/10 transition-all hover:shadow-[0_14px_40px_rgba(37,99,235,0.60)]"
               aria-label="Open AI Chatbot"
             >
               {/* Animated AI Bot Icon */}
@@ -301,14 +301,14 @@ export function AIChatbot() {
             className="fixed bottom-6 right-6 z-50 flex h-[570px] w-[90vw] max-w-[390px] flex-col overflow-hidden rounded-3xl border border-gray-200/90 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] dark:border-gray-800 dark:bg-gray-900"
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-gray-100 bg-gradient-to-r from-[#0D0A22] to-[#170E3B] px-4 py-3.5 text-white dark:border-gray-800">
+            <div className="flex items-center justify-between border-b border-gray-100 bg-gradient-to-r from-[#0B1221] to-[#0F172A] px-4 py-3.5 text-white dark:border-gray-800">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <AIBotAvatar size="md" />
                   <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 ring-2 ring-[#0D0A22]" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xs font-extrabold text-white flex items-center gap-1.5">
+                  <h3 className="font-heading text-xs font-semibold text-white flex items-center gap-1.5">
                     Zuvigo AI Assistant
                   </h3>
                   <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-medium">
@@ -329,7 +329,7 @@ export function AIChatbot() {
             </div>
 
             {/* Chat Body / Messages List */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3.5 bg-[#F9F8FD] dark:bg-gray-950/60">
+            <div className="flex-1 overflow-y-auto p-4 space-y-3.5 bg-[#F8FAFC] dark:bg-gray-950/60">
               {messages.map((m) => {
                 const isUser = m.sender === "user";
                 return (
@@ -341,7 +341,7 @@ export function AIChatbot() {
                     {!isUser ? (
                       <AIBotAvatar size="sm" />
                     ) : (
-                      <div className="grid h-6 w-6 place-items-center rounded-full bg-[#6C5CE7]/20 text-[#6C5CE7] flex-shrink-0 dark:bg-[#6C5CE7]/30 dark:text-white">
+                      <div className="grid h-6 w-6 place-items-center rounded-full bg-[#2563EB]/20 text-[#2563EB] flex-shrink-0 dark:bg-[#2563EB]/30 dark:text-white">
                         <User className="h-3.5 w-3.5" />
                       </div>
                     )}
@@ -349,7 +349,7 @@ export function AIChatbot() {
                     <div className={`flex flex-col ${isUser ? "items-end" : "items-start"}`}>
                       <div
                         className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-xs leading-relaxed shadow-xs ${isUser
-                          ? "bg-[#6C5CE7] text-white rounded-br-none"
+                          ? "bg-[#2563EB] text-white rounded-br-none"
                           : "bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 rounded-bl-none border border-gray-100 dark:border-gray-700/60"
                           }`}
                       >
@@ -359,9 +359,9 @@ export function AIChatbot() {
                         {m.isLeadForm && (
                           <form
                             onSubmit={handleLeadSubmit}
-                            className="mt-3 space-y-2 rounded-xl border border-[#6C5CE7]/30 bg-[#F0EDF9]/60 p-3 dark:border-[#6C5CE7]/40 dark:bg-gray-900/90"
+                            className="mt-3 space-y-2 rounded-xl border border-[#2563EB]/30 bg-blue-50/60 p-3 dark:border-[#2563EB]/40 dark:bg-gray-900/90"
                           >
-                            <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#6C5CE7] dark:text-[#9b8eff]">
+                            <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#2563EB] dark:text-blue-400">
                               <Calendar className="h-3.5 w-3.5" />
                               <span>Request Project Call</span>
                             </div>
@@ -371,7 +371,7 @@ export function AIChatbot() {
                               required
                               value={leadName}
                               onChange={(e) => setLeadName(e.target.value)}
-                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#6C5CE7] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#2563EB] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
                             />
                             <input
                               type="email"
@@ -379,19 +379,19 @@ export function AIChatbot() {
                               required
                               value={leadEmail}
                               onChange={(e) => setLeadEmail(e.target.value)}
-                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#6C5CE7] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#2563EB] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
                             />
                             <input
                               type="tel"
                               placeholder="Phone / WhatsApp (optional)"
                               value={leadPhone}
                               onChange={(e) => setLeadPhone(e.target.value)}
-                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#6C5CE7] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                              className="w-full rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs text-gray-800 outline-none focus:border-[#2563EB] dark:border-gray-700 dark:bg-gray-800 dark:text-white"
                             />
                             <button
                               type="submit"
                               disabled={isSubmittingLead}
-                              className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#6C5CE7] py-2 text-xs font-bold text-white shadow-xs transition-all hover:bg-[#5B4BC4] disabled:opacity-50"
+                              className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] py-2 text-xs font-bold text-white shadow-xs transition-all hover:bg-[#1D4ED8] disabled:opacity-50"
                             >
                               {isSubmittingLead ? (
                                 <>
@@ -414,7 +414,7 @@ export function AIChatbot() {
                             <Link
                               href={m.cta.url}
                               onClick={() => setIsOpen(false)}
-                              className="inline-flex items-center gap-1.5 rounded-lg bg-[#6C5CE7]/10 px-2.5 py-1 text-[10px] font-bold text-[#6C5CE7] transition-all hover:bg-[#6C5CE7] hover:text-white dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]"
+                              className="inline-flex items-center gap-1.5 rounded-lg bg-[#2563EB]/10 px-2.5 py-1 text-[10px] font-bold text-[#2563EB] transition-all hover:bg-[#2563EB] hover:text-white dark:bg-[#2563EB]/20 dark:text-blue-300"
                             >
                               <span>{m.cta.label}</span>
                               <ArrowRight className="h-3 w-3" />
@@ -435,13 +435,13 @@ export function AIChatbot() {
                 <div className="flex items-center gap-2.5">
                   <AIBotAvatar size="sm" />
                   <div className="flex items-center gap-1.5 rounded-2xl bg-white px-3.5 py-2.5 text-xs text-gray-500 shadow-xs border border-gray-100 max-w-[70px] dark:bg-gray-800 dark:border-gray-700">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#6C5CE7] animate-bounce" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB] animate-bounce" />
                     <span
-                      className="h-1.5 w-1.5 rounded-full bg-[#6C5CE7] animate-bounce"
+                      className="h-1.5 w-1.5 rounded-full bg-[#2563EB] animate-bounce"
                       style={{ animationDelay: "0.15s" }}
                     />
                     <span
-                      className="h-1.5 w-1.5 rounded-full bg-[#6C5CE7] animate-bounce"
+                      className="h-1.5 w-1.5 rounded-full bg-[#2563EB] animate-bounce"
                       style={{ animationDelay: "0.3s" }}
                     />
                   </div>
@@ -460,8 +460,8 @@ export function AIChatbot() {
                     type="button"
                     onClick={() => handleSendMessage(prompt)}
                     className={`rounded-full border px-2.5 py-1 font-semibold transition-colors ${prompt.includes("Book")
-                      ? "border-[#6C5CE7] bg-[#6C5CE7]/10 text-[#6C5CE7] hover:bg-[#6C5CE7] hover:text-white dark:bg-[#6C5CE7]/20 dark:text-[#9b8eff]"
-                      : "border-gray-200 bg-gray-50 text-gray-700 hover:border-[#6C5CE7] hover:bg-[#F0EDF9] hover:text-[#6C5CE7] dark:border-gray-800 dark:bg-gray-800 dark:text-gray-300"
+                      ? "border-[#2563EB] bg-[#2563EB]/10 text-[#2563EB] hover:bg-[#2563EB] hover:text-white dark:bg-[#2563EB]/20 dark:text-blue-300"
+                      : "border-gray-200 bg-gray-50 text-gray-700 hover:border-[#2563EB] hover:bg-blue-50 hover:text-[#2563EB] dark:border-gray-800 dark:bg-gray-800 dark:text-gray-300"
                       }`}
                   >
                     {prompt}
@@ -477,7 +477,7 @@ export function AIChatbot() {
                   e.preventDefault();
                   handleSendMessage();
                 }}
-                className="flex items-center gap-2 rounded-2xl bg-gray-100/80 px-3 py-1.5 border border-transparent focus-within:border-[#6C5CE7]/40 dark:bg-gray-800/80"
+                className="flex items-center gap-2 rounded-2xl bg-gray-100/80 px-3 py-1.5 border border-transparent focus-within:border-[#2563EB]/40 dark:bg-gray-800/80"
               >
                 <input
                   type="text"
@@ -493,7 +493,7 @@ export function AIChatbot() {
                   type="submit"
                   disabled={!input.trim()}
                   aria-label="Send message to AI Assistant"
-                  className="grid h-7 w-7 flex-shrink-0 place-items-center rounded-xl bg-[#6C5CE7] text-white shadow-xs transition-all hover:bg-[#5B4BC4] disabled:opacity-40 disabled:hover:bg-[#6C5CE7]"
+                  className="grid h-7 w-7 flex-shrink-0 place-items-center rounded-xl bg-[#2563EB] text-white shadow-xs transition-all hover:bg-[#1D4ED8] disabled:opacity-40 disabled:hover:bg-[#2563EB]"
                 >
                   <Send className="h-3.5 w-3.5" />
                 </button>

@@ -8,11 +8,11 @@ export function CookiePolicyPage() {
         {/* Page Header */}
         <Reveal>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#6C5CE7]/30 bg-[#F0EDF9] px-4 py-1 text-xs font-bold uppercase tracking-widest text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-widest text-[#2563EB] dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-300">
               <Cookie className="h-3.5 w-3.5" />
               COOKIE POLICY
             </span>
-            <h1 className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h1 className="mt-4 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Cookie Policy
             </h1>
             <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
@@ -172,7 +172,7 @@ export function CookiePolicyPage() {
                 7. Changes & Contact
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-[#4B5563] dark:text-gray-300">
-                Zuvigo reserves the right to update this policy periodically. Continued use of the website after modifications constitutes consent to the modified policy. For any questions, email us at <strong className="text-[#6C5CE7]">hello@zuvigo.com</strong>.
+                Zuvigo reserves the right to update this policy periodically. Continued use of the website after modifications constitutes consent to the modified policy. For any questions, email us at <strong className="text-[#2563EB]">hello@zuvigo.com</strong>.
               </p>
             </div>
           </Reveal>

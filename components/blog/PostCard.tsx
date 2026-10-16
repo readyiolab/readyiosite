@@ -4,7 +4,7 @@ import { blogPostUrl } from "@/lib/site";
 import type { BlogPostSummary } from "@/lib/blog";
 import { isOptimizable } from "@/lib/images";
 
-export const FALLBACK_COVER = "/og-image.jpg";
+export const FALLBACK_COVER = "/og-image.webp";
 
 export function PostCard({ post }: { post: BlogPostSummary }) {
   return (

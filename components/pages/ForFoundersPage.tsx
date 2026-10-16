@@ -51,20 +51,20 @@ function FounderHero() {
       {/* Soft background aura */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 right-0 -z-10 h-[600px] w-[800px] rounded-full bg-gradient-to-bl from-[#6C5CE7]/10 via-[#7C3AED]/5 to-transparent blur-3xl"
+        className="pointer-events-none absolute top-0 right-0 -z-10 h-[600px] w-[800px] rounded-full bg-gradient-to-bl from-[#2563EB]/10 via-[#3B82F6]/5 to-transparent blur-3xl"
       />
 
       <div className="mx-auto max-w-7xl container-p">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
           <div>
             <Reveal>
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
                 FOR FOUNDERS
               </span>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h1 className="mt-4 font-heading text-4xl font-extrabold leading-[1.15] tracking-tight text-[#0F172A] sm:text-5xl lg:text-6xl dark:text-white">
+              <h1 className="mt-4 font-heading text-4xl font-bold leading-[1.15] tracking-tight text-[#0F172A] sm:text-5xl lg:text-6xl dark:text-white">
                 Turn your idea into<br />a working product.
               </h1>
             </Reveal>
@@ -81,13 +81,13 @@ function FounderHero() {
                   href={SITE.bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#6C5CE7] px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-[#5B4BC4] active:scale-95"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-700 active:scale-95"
                 >
                   Discuss Your Idea
                 </a>
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#6C5CE7]/30 bg-transparent px-7 py-3.5 text-xs sm:text-sm font-bold text-[#6C5CE7] transition-all hover:bg-[#6C5CE7]/5 active:scale-95 dark:text-[#A78BFA] dark:border-[#A78BFA]/30"
+                  className="inline-flex items-center gap-2 rounded-xl border border-blue-300/40 bg-transparent px-7 py-3.5 text-xs sm:text-sm font-bold text-[#2563EB] transition-all hover:bg-blue-50/50 active:scale-95 dark:text-blue-300 dark:border-blue-800"
                 >
                   See How It Works
                 </a>
@@ -97,15 +97,15 @@ function FounderHero() {
             <Reveal delay={0.4}>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs sm:text-sm font-bold text-[#475569] dark:text-gray-400">
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#6C5CE7]" />
+                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
                   Clear scope
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#6C5CE7]" />
+                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
                   Milestone-based delivery
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#6C5CE7]" />
+                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
                   Support after launch
                 </span>
               </div>
@@ -118,7 +118,7 @@ function FounderHero() {
               {/* Desktop Connected 3D Layout (lg and above) */}
               <div className="hidden lg:flex relative min-h-[420px] w-full items-center justify-end select-none">
 
-                {/* Connecting SVG Line with Purple Nodes */}
+                {/* Connecting SVG Line with Blue Nodes */}
                 <svg
                   className="absolute inset-0 h-full w-full pointer-events-none z-10"
                   viewBox="0 0 580 420"
@@ -128,28 +128,28 @@ function FounderHero() {
                   {/* Curve 1: From Idea Card to Wireframe Card */}
                   <path
                     d="M 145 220 Q 185 220, 185 170 T 235 170"
-                    stroke="#8B5CF6"
+                    stroke="#3B82F6"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                   />
                   {/* Node 1 */}
-                  <circle cx="235" cy="170" r="5" fill="#6C5CE7" stroke="white" strokeWidth="2" />
+                  <circle cx="235" cy="170" r="5" fill="#2563EB" stroke="white" strokeWidth="2" />
 
                   {/* Curve 2: From Wireframe Card to Working Product Card */}
                   <path
                     d="M 375 160 Q 415 160, 415 100 T 455 100"
-                    stroke="#8B5CF6"
+                    stroke="#3B82F6"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                   />
                   {/* Node 2 */}
-                  <circle cx="455" cy="100" r="5" fill="#6C5CE7" stroke="white" strokeWidth="2" />
+                  <circle cx="455" cy="100" r="5" fill="#2563EB" stroke="white" strokeWidth="2" />
                 </svg>
 
                 {/* 1. Idea Card */}
                 <div className="absolute left-[0%] top-[38%] z-20 w-[150px] rounded-2xl border border-gray-100/90 bg-white p-4 shadow-md dark:border-gray-800 dark:bg-gray-900">
                   <div className="flex items-center gap-1.5 text-[#0F172A] dark:text-white">
-                    <Lightbulb className="h-4 w-4 text-[#6C5CE7]" />
+                    <Lightbulb className="h-4 w-4 text-[#2563EB]" />
                     <span className="text-xs font-bold">Idea</span>
                   </div>
                   <p className="mt-2.5 text-[10px] leading-relaxed text-gray-500 dark:text-gray-400">
@@ -166,7 +166,7 @@ function FounderHero() {
                 <div className="absolute left-[33%] top-[12%] z-20 w-[175px] rounded-2xl border border-gray-100/90 bg-white p-3.5 shadow-xl dark:border-gray-800 dark:bg-gray-900">
                   <div className="flex items-center justify-between border-b border-gray-100 pb-2 dark:border-gray-800">
                     <div className="flex items-center gap-1.5 text-[#0F172A] dark:text-white">
-                      <Layout className="h-4 w-4 text-[#6C5CE7]" />
+                      <Layout className="h-4 w-4 text-[#2563EB]" />
                       <span className="text-xs font-bold">Wireframe</span>
                     </div>
                     <div className="flex gap-1">
@@ -194,8 +194,8 @@ function FounderHero() {
 
                 {/* 3. Working Product Card */}
                 <div className="absolute right-0 top-[0%] z-30 w-[260px] overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center gap-2 border-b border-gray-100 bg-[#FAF9FD] px-4 py-3 dark:border-gray-800 dark:bg-gray-900/80">
-                    <Layout className="h-4 w-4 text-[#6C5CE7]" />
+                  <div className="flex items-center gap-2 border-b border-gray-100 bg-[#F8FAFC] px-4 py-3 dark:border-gray-800 dark:bg-gray-900/80">
+                    <Layout className="h-4 w-4 text-[#2563EB]" />
                     <span className="text-xs font-bold text-[#0F172A] dark:text-white">Working Product</span>
                   </div>
 
@@ -205,11 +205,11 @@ function FounderHero() {
                     <div className="w-[80px] bg-[#0E131F] p-2.5 text-white flex flex-col justify-between">
                       <div>
                         <div className="flex items-center gap-1">
-                          <div className="h-2 w-2 rounded-full bg-[#6C5CE7]" />
-                          <span className="text-[7px] font-extrabold tracking-wider">APP</span>
+                          <div className="h-2 w-2 rounded-full bg-[#2563EB]" />
+                          <span className="text-[7px] font-semibold tracking-wider">APP</span>
                         </div>
                         <div className="mt-4 space-y-1.5">
-                          <div className="flex items-center gap-1 rounded-md bg-[#6C5CE7] p-1 text-[7px] font-bold">
+                          <div className="flex items-center gap-1 rounded-md bg-[#2563EB] p-1 text-[7px] font-bold">
                             <span>Dashboard</span>
                           </div>
                           <div className="px-1 text-[7px] text-gray-400 font-medium">Clients</div>
@@ -225,16 +225,16 @@ function FounderHero() {
                     {/* Main Panel content */}
                     <div className="flex-1 bg-white p-3.5 dark:bg-gray-950 flex flex-col justify-between">
                       <div>
-                        <h4 className="text-xs font-extrabold text-[#0F172A] dark:text-white">Dashboard</h4>
+                        <h4 className="text-xs font-bold text-[#0F172A] dark:text-white">Dashboard</h4>
 
                         {/* Active Sessions & Clients */}
                         <div className="mt-3 grid grid-cols-2 gap-2">
-                          <div className="rounded-xl border border-gray-100 bg-[#FAF9FD] p-2 dark:border-gray-800 dark:bg-gray-900/60">
+                          <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-2 dark:border-gray-800 dark:bg-gray-900/60">
                             <span className="text-[8px] text-gray-400 font-medium block">Upcoming Sessions</span>
                             <span className="text-sm font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
                             <span className="text-[7px] text-gray-400 block mt-0.5">This Week</span>
                           </div>
-                          <div className="rounded-xl border border-gray-100 bg-[#FAF9FD] p-2 dark:border-gray-800 dark:bg-gray-900/60">
+                          <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-2 dark:border-gray-800 dark:bg-gray-900/60">
                             <span className="text-[8px] text-gray-400 font-medium block">Active Clients</span>
                             <span className="text-sm font-bold text-gray-900 dark:text-white block mt-0.5">48</span>
                             <span className="text-[7px] text-emerald-500 font-bold block mt-0.5">▲ +12%</span>
@@ -243,7 +243,7 @@ function FounderHero() {
 
                         {/* Recent Activities */}
                         <div className="mt-3.5">
-                          <span className="text-[8px] text-gray-400 font-extrabold block">Recent Activity</span>
+                          <span className="text-[8px] text-gray-400 font-semibold block">Recent Activity</span>
                           <div className="mt-2 space-y-2">
                             <div className="flex items-center justify-between text-[8px]">
                               <span className="text-gray-700 font-medium dark:text-gray-300">New session booked</span>
@@ -267,7 +267,7 @@ function FounderHero() {
                           <span className="text-gray-400 font-bold">Revenue Overview</span>
                           <span className="text-gray-400">This Month</span>
                         </div>
-                        <svg className="w-full h-10 mt-1 text-[#6C5CE7]" viewBox="0 0 100 30" fill="none">
+                        <svg className="w-full h-10 mt-1 text-[#2563EB]" viewBox="0 0 100 30" fill="none">
                           <path d="M0 25 L15 20 L30 22 L45 10 L60 15 L75 5 L90 12 L100 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                           <path d="M0 25 L15 20 L30 22 L45 10 L60 15 L75 5 L90 12 L100 2 L100 30 L0 30 Z" fill="currentColor" fillOpacity="0.1" />
                         </svg>
@@ -286,10 +286,10 @@ function FounderHero() {
                 <div className="rounded-2xl border border-gray-200/90 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Lightbulb className="h-4 w-4 text-[#6C5CE7]" />
-                      <span className="text-xs font-extrabold uppercase tracking-wider">01. Idea</span>
+                      <Lightbulb className="h-4 w-4 text-[#2563EB]" />
+                      <span className="text-xs font-semibold uppercase tracking-wider">01. Idea</span>
                     </div>
-                    <span className="rounded-full bg-[#6C5CE7]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#6C5CE7]">Concept</span>
+                    <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">Concept</span>
                   </div>
                   <p className="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
                     A solution that helps coaches manage clients and sessions.
@@ -300,10 +300,10 @@ function FounderHero() {
                 <div className="rounded-2xl border border-gray-200/90 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                   <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 dark:border-gray-800">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Layout className="h-4 w-4 text-[#6C5CE7]" />
-                      <span className="text-xs font-extrabold uppercase tracking-wider">02. Wireframe</span>
+                      <Layout className="h-4 w-4 text-[#2563EB]" />
+                      <span className="text-xs font-semibold uppercase tracking-wider">02. Wireframe</span>
                     </div>
-                    <span className="rounded-full bg-[#6C5CE7]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#6C5CE7]">UX Wireframe</span>
+                    <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">UX Wireframe</span>
                   </div>
                   <div className="mt-3 space-y-2">
                     <div className="h-3 w-full rounded-xs bg-gray-100 dark:bg-gray-800" />
@@ -313,22 +313,22 @@ function FounderHero() {
 
                 {/* 03. Working Product Card */}
                 <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between border-b border-gray-100 bg-[#FAF9FD] px-5 py-3.5 dark:border-gray-800 dark:bg-gray-900/80">
+                  <div className="flex items-center justify-between border-b border-gray-100 bg-[#F8FAFC] px-5 py-3.5 dark:border-gray-800 dark:bg-gray-900/80">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Layout className="h-4 w-4 text-[#6C5CE7]" />
-                      <span className="text-xs font-extrabold uppercase tracking-wider">03. Working Product</span>
+                      <Layout className="h-4 w-4 text-[#2563EB]" />
+                      <span className="text-xs font-semibold uppercase tracking-wider">03. Working Product</span>
                     </div>
                     <span className="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-bold text-emerald-600">Live App</span>
                   </div>
                   <div className="p-5 bg-white dark:bg-gray-950">
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-xl border border-gray-100 bg-[#FAF9FD] p-3.5 dark:border-gray-800 dark:bg-gray-900">
+                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-3.5 dark:border-gray-800 dark:bg-gray-900">
                         <span className="text-xs text-gray-400 font-medium block">Upcoming Sessions</span>
-                        <span className="text-lg font-extrabold text-gray-900 dark:text-white block mt-0.5">12</span>
+                        <span className="text-lg font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
                       </div>
-                      <div className="rounded-xl border border-gray-100 bg-[#FAF9FD] p-3.5 dark:border-gray-800 dark:bg-gray-900">
+                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-3.5 dark:border-gray-800 dark:bg-gray-900">
                         <span className="text-xs text-gray-400 font-medium block">Active Clients</span>
-                        <span className="text-lg font-extrabold text-gray-900 dark:text-white block mt-0.5">48 <span className="text-xs text-emerald-500 font-bold">▲ +12%</span></span>
+                        <span className="text-lg font-bold text-gray-900 dark:text-white block mt-0.5">48 <span className="text-xs text-emerald-500 font-bold">▲ +12%</span></span>
                       </div>
                     </div>
                   </div>
@@ -365,15 +365,15 @@ function FounderProblem() {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-[#FAF9FD] dark:bg-gray-950/60">
+    <section className="py-20 md:py-24 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div>
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               FROM IDEA TO EXECUTION
             </span>
             <div className="mt-3 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
-              <h2 className="font-heading text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
                 A good idea is only<br className="hidden sm:inline" /> the beginning.
               </h2>
               <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#5A6376] dark:text-gray-300">
@@ -389,7 +389,7 @@ function FounderProblem() {
             return (
               <Reveal key={card.text} delay={idx * 0.1}>
                 <div className="flex h-full min-h-[170px] flex-col justify-between rounded-2xl border border-gray-100/90 bg-white p-7 shadow-xs transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
-                  <div className="text-[#6C5CE7] dark:text-[#A78BFA]">
+                  <div className="text-[#2563EB] dark:text-blue-400">
                     <Icon className="h-6 w-6 stroke-[1.75]" />
                   </div>
                   <h4 className="mt-8 font-heading text-sm sm:text-base font-bold leading-snug text-[#0F172A] dark:text-white">
@@ -443,19 +443,19 @@ function FounderJourney() {
             {/* Ambient background glows */}
             <div
               aria-hidden
-              className="pointer-events-none absolute -top-40 right-0 h-[450px] w-[500px] rounded-full bg-gradient-to-br from-[#6C5CE7]/25 via-[#7C3AED]/10 to-transparent blur-3xl"
+              className="pointer-events-none absolute -top-40 right-0 h-[450px] w-[500px] rounded-full bg-gradient-to-br from-[#2563EB]/25 via-[#3B82F6]/10 to-transparent blur-3xl"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute -bottom-40 left-0 h-[450px] w-[500px] rounded-full bg-gradient-to-tr from-[#6C5CE7]/20 via-[#4F46E5]/10 to-transparent blur-3xl"
+              className="pointer-events-none absolute -bottom-40 left-0 h-[450px] w-[500px] rounded-full bg-gradient-to-tr from-[#2563EB]/20 via-[#1D4ED8]/10 to-transparent blur-3xl"
             />
 
             {/* Section Header */}
             <div className="relative z-10">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#9B8EFF]">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
                 HOW WE HELP
               </span>
-              <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 From idea to first version.
               </h2>
             </div>
@@ -466,7 +466,7 @@ function FounderJourney() {
               {/* Horizontal Connecting Glow Line (Desktop) */}
               <div
                 aria-hidden
-                className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#6C5CE7]/30 via-[#8B5CF6] to-[#6C5CE7]/30 z-0"
+                className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#2563EB]/30 via-[#3B82F6] to-[#2563EB]/30 z-0"
               />
 
               <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -477,13 +477,13 @@ function FounderJourney() {
                       <div className="relative flex flex-col items-start lg:items-center text-left lg:text-center group">
 
                         {/* Circular Glowing Icon Node */}
-                        <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-[#8B5CF6]/50 bg-[#12112A] text-[#A78BFA] shadow-[0_0_30px_rgba(108,92,231,0.4)] transition-all duration-300 group-hover:scale-105 group-hover:border-[#8B5CF6] group-hover:shadow-[0_0_40px_rgba(139,92,246,0.6)]">
+                        <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-blue-500/40 bg-[#0B1221] text-blue-300 shadow-[0_0_30px_rgba(37,99,235,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:border-blue-400 group-hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
                           <Icon className="h-7 w-7 stroke-[1.75]" />
-                          <span className="absolute -bottom-1 h-2 w-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]" />
+                          <span className="absolute -bottom-1 h-2 w-2 rounded-full bg-[#3B82F6] shadow-[0_0_8px_#3B82F6]" />
                         </div>
 
                         {/* Step Number & Title */}
-                        <span className="mt-6 font-heading text-xs font-extrabold text-[#A78BFA]">
+                        <span className="mt-6 font-heading text-xs font-bold text-blue-300">
                           {s.num}
                         </span>
                         <h3 className="mt-1 font-heading text-base font-bold text-white">
@@ -512,14 +512,14 @@ function FounderJourney() {
 
 function WhatWeCanBuild() {
   return (
-    <section className="py-20 md:py-28 bg-[#FAF9FD] dark:bg-gray-950/60">
+    <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div>
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               HOW WE CAN BUILD
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
               The right technology for the stage you are in.
             </h2>
           </div>
@@ -541,7 +541,7 @@ function WhatWeCanBuild() {
                   </div>
                 </div>
                 <div className="mt-3 space-y-1">
-                  <h5 className="font-heading text-[10px] font-extrabold leading-tight">
+                  <h5 className="font-heading text-[10px] font-bold leading-tight">
                     Better facilities.<br />Stronger schools.
                   </h5>
                   <p className="text-[6px] text-gray-400 max-w-[110px] leading-tight">
@@ -555,7 +555,7 @@ function WhatWeCanBuild() {
 
               <div className="mt-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-heading text-sm font-extrabold text-[#0F172A] dark:text-white">
+                  <h3 className="font-heading text-sm font-bold text-[#0F172A] dark:text-white">
                     Validation Websites
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#5A6376] dark:text-gray-400">
@@ -574,18 +574,18 @@ function WhatWeCanBuild() {
                 <div className="w-[38px] bg-[#121824] p-1.5 text-white">
                   <div className="h-1 w-4 rounded-xs bg-white/30" />
                   <div className="mt-3 space-y-1.5">
-                    <div className="h-1.5 w-full rounded-xs bg-[#6C5CE7]" />
+                    <div className="h-1.5 w-full rounded-xs bg-[#2563EB]" />
                     <div className="h-1 w-3/4 rounded-xs bg-white/20" />
                     <div className="h-1 w-5/6 rounded-xs bg-white/20" />
                     <div className="h-1 w-2/3 rounded-xs bg-white/20" />
                   </div>
                 </div>
-                <div className="flex-1 p-2 bg-[#FAF9FD] dark:bg-gray-900/40">
-                  <span className="text-[8px] font-extrabold text-gray-800 dark:text-white">Overview</span>
+                <div className="flex-1 p-2 bg-[#F8FAFC] dark:bg-gray-900/40">
+                  <span className="text-[8px] font-semibold text-gray-800 dark:text-white">Overview</span>
                   <div className="mt-2 rounded-lg bg-white p-2 shadow-2xs dark:bg-gray-800">
                     <span className="text-[6px] text-gray-400 block">Active Users</span>
                     <span className="text-xs font-bold text-gray-900 dark:text-white">1,240</span>
-                    <svg className="w-full h-8 mt-1 text-[#6C5CE7]" viewBox="0 0 100 30" fill="none">
+                    <svg className="w-full h-8 mt-1 text-[#2563EB]" viewBox="0 0 100 30" fill="none">
                       <path d="M0 25 L20 18 L40 22 L60 8 L80 14 L100 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                       <path d="M0 25 L20 18 L40 22 L60 8 L80 14 L100 4 L100 30 L0 30 Z" fill="currentColor" fillOpacity="0.1" />
                     </svg>
@@ -595,7 +595,7 @@ function WhatWeCanBuild() {
 
               <div className="mt-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-heading text-sm font-extrabold text-[#0F172A] dark:text-white">
+                  <h3 className="font-heading text-sm font-bold text-[#0F172A] dark:text-white">
                     Web Applications & SaaS
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#5A6376] dark:text-gray-400">
@@ -612,12 +612,12 @@ function WhatWeCanBuild() {
               {/* Mockup Preview */}
               <div className="relative flex h-44 w-full flex-col overflow-hidden rounded-2xl bg-[#090C19] p-2.5 text-white">
                 <span className="text-[7px] text-gray-400">EXPERT HUB</span>
-                <h5 className="mt-1 font-heading text-[9px] font-extrabold leading-tight">
+                <h5 className="mt-1 font-heading text-[9px] font-bold leading-tight">
                   Find the right expert<br />for your project
                 </h5>
                 <div className="mt-2.5 flex items-center gap-1 rounded-md bg-white/10 p-1">
                   <div className="h-1.5 flex-1 rounded-xs bg-white/20" />
-                  <div className="rounded-xs bg-[#6C5CE7] px-1.5 py-0.5 text-[5px] font-bold">Search</div>
+                  <div className="rounded-xs bg-[#2563EB] px-1.5 py-0.5 text-[5px] font-bold">Search</div>
                 </div>
                 <div className="mt-3">
                   <span className="text-[6px] text-gray-400 block">Popular Categories</span>
@@ -632,7 +632,7 @@ function WhatWeCanBuild() {
 
               <div className="mt-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-heading text-sm font-extrabold text-[#0F172A] dark:text-white">
+                  <h3 className="font-heading text-sm font-bold text-[#0F172A] dark:text-white">
                     Marketplaces & Portals
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#5A6376] dark:text-gray-400">
@@ -647,10 +647,10 @@ function WhatWeCanBuild() {
           <Reveal delay={0.4}>
             <div className="flex h-full flex-col justify-between rounded-3xl border border-gray-100/90 bg-white p-4 shadow-xs transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
               {/* Mockup Preview */}
-              <div className="relative flex h-44 w-full flex-col overflow-hidden rounded-2xl bg-[#FAF9FD] p-2.5 dark:bg-gray-950 border border-gray-100 dark:border-gray-800">
+              <div className="relative flex h-44 w-full flex-col overflow-hidden rounded-2xl bg-[#F8FAFC] p-2.5 dark:bg-gray-950 border border-gray-100 dark:border-gray-800">
                 <div className="flex items-center gap-1">
-                  <div className="h-2.5 w-2.5 rounded-full bg-[#6C5CE7]/20 text-[#6C5CE7] flex items-center justify-center text-[6px]">⚡</div>
-                  <span className="text-[8px] font-extrabold text-gray-800 dark:text-white">Insights</span>
+                  <div className="h-2.5 w-2.5 rounded-full bg-blue-100 text-[#2563EB] flex items-center justify-center text-[6px]">⚡</div>
+                  <span className="text-[8px] font-semibold text-gray-800 dark:text-white">Insights</span>
                 </div>
                 <div className="mt-2 rounded-lg bg-white p-2 shadow-2xs dark:bg-gray-900 border border-gray-50 dark:border-gray-800">
                   <span className="text-[6px] text-gray-400 block">Summary</span>
@@ -658,7 +658,7 @@ function WhatWeCanBuild() {
                     <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     <span className="text-[6px] font-bold text-gray-700 dark:text-gray-200">Dataset benchmarked</span>
                   </div>
-                  <svg className="w-full h-10 mt-2 text-[#6C5CE7]" viewBox="0 0 100 30" fill="none">
+                  <svg className="w-full h-10 mt-2 text-[#2563EB]" viewBox="0 0 100 30" fill="none">
                     <path d="M0 20 L25 25 L50 10 L75 18 L100 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </div>
@@ -666,7 +666,7 @@ function WhatWeCanBuild() {
 
               <div className="mt-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-heading text-sm font-extrabold text-[#0F172A] dark:text-white">
+                  <h3 className="font-heading text-sm font-bold text-[#0F172A] dark:text-white">
                     AI-Powered Products
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#5A6376] dark:text-gray-400">
@@ -685,12 +685,12 @@ function WhatWeCanBuild() {
                 <div className="w-[38px] bg-[#121824] p-1.5 text-white">
                   <div className="h-1 w-4 rounded-xs bg-white/30" />
                   <div className="mt-3 space-y-1.5">
-                    <div className="h-1.5 w-full rounded-xs bg-[#6C5CE7]" />
+                    <div className="h-1.5 w-full rounded-xs bg-[#2563EB]" />
                     <div className="h-1 w-3/4 rounded-xs bg-white/20" />
                   </div>
                 </div>
-                <div className="flex-1 p-2 bg-[#FAF9FD] dark:bg-gray-900/40">
-                  <span className="text-[8px] font-extrabold text-gray-800 dark:text-white">Deals</span>
+                <div className="flex-1 p-2 bg-[#F8FAFC] dark:bg-gray-900/40">
+                  <span className="text-[8px] font-semibold text-gray-800 dark:text-white">Deals</span>
                   <div className="mt-2 grid grid-cols-3 gap-1">
                     <div className="rounded-md bg-white p-1 shadow-2xs dark:bg-gray-800 space-y-1">
                       <span className="text-[5px] text-gray-400 font-bold block">Candidate</span>
@@ -699,7 +699,7 @@ function WhatWeCanBuild() {
                     </div>
                     <div className="rounded-md bg-white p-1 shadow-2xs dark:bg-gray-800 space-y-1">
                       <span className="text-[5px] text-gray-400 font-bold block">Progress</span>
-                      <div className="h-1 rounded-xs bg-[#6C5CE7]/30" />
+                      <div className="h-1 rounded-xs bg-[#2563EB]/30" />
                       <div className="h-1 rounded-xs bg-gray-100 dark:bg-gray-700" />
                     </div>
                     <div className="rounded-md bg-white p-1 shadow-2xs dark:bg-gray-800 space-y-1">
@@ -712,7 +712,7 @@ function WhatWeCanBuild() {
 
               <div className="mt-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-heading text-sm font-extrabold text-[#0F172A] dark:text-white">
+                  <h3 className="font-heading text-sm font-bold text-[#0F172A] dark:text-white">
                     CRM & Business Platforms
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-[#5A6376] dark:text-gray-400">
@@ -745,14 +745,14 @@ function FounderDiscovery() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-[#EDE8FF] p-6 sm:p-12 lg:p-16 dark:bg-purple-950/40 border border-purple-200/60 dark:border-purple-800/40 shadow-sm">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-blue-50/80 p-6 sm:p-12 lg:p-16 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-800/40 shadow-sm">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.25fr]">
               {/* Left Column */}
               <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7] dark:text-[#A78BFA]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB] dark:text-blue-300">
                   START WITH CLARITY
                 </span>
-                <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
+                <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
                   Start with the right<br />first version.
                 </h2>
                 <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#5A6376] dark:text-gray-300 max-w-md">
@@ -763,7 +763,7 @@ function FounderDiscovery() {
                     href={SITE.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#6C5CE7] px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-[#5B4BC4] active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-700 active:scale-95"
                   >
                     Start With Discovery
                   </a>
@@ -772,7 +772,7 @@ function FounderDiscovery() {
 
               {/* Right Column: 3x2 Grid of Clear Plan Items */}
               <div>
-                <h4 className="font-heading text-sm sm:text-base font-extrabold text-[#0F172A] dark:text-white mb-5">
+                <h4 className="font-heading text-sm sm:text-base font-bold text-[#0F172A] dark:text-white mb-5">
                   You&apos;ll get a clear plan, including:
                 </h4>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -781,7 +781,7 @@ function FounderDiscovery() {
                       key={item}
                       className="flex items-start gap-3.5 rounded-2xl bg-white p-4.5 shadow-2xs border border-white/80 dark:border-gray-800 dark:bg-gray-900"
                     >
-                      <div className="mt-0.5 grid h-6 w-6 place-items-center rounded-full bg-[#6C5CE7]/10 text-[#6C5CE7] flex-shrink-0 dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                      <div className="mt-0.5 grid h-6 w-6 place-items-center rounded-full bg-blue-100 text-[#2563EB] flex-shrink-0 dark:bg-blue-900/40 dark:text-blue-300">
                         <Check className="h-3.5 w-3.5 stroke-[2.5]" />
                       </div>
                       <span className="text-xs sm:text-sm font-bold leading-snug text-[#0F172A] dark:text-white">
@@ -831,14 +831,14 @@ function WhyFoundersWorkWithUs() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#FAF9FD] dark:bg-gray-950/60">
+    <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               OUR PRINCIPLES
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl leading-tight dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl leading-tight dark:text-white">
               A technology partner that thinks about the business.
             </h2>
           </div>
@@ -851,10 +851,10 @@ function WhyFoundersWorkWithUs() {
               <Reveal key={pt.title} delay={idx * 0.08}>
                 <div className="flex h-full flex-col justify-between rounded-3xl border border-gray-100/90 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
                   <div>
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#6C5CE7]/10 text-[#6C5CE7] dark:bg-[#6C5CE7]/20 dark:text-[#A78BFA]">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-100 text-[#2563EB] dark:bg-blue-900/40 dark:text-blue-300">
                       <Icon className="h-6 w-6 stroke-[1.75]" />
                     </div>
-                    <h3 className="mt-5 font-heading text-base font-extrabold text-[#0F172A] leading-snug dark:text-white">
+                    <h3 className="mt-5 font-heading text-base font-bold text-[#0F172A] leading-snug dark:text-white">
                       {pt.title}
                     </h3>
                     <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-[#5A6376] dark:text-gray-300">
@@ -887,26 +887,56 @@ function WhoThisIsFor() {
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               WHO THIS IS FOR
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl lg:text-5xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl lg:text-5xl dark:text-white">
               Zuvigo is a good fit for founders who:
             </h2>
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FITS.map((item, idx) => (
-            <Reveal key={item} delay={idx * 0.1}>
-              <div className="flex items-center gap-3.5 rounded-2xl border border-gray-200 bg-white p-5 shadow-xs dark:border-gray-800 dark:bg-gray-900">
-                <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-[#6C5CE7]" />
-                <span className="text-xs sm:text-sm font-bold text-[#111827] dark:text-white">
-                  {item}
-                </span>
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12 items-center">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {FITS.map((item, idx) => (
+              <Reveal key={item} delay={idx * 0.08}>
+                <div className="flex items-start gap-3.5 rounded-2xl border border-gray-200 bg-white p-5 shadow-xs dark:border-gray-800 dark:bg-gray-900">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-[#2563EB] mt-0.5" />
+                  <span className="text-xs sm:text-sm font-bold text-[#111827] dark:text-white leading-snug">
+                    {item}
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="lg:col-span-5">
+            <Reveal delay={0.2}>
+              <div className="group relative overflow-hidden rounded-3xl border border-blue-200/90 bg-white p-6 shadow-md dark:border-gray-800 dark:bg-gray-900">
+                <div className="relative h-64 w-full overflow-hidden rounded-2xl bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
+                  <Image
+                    src="/isometric-software-dev.webp"
+                    alt="Founder software development and product delivery"
+                    fill
+                    className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                  <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#2563EB] shadow-xs border border-blue-100">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+                    FOUNDER-FRIENDLY SPRINT
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-sm font-bold text-gray-950 dark:text-white">
+                    Phased Scope &amp; Milestone Deliveries
+                  </h4>
+                  <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    We break complex technical backlogs into predictable 2-week iterations with visible milestones and working prototypes.
+                  </p>
+                </div>
               </div>
             </Reveal>
-          ))}
+          </div>
         </div>
       </div>
     </section>
@@ -922,33 +952,33 @@ function SelectedFounderWork() {
       idea: "Independent distributors needed a reliable digital system to establish an online presence and manage leads.",
       built: "Complete web platform with lead capture, member management and automated notifications.",
       status: "Active & Scaling",
-      image: "/igrowbig.png",
+      image: "/igrowbig.webp",
     },
     {
       title: "Arbilo",
       idea: "Crypto traders lacked a simple, readable interface to visualize arbitrage market data.",
       built: "Analytics web app displaying real-time arbitrage matrices and market insights.",
       status: "Live Product",
-      image: "/arbiloprojct.png",
+      image: "/arbiloprojct.webp",
     },
     {
       title: "Freedom M&A",
       idea: "M&A advisory needed automated lead qualification and communication pipelines.",
       built: "AI-assisted CRM with automated phone/SMS workflows via Twilio integration.",
       status: "Live Product",
-      image: "/dave.png",
+      image: "/dave.webp",
     },
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#F0EDF9]/40 dark:bg-gray-900/40">
+    <section className="py-20 md:py-28 bg-blue-50/30 dark:bg-gray-900/40">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               SELECTED FOUNDER WORK
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#111827] sm:text-4xl dark:text-white">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl dark:text-white">
               Products built for founders.
             </h2>
           </div>
@@ -1020,15 +1050,15 @@ function FounderFAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAF9FD] dark:bg-gray-950/60">
+    <section className="py-16 md:py-24 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.8fr] lg:items-start">
           <Reveal>
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#6C5CE7]">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#2563EB]">
                 FOUNDER FAQ
               </span>
-              <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl dark:text-white">
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl dark:text-white">
                 Answers to common<br />questions.
               </h2>
             </div>
@@ -1043,10 +1073,10 @@ function FounderFAQ() {
                     <button
                       type="button"
                       onClick={() => setOpenIdx(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between p-4.5 sm:p-5 text-left font-heading text-xs sm:text-sm font-bold text-[#0F172A] dark:text-white hover:text-[#6C5CE7] dark:hover:text-[#A78BFA] transition-colors"
+                      className="flex w-full items-center justify-between p-4.5 sm:p-5 text-left font-heading text-xs sm:text-sm font-bold text-[#0F172A] dark:text-white hover:text-[#2563EB] dark:hover:text-blue-300 transition-colors"
                     >
                       <span>{faq.q}</span>
-                      <div className="ml-4 text-[#6C5CE7] dark:text-[#A78BFA]">
+                      <div className="ml-4 text-[#2563EB] dark:text-blue-400">
                         {isOpen ? <ChevronUp className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                       </div>
                     </button>

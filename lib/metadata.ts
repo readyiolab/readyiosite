@@ -17,7 +17,7 @@ export function pageMetadata({
   ogDescription = description,
   imageAlt,
 }: PageMetadataInput): Metadata {
-  const image = { url: "/og-image.jpg", width: 1200, height: 630, alt: imageAlt ?? ogTitle };
+  const image = { url: "/og-image.webp", width: 1200, height: 630, alt: imageAlt ?? ogTitle };
   return {
     title,
     description,
