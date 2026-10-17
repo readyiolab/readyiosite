@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ChevronRight, Monitor, Box, Cloud, Zap, Star } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { HeroVisualHome } from "@/components/pages/HeroVisualHome";
 
@@ -67,25 +67,25 @@ function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.15] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
+            <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.15] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
               Websites, applications and software that make business{" "}
               <span className="text-[#2563EB]">work better.</span>
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-lg">
               Zuvigo builds modern websites, custom web applications, cloud and
               desktop software, business automation, and productivity tools for
               growing businesses.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5">
               <Link
                 href="/solutions"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 to-blue-500 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
+                className="group relative inline-flex w-full sm:w-auto items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 to-blue-500 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
               >
-                <span className="flex items-center gap-2 rounded-full bg-[#0B0F19] px-7 py-3.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
+                <span className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0B0F19] px-7 py-3.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                   <span>Explore Solutions</span>
                   <ArrowRight className="h-4 w-4 text-blue-400 transition-transform duration-200 group-hover:translate-x-1" />
@@ -94,7 +94,7 @@ function HeroSection() {
 
               <Link
                 href="/software"
-                className="group inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-6 py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-6 py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Explore Software</span>
                 <ChevronRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5" />
@@ -227,28 +227,28 @@ function SolutionsOverviewSection() {
     {
       title: "Website Development",
       desc: "High-converting, responsive websites engineered for ultra-fast speeds, SEO authority, and seamless user experiences.",
-      icon: Monitor,
+      iconSrc: "/icons/website-development.webp",
       href: "/solutions#websites",
       isPrimary: true,
     },
     {
       title: "Web Application Development",
       desc: "Custom SaaS applications, client portals, and bespoke web software built to streamline complex business operations.",
-      icon: Box,
+      iconSrc: "/icons/web-application-development.webp",
       href: "/solutions#web-apps",
       isPrimary: false,
     },
     {
       title: "Cloud & Desktop Software",
       desc: "Scalable cloud infrastructure, desktop software, and high-throughput microservices architected for 99.99% uptime.",
-      icon: Cloud,
+      iconSrc: "/icons/cloud-desktop-software-development.webp",
       href: "/solutions#cloud-desktop",
       isPrimary: false,
     },
     {
       title: "Business & AI Automation",
       desc: "Autonomous AI workflows, custom integrations, and smart automations that eliminate manual tasks and accelerate growth.",
-      icon: Zap,
+      iconSrc: "/icons/business-ai-automation.webp",
       href: "/solutions#automation",
       isPrimary: false,
     },
@@ -286,18 +286,23 @@ function SolutionsOverviewSection() {
         {/* 4 Cards Grid matching reference image */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((c) => {
-            const Icon = c.icon;
             if (c.isPrimary) {
               return (
                 <Link
                   key={c.title}
                   href={c.href}
-                  className="group relative flex flex-col justify-between rounded-3xl bg-[#0B1221] p-7 sm:p-8 text-white shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-950/20 border border-slate-800 min-h-[380px] sm:min-h-[420px]"
+                  className="group relative flex flex-col justify-between rounded-3xl bg-[#0B1221] p-7 sm:p-8 text-white shadow-md border border-slate-800 min-h-[380px] sm:min-h-[420px]"
                 >
                   <div>
-                    {/* Minimal outline icon */}
-                    <div className="text-white/90 group-hover:text-white transition-colors">
-                      <Icon className="h-8 w-8 stroke-[1.75]" />
+                    {/* Custom Asset Icon - Standalone, no border or bg */}
+                    <div className="relative h-12 w-12 shrink-0">
+                      <Image
+                        src={c.iconSrc}
+                        alt={c.title}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 object-contain"
+                      />
                     </div>
 
                     {/* Card Title */}
@@ -313,7 +318,7 @@ function SolutionsOverviewSection() {
 
                   {/* Bottom Pill Button */}
                   <div className="mt-8 pt-2">
-                    <span className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs sm:text-sm font-semibold text-gray-950 shadow-xs group-hover:bg-slate-100 transition-colors">
+                    <span className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs sm:text-sm font-semibold text-gray-950 shadow-xs">
                       Learn More
                     </span>
                   </div>
@@ -325,16 +330,22 @@ function SolutionsOverviewSection() {
               <Link
                 key={c.title}
                 href={c.href}
-                className="group relative flex flex-col justify-between rounded-3xl bg-[#F8FAFC] p-7 sm:p-8 text-gray-900 shadow-xs border border-slate-200/90 transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-200/60 min-h-[380px] sm:min-h-[420px]"
+                className="group relative flex flex-col justify-between rounded-3xl bg-[#F8FAFC] p-7 sm:p-8 text-gray-900 shadow-xs border border-slate-200/90 min-h-[380px] sm:min-h-[420px]"
               >
                 <div>
-                  {/* Minimal outline icon */}
-                  <div className="text-gray-900 group-hover:text-[#2563EB] transition-colors">
-                    <Icon className="h-8 w-8 stroke-[1.75]" />
+                  {/* Custom Asset Icon - Standalone, no border or bg */}
+                  <div className="relative h-12 w-12 shrink-0">
+                    <Image
+                      src={c.iconSrc}
+                      alt={c.title}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 object-contain"
+                    />
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
+                  <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-950">
                     {c.title}
                   </h3>
 
@@ -346,7 +357,7 @@ function SolutionsOverviewSection() {
 
                 {/* Bottom Pill Button */}
                 <div className="mt-8 pt-2">
-                  <span className="inline-flex items-center justify-center rounded-full bg-[#0B1221] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs group-hover:bg-[#2563EB] transition-colors">
+                  <span className="inline-flex items-center justify-center rounded-full bg-[#0B1221] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs">
                     Learn More
                   </span>
                 </div>

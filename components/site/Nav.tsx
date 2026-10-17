@@ -2,14 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   ArrowRight,
   ChevronDown,
   Monitor,
   LayoutGrid,
-  Cloud,
-  Zap,
   FileText,
   Mail,
   PenLine,
@@ -32,28 +31,28 @@ export const SOLUTIONS_ITEMS = [
     desc: "Modern, high-converting websites for growing businesses.",
     badge: "High Performance",
     href: "/solutions#websites",
-    icon: Monitor,
+    iconSrc: "/icons/website-development.webp",
   },
   {
     title: "Web Application Development",
     desc: "Custom web applications tailored to your workflows.",
     badge: "Custom Workflows",
     href: "/solutions#web-apps",
-    icon: LayoutGrid,
+    iconSrc: "/icons/web-application-development.webp",
   },
   {
     title: "Cloud & Desktop Software Development",
     desc: "Scalable cloud and desktop software solutions.",
     badge: "Resilient Arch",
     href: "/solutions#cloud-desktop",
-    icon: Cloud,
+    iconSrc: "/icons/cloud-desktop-software-development.webp",
   },
   {
     title: "Business & AI Automation",
     desc: "Automate processes and unlock new efficiency with AI.",
     badge: "AI Powered",
     href: "/solutions#automation",
-    icon: Zap,
+    iconSrc: "/icons/business-ai-automation.webp",
   },
 ];
 
@@ -110,7 +109,6 @@ export const SOFTWARE_ITEMS = [
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [open, setOpen] = useState(false);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<"solutions" | "software" | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<"solutions" | "software" | null>(null);
@@ -124,13 +122,8 @@ export function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setScrolled(scrollY > 20);
-
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        setScrollProgress(Math.min(100, Math.max(0, (scrollY / totalHeight) * 100)));
-      }
+      const isScrolled = window.scrollY > 20;
+      setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -191,17 +184,12 @@ export function Nav() {
       {/* ================= DESKTOP & SCROLLED FLOATING HEADER ================= */}
       <header
         ref={navRef}
-        className={`fixed inset-x-0 z-50 transition-all duration-500 ease-out ${scrolled
-            ? "top-3 sm:top-4 px-3 sm:px-6 pointer-events-none"
-            : "top-0 px-0 pointer-events-auto"
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out ${scrolled
+            ? "border-b border-slate-200/80 bg-white/90 backdrop-blur-xl py-3 shadow-[0_4px_24px_-4px_rgba(15,23,42,0.08)]"
+            : "border-b border-slate-100/60 bg-white/75 backdrop-blur-md py-4 sm:py-5"
           }`}
       >
-        <div
-          className={`relative mx-auto transition-all duration-500 ease-out pointer-events-auto ${scrolled
-              ? "max-w-5xl rounded-full border border-white/80 bg-white/85 backdrop-blur-2xl py-2 sm:py-2.5 px-4 sm:px-6 shadow-[0_16px_36px_-10px_rgba(15,23,42,0.12),_0_0_0_1px_rgba(226,232,240,0.8)]"
-              : "max-w-7xl border-b border-gray-100/60 bg-white/75 backdrop-blur-md py-4 px-4 sm:px-6 lg:px-8"
-            }`}
-        >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
 
           <div className="flex items-center justify-between">
@@ -222,10 +210,10 @@ export function Nav() {
                   href="/solutions"
                   onClick={() => setActiveDropdown(null)}
                   className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all ${isSolutionsActive
-                      ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
-                      : activeDropdown === "solutions"
-                        ? "text-gray-950 bg-gray-100/70"
-                        : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
+                    ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
+                    : activeDropdown === "solutions"
+                      ? "text-gray-950 bg-gray-100/70"
+                      : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
                     }`}
                 >
                   Solutions
@@ -260,48 +248,38 @@ export function Nav() {
                         </div>
 
                         <div className="space-y-1">
-                          {SOLUTIONS_ITEMS.map((item) => {
-                            const Icon = item.icon;
-                            return (
-                              <Link
-                                key={item.title}
-                                href={item.href}
-                                onClick={() => setActiveDropdown(null)}
-                                className="group flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
-                              >
-                                <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-blue-100/90 bg-blue-50/80 text-[#2563EB] shadow-2xs group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all">
-                                  <Icon className="h-4 w-4" />
+                          {SOLUTIONS_ITEMS.map((item) => (
+                            <Link
+                              key={item.title}
+                              href={item.href}
+                              onClick={() => setActiveDropdown(null)}
+                              className="group flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
+                            >
+                              <div className="relative h-10 w-10 shrink-0 flex items-center justify-center">
+                                <Image
+                                  src={item.iconSrc}
+                                  alt={item.title}
+                                  width={40}
+                                  height={40}
+                                  className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-110"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center justify-between">
+                                  <span className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors">
+                                    {item.title}
+                                  </span>
+                                  <ArrowRight className="h-3.5 w-3.5 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#2563EB] transition-all" />
                                 </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors">
-                                      {item.title}
-                                    </span>
-                                    <ArrowRight className="h-3.5 w-3.5 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#2563EB] transition-all" />
-                                  </div>
-                                  <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
-                                    {item.desc}
-                                  </p>
-                                </div>
-                              </Link>
-                            );
-                          })}
+                                <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
+                                  {item.desc}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
                         </div>
 
-                        {/* Bottom highlight pill */}
-                        <div className="mt-2 pt-2 border-t border-gray-100/80 px-2">
-                          <Link
-                            href="/solutions"
-                            onClick={() => setActiveDropdown(null)}
-                            className="flex items-center justify-between text-[11px] font-medium text-gray-600 hover:text-[#2563EB] transition-colors"
-                          >
-                            <span className="flex items-center gap-1.5">
-                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                              Custom architecture &amp; engineering
-                            </span>
-                            <span className="font-semibold text-[#2563EB]">Learn more →</span>
-                          </Link>
-                        </div>
+
                       </div>
                     </motion.div>
                   )}
@@ -318,10 +296,10 @@ export function Nav() {
                   href="/software"
                   onClick={() => setActiveDropdown(null)}
                   className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-all ${isSoftwareActive
-                      ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
-                      : activeDropdown === "software"
-                        ? "text-gray-950 bg-gray-100/70"
-                        : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
+                    ? "bg-blue-50/90 text-[#2563EB] font-semibold shadow-2xs"
+                    : activeDropdown === "software"
+                      ? "text-gray-950 bg-gray-100/70"
+                      : "text-gray-700 hover:text-gray-950 hover:bg-gray-50/80"
                     }`}
                 >
                   Software
@@ -390,20 +368,7 @@ export function Nav() {
                           })}
                         </div>
 
-                        {/* Bottom highlight banner */}
-                        <div className="mt-2.5 pt-2 border-t border-gray-100/80 px-2 flex items-center justify-between text-[11px]">
-                          <span className="text-gray-500">
-                            Cloud, desktop &amp; enterprise deployments
-                          </span>
-                          <a
-                            href="https://pdf.zuvigo.com/workspace"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-[#2563EB] hover:underline flex items-center gap-0.5"
-                          >
-                            Open Workspace <ExternalLink className="h-2.5 w-2.5" />
-                          </a>
-                        </div>
+
                       </div>
                     </motion.div>
                   )}
@@ -531,7 +496,7 @@ export function Nav() {
 
               {/* Mobile Navigation Menu List (Menu & Submenus) */}
               <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-2">
-                
+
                 {/* 1. SOLUTIONS (MENU ITEM WITH SUBMENU) */}
                 <div className="rounded-2xl border border-slate-100 bg-slate-50/60 overflow-hidden transition-all">
                   <div className="flex items-center justify-between p-3.5">
@@ -540,8 +505,14 @@ export function Nav() {
                       onClick={() => setOpen(false)}
                       className="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-[#2563EB]"
                     >
-                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-100/70 text-[#2563EB]">
-                        <Monitor className="h-4 w-4" />
+                      <div className="relative h-8 w-8 shrink-0 flex items-center justify-center">
+                        <Image
+                          src="/icons/website-development.webp"
+                          alt="Solutions"
+                          width={32}
+                          height={32}
+                          className="h-8 w-8 object-contain"
+                        />
                       </div>
                       <span>Solutions</span>
                     </Link>
@@ -552,9 +523,8 @@ export function Nav() {
                       className="grid h-8 w-8 place-items-center rounded-lg hover:bg-slate-200/60 text-slate-500 transition-transform"
                     >
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          openMobileSubmenu === "solutions" ? "rotate-180 text-[#2563EB]" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-200 ${openMobileSubmenu === "solutions" ? "rotate-180 text-[#2563EB]" : ""
+                          }`}
                       />
                     </button>
                   </div>
@@ -569,29 +539,32 @@ export function Nav() {
                         transition={{ duration: 0.2 }}
                         className="border-t border-slate-200/70 bg-white p-3 space-y-1.5"
                       >
-                        {SOLUTIONS_ITEMS.map((item) => {
-                          const Icon = item.icon;
-                          return (
-                            <Link
-                              key={item.title}
-                              href={item.href}
-                              onClick={() => setOpen(false)}
-                              className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
-                            >
-                              <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-blue-50 text-[#2563EB]">
-                                <Icon className="h-3.5 w-3.5" />
+                        {SOLUTIONS_ITEMS.map((item) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            onClick={() => setOpen(false)}
+                            className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
+                          >
+                            <div className="relative h-8 w-8 shrink-0 flex items-center justify-center">
+                              <Image
+                                src={item.iconSrc}
+                                alt={item.title}
+                                width={32}
+                                height={32}
+                                className="h-8 w-8 object-contain"
+                              />
+                            </div>
+                            <div className="flex-1">
+                              <div className="text-xs font-bold text-slate-800">
+                                {item.title}
                               </div>
-                              <div className="flex-1">
-                                <div className="text-xs font-bold text-slate-800">
-                                  {item.title}
-                                </div>
-                                <div className="text-[10px] text-slate-500 line-clamp-1">
-                                  {item.desc}
-                                </div>
+                              <div className="text-[10px] text-slate-500 line-clamp-1">
+                                {item.desc}
                               </div>
-                            </Link>
-                          );
-                        })}
+                            </div>
+                          </Link>
+                        ))}
 
                         <div className="pt-2 border-t border-slate-100">
                           <Link
@@ -633,9 +606,8 @@ export function Nav() {
                       className="grid h-8 w-8 place-items-center rounded-lg hover:bg-slate-200/60 text-slate-500 transition-transform"
                     >
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          openMobileSubmenu === "software" ? "rotate-180 text-[#2563EB]" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-200 ${openMobileSubmenu === "software" ? "rotate-180 text-[#2563EB]" : ""
+                          }`}
                       />
                     </button>
                   </div>

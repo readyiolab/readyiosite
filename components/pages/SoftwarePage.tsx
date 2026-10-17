@@ -80,7 +80,7 @@ function SoftwareHero() {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
+            <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
               Practical software for documents, workflows{" "}
               <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 bg-clip-text text-transparent">
                 and everyday productivity.
@@ -88,7 +88,7 @@ function SoftwareHero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-lg">
               Zuvigo builds powerful software for modern teams. Our products
               include VigoPDF, eSign, VigoFlow, VigoLetters, Productivity
               Suite and Desktop Software — designed to help you work faster,
@@ -96,12 +96,12 @@ function SoftwareHero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5">
               <a
                 href="https://pdf.zuvigo.com/workspace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.6)] active:scale-[0.98]"
+                className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.6)] active:scale-[0.98]"
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 <span>Explore Productivity Suite</span>
@@ -112,7 +112,7 @@ function SoftwareHero() {
                 href="https://pdf.zuvigo.com/desktop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-6 py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-6 py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>View Desktop Software</span>
                 <ChevronRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5" />
@@ -184,13 +184,13 @@ function SixProductsSection() {
   ];
 
   return (
-    <section className="relative py-20 sm:py-28 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50/50">
+    <section className="relative py-14 sm:py-24 lg:py-28 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-14">
+        <div className="max-w-2xl mb-10 sm:mb-14">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2563EB] border border-blue-100/70">
             OUR SOFTWARE
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+          <h2 className="mt-3 text-2xl sm:text-4xl font-bold tracking-tight text-gray-900">
             Six products. One connected experience.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -200,7 +200,7 @@ function SixProductsSection() {
         </div>
 
         {/* 6 Products Grid with elevated visual highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {products.map((p) => {
             const Icon = p.icon;
             return (

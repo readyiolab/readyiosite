@@ -32,7 +32,7 @@ export function HeroVisualHome() {
 
       {/* SVG Connecting Circuit Lines */}
       <svg
-        className="pointer-events-none absolute inset-0 h-full w-full overflow-visible z-0"
+        className="hidden sm:block pointer-events-none absolute inset-0 h-full w-full overflow-visible z-0"
         aria-hidden="true"
         viewBox="0 0 640 480"
       >
@@ -152,7 +152,7 @@ export function HeroVisualHome() {
         </motion.div>
 
         {/* ================= 2. LAYERED FRONT CARDS (OVERLAPPING) ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 -mt-8 sm:-mt-12 relative z-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 sm:-mt-8 lg:-mt-12 relative z-20">
           {/* LEFT CARD: Project Dashboard */}
           <motion.div
             initial={{ opacity: 0, x: -15 }}

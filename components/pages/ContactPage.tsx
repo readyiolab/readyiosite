@@ -94,8 +94,8 @@ export function ContactPage() {
       <section className="pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="mx-auto max-w-7xl container-p">
           <Reveal>
-            <div className="overflow-hidden rounded-[2.5rem] border border-border/80 bg-card p-6 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-              <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[1.1fr_1.6fr] lg:gap-14">
+            <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-border/80 bg-card p-4 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+              <div className="grid grid-cols-1 items-stretch gap-8 sm:gap-10 lg:grid-cols-[1.1fr_1.6fr] lg:gap-14">
 
                 {/* Left Column: Brand, Contact Channels & Socials */}
                 <div className="flex flex-col justify-between py-2 sm:py-4">
@@ -212,7 +212,7 @@ export function ContactPage() {
                 </div>
 
                 {/* Right Column: Signature Zuvigo Royal Blue Brand Colored Card */}
-                <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E40AF] p-8 sm:p-12 lg:p-14 text-white shadow-2xl">
+                <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E40AF] p-5 sm:p-12 lg:p-14 text-white shadow-2xl">
                   {/* Subtle ambient light bleed for depth */}
                   <div
                     aria-hidden="true"
@@ -221,7 +221,7 @@ export function ContactPage() {
 
                   {/* Form Heading */}
                   <div className="relative z-10">
-                    <h2 className="font-heading text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
+                    <h2 className="font-heading text-2xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
                       Got ideas? We&apos;ve got the skills. Let&apos;s team up.
                     </h2>
                     <p className="mt-3 text-sm text-blue-100 sm:text-base leading-relaxed">

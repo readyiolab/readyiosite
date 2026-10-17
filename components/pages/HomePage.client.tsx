@@ -9,22 +9,12 @@ import { SITE } from "@/lib/site";
 import {
   ArrowRight,
   CheckCircle2,
-  CheckSquare,
   ChevronDown,
   Database,
-  FileCheck,
-  Globe2,
   Globe,
-  Layers,
-  Lightbulb,
   Plus,
-  Rocket,
-  Search,
-  Send,
   ShieldCheck,
   Users,
-  Bot,
-  Cpu,
 } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
@@ -121,62 +111,60 @@ function MetricCounter({
   );
 }
 
-/* ---------------- Below-The-Fold Trust Signals & Impact Strip ---------------- */
-
 function BelowFoldTrustStrip() {
   return (
     <section className="relative border-y border-blue-100 bg-white py-12 dark:border-gray-800 dark:bg-gray-950/70">
       <div className="mx-auto max-w-7xl container-p">
         {/* Metric Badges Grid with Smooth Live Counters */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {/* Card 1: 100+ */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-3.5 sm:p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={100} decimals={0} suffix="+" />
             </div>
-            <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
+            <div className="mt-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
               Systems & Web Apps Shipped
             </div>
-            <div className="mt-1 text-[11px] text-[#6B7280] dark:text-gray-400">
+            <div className="mt-1 text-[10px] sm:text-[11px] text-[#6B7280] dark:text-gray-400">
               Websites, CRMs & AI workflows
             </div>
           </div>
 
           {/* Card 2: 99.4% */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-3.5 sm:p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={99.4} decimals={1} suffix="%" />
             </div>
-            <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
+            <div className="mt-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
               On-Time Milestone Delivery
             </div>
-            <div className="mt-1 text-[11px] text-[#6B7280] dark:text-gray-400">
+            <div className="mt-1 text-[10px] sm:text-[11px] text-[#6B7280] dark:text-gray-400">
               Clear scope, transparent sprint updates
             </div>
           </div>
 
           {/* Card 3: 4.9 / 5 */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-3.5 sm:p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={4.9} decimals={1} suffix=" / 5" />
             </div>
-            <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
+            <div className="mt-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
               Client Satisfaction Rating
             </div>
-            <div className="mt-1 text-[11px] text-[#6B7280] dark:text-gray-400">
+            <div className="mt-1 text-[10px] sm:text-[11px] text-[#6B7280] dark:text-gray-400">
               Founder & enterprise verified reviews
             </div>
           </div>
 
           {/* Card 4: 1 Team */}
-          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
-            <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
+          <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-[#FAFAFC] p-3.5 sm:p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-lg dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-[#2563EB]/50 dark:hover:bg-gray-900">
+            <div className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#2563EB] dark:text-[#60A5FA]">
               <MetricCounter target={1} decimals={0} suffix=" Team" />
             </div>
-            <div className="mt-2 text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
+            <div className="mt-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#111827] dark:text-white">
               Zero Vendor Finger-Pointing
             </div>
-            <div className="mt-1 text-[11px] text-[#6B7280] dark:text-gray-400">
+            <div className="mt-1 text-[10px] sm:text-[11px] text-[#6B7280] dark:text-gray-400">
               End-to-end accountability from idea to launch
             </div>
           </div>
@@ -190,10 +178,7 @@ function BelowFoldTrustStrip() {
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="space-y-3 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#2563EB]/40 bg-blue-500/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest text-blue-300 backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                HIGH-CONVERTING ARCHITECTURE
-              </div>
+
               <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-tight">
                 Turn your web traffic into qualified leads with smart CRM &amp; AI automation.
               </h2>
@@ -247,12 +232,12 @@ function ServicesSection() {
 
         {/* Business Journey summary badge */}
         <Reveal delay={0.1}>
-          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#111827] shadow-sm dark:border-gray-800 dark:bg-gray-900 dark:text-white">
-            <span className="text-[#2563EB]">Attract</span>
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-black bg-white px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#111827] shadow-sm dark:border-gray-800 dark:bg-gray-900 dark:text-white">
+            <span className="text-black">Attract</span>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <span className="text-[#2563EB]">Organize</span>
+            <span className="text-black">Organize</span>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <span className="text-[#2563EB]">Automate</span>
+            <span className="text-black">Automate</span>
           </div>
         </Reveal>
 
@@ -269,34 +254,40 @@ function ServicesSection() {
             <motion.div
               whileHover={{ y: -6 }}
               transition={{ duration: 0.2 }}
-              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
+              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-5 sm:p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
             >
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30">
-                      <Globe2 className="h-6 w-6" />
+                    <div className="relative h-14 w-14 shrink-0">
+                      <Image
+                        src="/icons/websites-web-applications.webp"
+                        alt="Websites & Web Applications"
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 object-contain"
+                      />
                     </div>
-                    <span className="font-heading text-3xl font-bold text-[#2563EB]/80">01</span>
+                    <span className="font-heading text-3xl font-bold text-black dark:text-white">01</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-black">
                       ATTRACT
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-xl sm:text-2xl font-bold text-[#111827] dark:text-white min-h-0 lg:min-h-[64px] flex items-center">
                       Websites & Web Applications
                     </h3>
-                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
+                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-0 lg:min-h-[42px] flex items-center">
                       Build your digital presence and turn more visitors into customers.
                     </p>
-                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-[52px] flex items-center">
+                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-0 lg:min-h-[52px] flex items-center">
                       Business websites, e-commerce experiences, customer portals and custom web applications designed around your goals.
                     </p>
                   </div>
                 </div>
 
-                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-[92px] flex flex-col justify-around">
+                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-0 lg:min-h-[92px] flex flex-col justify-around">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>Business and lead-generation websites</span>
@@ -315,38 +306,11 @@ function ServicesSection() {
               <div className="mt-8 flex flex-col justify-end">
                 <Link
                   href="/services"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#1D4ED8]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
                 >
                   Explore Websites & Web Applications
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
-
-                {/* Interface Preview (Sized to match Card 03 preview height) */}
-                <div className="mt-5 flex min-h-[185px] flex-col justify-between overflow-hidden rounded-2xl border border-gray-100 bg-[#111827] p-4 text-white shadow-inner dark:border-gray-800">
-                  <div className="flex items-center justify-between border-b border-gray-800 pb-2.5">
-                    <div className="flex gap-1.5">
-                      <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-                    </div>
-                    <span className="text-[10px] font-semibold text-gray-400">zuvigo.com</span>
-                  </div>
-                  <div className="my-auto space-y-2.5 py-1">
-                    <div className="font-heading text-sm font-bold leading-snug text-white">
-                      Modern websites that convert visitors into customers.
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <button type="button" className="rounded-lg bg-[#2563EB] px-3 py-1.5 text-[10px] font-bold text-white shadow-sm">
-                        Get Started
-                      </button>
-                      <span className="text-[10px] font-semibold text-emerald-400">↑ 148% Growth</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl bg-gray-800/60 px-3 py-1.5 text-[10px] text-gray-300">
-                    <span>Active Now: 14 Visitors</span>
-                    <span className="font-bold text-emerald-400">● Live</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </Reveal>
@@ -356,34 +320,40 @@ function ServicesSection() {
             <motion.div
               whileHover={{ y: -6 }}
               transition={{ duration: 0.2 }}
-              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
+              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-5 sm:p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
             >
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30">
-                      <Users className="h-6 w-6" />
+                    <div className="relative h-14 w-14 shrink-0">
+                      <Image
+                        src="/icons/crm-business-systems.webp"
+                        alt="CRM & Business Systems"
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 object-contain"
+                      />
                     </div>
-                    <span className="font-heading text-3xl font-bold text-[#2563EB]/80">02</span>
+                    <span className="font-heading text-3xl font-bold text-black dark:text-white">02</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-black">
                       ORGANIZE
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-xl sm:text-2xl font-bold text-[#111827] dark:text-white min-h-0 lg:min-h-[64px] flex items-center">
                       CRM & Business Systems
                     </h3>
-                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
+                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-0 lg:min-h-[42px] flex items-center">
                       Keep every lead, customer and follow-up organized.
                     </p>
-                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-[52px] flex items-center">
+                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-0 lg:min-h-[52px] flex items-center">
                       Simple CRM and business systems customized around how your team actually works—not unnecessary features and complicated processes.
                     </p>
                   </div>
                 </div>
 
-                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-[92px] flex flex-col justify-around">
+                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-0 lg:min-h-[92px] flex flex-col justify-around">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#2563EB]" />
                     <span>CRM setup and customization</span>
@@ -402,42 +372,11 @@ function ServicesSection() {
               <div className="mt-8 flex flex-col justify-end">
                 <Link
                   href="/services"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#1D4ED8]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
                 >
                   Explore CRM & Business Systems
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
-
-                {/* Interface Preview (Sized to match Card 03 preview height) */}
-                <div className="mt-5 flex min-h-[185px] flex-col justify-between overflow-hidden rounded-2xl border border-gray-100 bg-[#0F172A] p-4 text-white shadow-inner dark:border-gray-800">
-                  <div className="flex items-center justify-between border-b border-gray-800 pb-2 text-xs">
-                    <span className="font-bold text-gray-200">Deals Pipeline</span>
-                    <span className="rounded-lg bg-blue-600 px-2 py-0.5 text-[10px] font-bold text-white shadow-xs">
-                      + New Deal
-                    </span>
-                  </div>
-                  <div className="my-auto grid grid-cols-3 gap-1.5 py-1 text-[10px]">
-                    <div className="rounded-xl bg-gray-800/80 p-2 border border-gray-700/50">
-                      <span className="text-[9px] font-semibold text-gray-400">New Lead</span>
-                      <div className="mt-1 font-bold text-white">Acme Corp</div>
-                      <div className="mt-0.5 text-[9px] font-bold text-[#2563EB]">$14.2k</div>
-                    </div>
-                    <div className="rounded-xl bg-gray-800/80 p-2 border border-gray-700/50">
-                      <span className="text-[9px] font-semibold text-gray-400">Proposal</span>
-                      <div className="mt-1 font-bold text-white">Summit Co</div>
-                      <div className="mt-0.5 text-[9px] font-bold text-blue-400">$22.0k</div>
-                    </div>
-                    <div className="rounded-xl bg-blue-950/70 p-2 border border-blue-800/60">
-                      <span className="text-[9px] font-semibold text-blue-300">Closed Won</span>
-                      <div className="mt-1 font-bold text-blue-100">Omega Ltd</div>
-                      <div className="mt-0.5 text-[9px] font-bold text-emerald-400">$38.5k</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl bg-gray-800/60 px-3 py-1.5 text-[10px] text-gray-300">
-                    <span>Pipeline Total: $74.7k</span>
-                    <span className="font-bold text-blue-400">3 Deals Active</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </Reveal>
@@ -447,34 +386,40 @@ function ServicesSection() {
             <motion.div
               whileHover={{ y: -6 }}
               transition={{ duration: 0.2 }}
-              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
+              className="group relative flex h-full flex-col justify-between rounded-3xl border border-gray-200 bg-white p-5 sm:p-7 shadow-lg transition-all dark:border-gray-800 dark:bg-gray-900"
             >
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-[#10B981] dark:bg-emerald-950/30">
-                      <Cpu className="h-6 w-6" />
+                    <div className="relative h-14 w-14 shrink-0">
+                      <Image
+                        src="/icons/ai-automation.webp"
+                        alt="AI & Automation"
+                        width={56}
+                        height={56}
+                        className="h-14 w-14 object-contain"
+                      />
                     </div>
-                    <span className="font-heading text-3xl font-bold text-[#10B981]/80">03</span>
+                    <span className="font-heading text-3xl font-bold text-black dark:text-white">03</span>
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#10B981]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-black">
                       AUTOMATE
                     </span>
-                    <h3 className="mt-1.5 font-heading text-2xl font-bold text-[#111827] dark:text-white min-h-[64px] flex items-center">
+                    <h3 className="mt-1.5 font-heading text-xl sm:text-2xl font-bold text-[#111827] dark:text-white min-h-0 lg:min-h-[64px] flex items-center">
                       AI & Automation
                     </h3>
-                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-[42px] flex items-center">
+                    <p className="mt-2.5 font-semibold text-sm leading-snug text-[#111827] dark:text-gray-200 min-h-0 lg:min-h-[42px] flex items-center">
                       Reduce repetitive work and respond to customers faster.
                     </p>
-                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-[52px] flex items-center">
+                    <p className="mt-2 text-xs leading-relaxed text-[#6B7280] dark:text-gray-400 min-h-0 lg:min-h-[52px] flex items-center">
                       Practical AI assistants and automations for lead response, customer support, documents, reporting and everyday workflows.
                     </p>
                   </div>
                 </div>
 
-                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-[92px] flex flex-col justify-around">
+                <ul className="mt-6 space-y-2.5 text-xs font-medium text-[#374151] dark:text-gray-300 min-h-0 lg:min-h-[92px] flex flex-col justify-around">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#10B981]" />
                     <span>AI chat and voice assistants</span>
@@ -493,47 +438,11 @@ function ServicesSection() {
               <div className="mt-8 flex flex-col justify-end">
                 <Link
                   href="/services"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#10B981] px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#059669]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-5 py-3 text-xs font-bold text-white shadow-sm transition-all hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
                 >
                   Explore AI & Automation
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
-
-                {/* Interface Preview (Matching Card 01 & 02 preview height) */}
-                <div className="mt-5 flex min-h-[185px] flex-col justify-between overflow-hidden rounded-2xl border border-gray-200/80 bg-[#F8FAF7] p-3.5 dark:border-gray-800 dark:bg-gray-950/60">
-                  {/* AI Assistant Card */}
-                  <div className="relative z-10 rounded-xl border border-gray-200/80 bg-white p-2.5 shadow-xs dark:border-gray-800 dark:bg-gray-900">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-[#111827] dark:text-white">
-                      <div className="flex items-center gap-1.5">
-                        <Bot className="h-3.5 w-3.5 text-[#10B981]" />
-                        <span>AI Assistant</span>
-                      </div>
-                      <span className="text-[9px] font-bold text-emerald-600">⚡ 12ms</span>
-                    </div>
-
-                    <div className="mt-1.5 rounded-lg bg-gray-50 p-2 text-[10px] leading-snug text-gray-600 dark:bg-gray-800/60 dark:text-gray-300">
-                      I can draft proposals, summarize conversations, and follow up with leads.
-                    </div>
-                  </div>
-
-                  {/* Flow Nodes Horizontal Row */}
-                  <div className="mt-2.5 flex items-center justify-between gap-1 text-[9px] font-bold text-[#111827] dark:text-white">
-                    <div className="flex items-center gap-1 rounded-full border border-gray-200 bg-white px-2 py-1 shadow-2xs dark:border-gray-800 dark:bg-gray-900">
-                      <Users className="h-2.5 w-2.5 text-[#10B981]" />
-                      <span>New Lead</span>
-                    </div>
-                    <span className="text-gray-400">→</span>
-                    <div className="flex items-center gap-1 rounded-full border border-gray-200 bg-white px-2 py-1 shadow-2xs dark:border-gray-800 dark:bg-gray-900">
-                      <FileCheck className="h-2.5 w-2.5 text-[#10B981]" />
-                      <span>AI Follow-up</span>
-                    </div>
-                    <span className="text-gray-400">→</span>
-                    <div className="flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-1 text-[#10B981] shadow-2xs dark:border-emerald-800 dark:bg-emerald-950/50">
-                      <CheckSquare className="h-2.5 w-2.5 text-[#10B981]" />
-                      <span>Task</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </Reveal>
@@ -579,19 +488,41 @@ function ForFoundersBanner() {
                 </div>
               </div>
 
-              {/* Right Content: Horizontal Connected Nodes */}
-              <div className="relative flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-2 pt-4">
-                {/* Connecting Line passing behind the circles (desktop & tablet) */}
+              {/* Right Content: Connected Process Nodes */}
+              <div className="relative flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-2 pt-4">
+                {/* Horizontal Glowing Connection Line (desktop & tablet) */}
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute top-12 left-12 right-12 hidden sm:block h-[2px] bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#2563EB] shadow-[0_0_12px_#2563EB]"
-                />
+                  className="pointer-events-none absolute top-[56px] -translate-y-1/2 left-[16.6%] right-[16.6%] hidden sm:block z-0"
+                >
+                  {/* Outer neon glow */}
+                  <div className="absolute inset-x-0 -top-1 h-2 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 blur-sm opacity-80" />
+                  {/* Crisp bright laser line */}
+                  <div className="relative h-[3px] w-full rounded-full bg-gradient-to-r from-blue-600 via-sky-300 to-blue-600 shadow-[0_0_16px_#38bdf8,0_0_30px_#2563eb]" />
+                </div>
+
+                {/* Vertical Glowing Connection Line (mobile) */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-[56px] bottom-[100px] w-[3px] sm:hidden z-0"
+                >
+                  <div className="absolute inset-y-0 -left-1 w-2 bg-gradient-to-b from-blue-500 via-cyan-400 to-blue-500 blur-sm opacity-80" />
+                  <div className="relative h-full w-[3px] rounded-full bg-gradient-to-b from-blue-600 via-sky-300 to-blue-600 shadow-[0_0_16px_#38bdf8]" />
+                </div>
 
                 {/* Node 1: Idea */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
-                    <Lightbulb className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
+                  <div className="relative grid h-20 w-20 place-items-center rounded-full border-2 border-white/90 bg-white p-2.5 text-slate-900 shadow-[0_0_35px_rgba(255,255,255,0.35),0_12px_28px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]">
+                    <Image
+                      src="/icons/idea.webp"
+                      alt="Idea"
+                      width={54}
+                      height={54}
+                      className="h-14 w-14 object-contain"
+                    />
+                    <span className="absolute -top-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[10px] font-extrabold text-slate-900 ring-4 ring-[#0D1322] shadow-[0_0_10px_#3B82F6]">
+                      01
+                    </span>
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     Idea
@@ -603,9 +534,17 @@ function ForFoundersBanner() {
 
                 {/* Node 2: First version */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
-                    <Globe2 className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
+                  <div className="relative grid h-20 w-20 place-items-center rounded-full border-2 border-white/90 bg-white p-2.5 text-slate-900 shadow-[0_0_35px_rgba(255,255,255,0.35),0_12px_28px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]">
+                    <Image
+                      src="/icons/first-version.webp"
+                      alt="First version"
+                      width={54}
+                      height={54}
+                      className="h-14 w-14 object-contain"
+                    />
+                    <span className="absolute -top-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[10px] font-extrabold text-slate-900 ring-4 ring-[#0D1322] shadow-[0_0_10px_#3B82F6]">
+                      02
+                    </span>
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     First version
@@ -617,9 +556,17 @@ function ForFoundersBanner() {
 
                 {/* Node 3: Launch */}
                 <div className="relative z-10 flex flex-1 flex-col items-center text-center">
-                  <div className="relative grid h-16 w-16 place-items-center rounded-full border border-[#2563EB] bg-[#0F172A] text-white shadow-[0_0_24px_rgba(37,99,235,0.4)]">
-                    <Rocket className="h-7 w-7 text-white" />
-                    <span className="absolute top-0 right-0 h-3.5 w-3.5 rounded-full bg-[#2563EB] ring-4 ring-[#0D1322] shadow-[0_0_8px_#2563EB]" />
+                  <div className="relative grid h-20 w-20 place-items-center rounded-full border-2 border-white/90 bg-white p-2.5 text-slate-900 shadow-[0_0_35px_rgba(255,255,255,0.35),0_12px_28px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]">
+                    <Image
+                      src="/icons/launch.webp"
+                      alt="Launch"
+                      width={54}
+                      height={54}
+                      className="h-14 w-14 object-contain"
+                    />
+                    <span className="absolute -top-1.5 -right-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[10px] font-extrabold text-slate-900 ring-4 ring-[#0D1322] shadow-[0_0_10px_#3B82F6]">
+                      03
+                    </span>
                   </div>
                   <h3 className="mt-4 font-heading text-base font-bold text-white">
                     Launch
@@ -929,9 +876,7 @@ function WhyZuvigo() {
             {POINTS.map((pt, idx) => (
               <Reveal key={pt.title} delay={idx * 0.1}>
                 <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-[#2563EB]/40 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
-                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#2563EB]/10 text-[#2563EB] dark:bg-blue-900/30">
-                    <ShieldCheck className="h-5 w-5" />
-                  </div>
+
                   <h3 className="mt-4 font-heading text-lg font-bold text-[#111827] dark:text-white">
                     {pt.title}
                   </h3>
@@ -953,17 +898,17 @@ function WhyZuvigo() {
 function ProcessSection() {
   const STEPS = [
     {
-      icon: Search,
+      iconSrc: "/icons/understand.webp",
       title: "Understand",
       desc: "We learn your goals, users and challenges to define the right plan.",
     },
     {
-      icon: Layers,
+      iconSrc: "/icons/build.webp",
       title: "Build",
       desc: "We design, build and test in close collaboration with you.",
     },
     {
-      icon: Send,
+      iconSrc: "/icons/launch-support.webp",
       title: "Launch & Support",
       desc: "We launch with confidence and support you as you grow.",
     },
@@ -980,13 +925,18 @@ function ProcessSection() {
 
         <div className="mt-14 flex flex-col items-center justify-center gap-10 md:flex-row md:gap-6 lg:gap-10">
           {STEPS.map((s, idx) => {
-            const IconComp = s.icon;
             return (
               <div key={s.title} className="flex items-center gap-4">
                 <Reveal delay={idx * 0.15}>
                   <div className="flex items-center gap-4">
-                    <div className="grid h-14 w-14 flex-shrink-0 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-[#60A5FA] shadow-xs">
-                      <IconComp className="h-6 w-6 stroke-[2]" />
+                    <div className="relative h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0">
+                      <Image
+                        src={s.iconSrc}
+                        alt={s.title}
+                        width={64}
+                        height={64}
+                        className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
+                      />
                     </div>
                     <div>
                       <h3 className="font-heading text-base sm:text-lg font-bold text-[#111827] dark:text-white">

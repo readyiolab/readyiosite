@@ -29,7 +29,7 @@ export function HeroVisualSoftware() {
 
       {/* SVG Connecting Circuit Lines */}
       <svg
-        className="pointer-events-none absolute inset-0 h-full w-full overflow-visible z-0"
+        className="hidden sm:block pointer-events-none absolute inset-0 h-full w-full overflow-visible z-0"
         aria-hidden="true"
         viewBox="0 0 640 480"
       >
@@ -218,7 +218,7 @@ export function HeroVisualSoftware() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative max-w-lg mx-auto sm:ml-8 -mt-6 sm:-mt-10 rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] z-20"
+          className="relative max-w-lg mx-auto sm:ml-8 mt-4 sm:-mt-6 lg:-mt-10 rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] z-20"
         >
           {/* Top Bar */}
           <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">

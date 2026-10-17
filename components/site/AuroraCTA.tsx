@@ -39,7 +39,7 @@ export function AuroraCTA({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           {/* Main Card with Subtle Border and Watermark Background */}
-          <div className="relative overflow-hidden rounded-[2.25rem] sm:rounded-[3rem] border border-gray-200/80 bg-white px-6 py-20 sm:px-12 sm:py-24 lg:py-28 text-center shadow-xs">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[3rem] border border-gray-200/80 bg-white px-5 py-14 sm:px-12 sm:py-24 lg:py-28 text-center shadow-xs">
             {/* Subtle Eyeglasses / Infinity Optical Loop Background Watermark (Matching Reference) */}
             <svg
               aria-hidden="true"
@@ -85,33 +85,33 @@ export function AuroraCTA({
             )}
 
             {/* Main Headline */}
-            <h2 className="relative z-10 mx-auto max-w-3xl font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight text-[#111827] leading-[1.16]">
+            <h2 className="relative z-10 mx-auto max-w-3xl font-heading text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight text-[#111827] leading-[1.16]">
               {heading}
             </h2>
 
             {/* Subtitle Description */}
             {subtitle && (
-              <p className="relative z-10 mx-auto mt-5 sm:mt-6 max-w-xl text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="relative z-10 mx-auto mt-4 sm:mt-6 max-w-xl text-sm sm:text-base text-gray-600 leading-relaxed">
                 {subtitle}
               </p>
             )}
 
             {/* Two Side-by-Side Pill Action Buttons matching Reference Image */}
-            <div className="relative z-10 mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
+            <div className="relative z-10 mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               {/* Button 1: Outlined Pill Button (Like "Buy now") */}
               {isPrimaryExt ? (
                 <a
                   href={buttonHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
                 >
                   {buttonText}
                 </a>
               ) : (
                 <Link
                   href={buttonHref}
-                  className="inline-flex items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
                 >
                   {buttonText}
                 </Link>
@@ -123,14 +123,14 @@ export function AuroraCTA({
                   href={secondaryButtonHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
                 >
                   {secondaryButtonText}
                 </a>
               ) : (
                 <Link
                   href={secondaryButtonHref}
-                  className="inline-flex items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
                 >
                   {secondaryButtonText}
                 </Link>
