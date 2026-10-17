@@ -3,19 +3,19 @@ import { Scale, ShieldAlert, FileCode, AlertTriangle, ExternalLink, Mail, Refres
 
 export function TermsPage() {
   return (
-    <div className="pt-32 pb-24 md:pt-40 md:pb-32">
+    <div className="pt-16 pb-12 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24">
       <div className="mx-auto max-w-5xl container-p">
         {/* Page Header */}
         <Reveal>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-widest text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-blue-50 px-3.5 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
               <Scale className="h-3.5 w-3.5" />
               TERMS & CONDITIONS
             </span>
-            <h1 className="mt-4 font-heading text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
+            <h1 className="mt-4 font-heading text-2xl xs:text-3xl font-bold tracking-tight text-[#111827] sm:text-4xl md:text-5xl dark:text-white">
               Terms of Service
             </h1>
-            <p className="mt-3 text-base leading-relaxed text-[#4B5563] sm:text-lg dark:text-gray-300">
+            <p className="mt-3 text-sm leading-relaxed text-[#4B5563] sm:text-base md:text-lg dark:text-gray-300">
               Welcome to Zuvigo. Please read these terms carefully. They govern your access to our website, digital applications, and technology services.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#6B7280] dark:text-gray-400">
@@ -26,10 +26,10 @@ export function TermsPage() {
         </Reveal>
 
         {/* Policy Content Card Grid */}
-        <div className="mt-14 space-y-10">
+        <div className="mt-8 sm:mt-12 space-y-6 sm:space-y-8">
           {/* Section 1: Agreement to Terms */}
           <Reveal>
-            <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Scale className="h-5 w-5" />
@@ -51,7 +51,7 @@ export function TermsPage() {
 
           {/* Section 2: Intellectual Property & Ownership */}
           <Reveal>
-            <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <FileCode className="h-5 w-5" />
@@ -73,7 +73,7 @@ export function TermsPage() {
 
           {/* Section 3: Acceptable Use & Conduct */}
           <Reveal>
-            <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <ShieldAlert className="h-5 w-5" />
@@ -124,7 +124,7 @@ export function TermsPage() {
 
           {/* Section 4: Client Engagements */}
           <Reveal>
-            <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                   <Layers className="h-5 w-5" />
@@ -147,7 +147,7 @@ export function TermsPage() {
           {/* Section 5: Disclaimer & Liability */}
           <Reveal>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                 <div className="flex items-center gap-3">
                   <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                     <AlertTriangle className="h-5 w-5" />
@@ -161,7 +161,7 @@ export function TermsPage() {
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                 <div className="flex items-center gap-3">
                   <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">
                     <ExternalLink className="h-5 w-5" />
@@ -179,7 +179,7 @@ export function TermsPage() {
 
           {/* Section 6: Updates & Contact */}
           <Reveal>
-            <div className="rounded-3xl border border-gray-200/90 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <div className="rounded-2xl sm:rounded-3xl border border-gray-200/90 bg-white p-4 sm:p-7 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="flex items-center justify-between border-b border-gray-100 pb-4 dark:border-gray-800">
                 <div className="flex items-center gap-3">
                   <div className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-50 text-[#2563EB] dark:bg-blue-900/30 dark:text-blue-300">

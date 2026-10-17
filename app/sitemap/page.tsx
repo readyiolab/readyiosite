@@ -23,7 +23,7 @@ export default async function SitemapPage() {
   const legalLinks = FOOTER_LINKS.filter((l) => LEGAL_PATHS.has(l.href))
 
   return (
-    <section className="pt-36 pb-24 md:pt-44">
+    <section className="pt-20 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28">
       <div className="mx-auto max-w-5xl container-p">
         <SectionHeading eyebrow="Sitemap" as="h1" title="Every page on Zuvigo" align="left" />
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">

@@ -87,7 +87,7 @@ export function BlogListing({
                     Featured
                   </div>
                 </div>
-                <div className="flex flex-col justify-center p-8 md:p-12">
+                <div className="flex flex-col justify-center p-5 sm:p-8 md:p-12">
                   <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     <Tag className="h-3.5 w-3.5" /> {featured.category_name}
                     {featured.reading_time ? (
@@ -97,15 +97,15 @@ export function BlogListing({
                       </>
                     ) : null}
                   </div>
-                  <h2 className="mt-4 font-heading text-2xl font-bold leading-tight tracking-tight md:text-4xl">
+                  <h2 className="mt-3 sm:mt-4 font-heading text-xl sm:text-2xl font-bold leading-tight tracking-tight md:text-4xl">
                     {featured.title}
                   </h2>
                   {featured.excerpt && (
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground md:text-base">
                       {featured.excerpt}
                     </p>
                   )}
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary">
+                  <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
                     Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export function BlogListing({
       </section>
 
       {/* Grid */}
-      <section className="pb-28 md:pb-36">
+      <section className="pb-16 sm:pb-24 md:pb-32">
         <div className="mx-auto max-w-7xl container-p">
           {visible.length === 0 ? (
             <div className="rounded-3xl border border-border bg-card p-12 text-center text-muted-foreground">

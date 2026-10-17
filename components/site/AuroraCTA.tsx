@@ -35,11 +35,11 @@ export function AuroraCTA({
     secondaryButtonHref.startsWith("http") || secondaryButtonHref.startsWith("mailto:");
 
   return (
-    <section id={id} className={`py-12 sm:py-16 lg:py-20 relative bg-white ${className}`}>
+    <section id={id} className={`py-10 sm:py-16 lg:py-20 relative bg-white ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           {/* Main Card with Subtle Border and Watermark Background */}
-          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[3rem] border border-gray-200/80 bg-white px-5 py-14 sm:px-12 sm:py-24 lg:py-28 text-center shadow-xs">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-[3rem] border border-gray-200/80 bg-white px-4 py-10 sm:px-12 sm:py-20 lg:py-28 text-center shadow-xs">
             {/* Subtle Eyeglasses / Infinity Optical Loop Background Watermark (Matching Reference) */}
             <svg
               aria-hidden="true"
@@ -79,19 +79,19 @@ export function AuroraCTA({
 
             {/* Optional Eyebrow Tag if provided */}
             {eyebrow && (
-              <div className="relative z-10 mb-4 inline-flex items-center rounded-full bg-slate-100 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-700">
+              <div className="relative z-10 mb-4 inline-flex items-center rounded-full bg-slate-100 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-700">
                 {eyebrow}
               </div>
             )}
 
             {/* Main Headline */}
-            <h2 className="relative z-10 mx-auto max-w-3xl font-heading text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight text-[#111827] leading-[1.16]">
+            <h2 className="relative z-10 mx-auto max-w-3xl font-heading text-[22px] xs:text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight text-[#111827] leading-[1.18] sm:leading-[1.16]">
               {heading}
             </h2>
 
             {/* Subtitle Description */}
             {subtitle && (
-              <p className="relative z-10 mx-auto mt-4 sm:mt-6 max-w-xl text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="relative z-10 mx-auto mt-3 sm:mt-6 max-w-xl text-xs sm:text-base text-gray-600 leading-relaxed">
                 {subtitle}
               </p>
             )}

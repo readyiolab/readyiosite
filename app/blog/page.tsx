@@ -37,7 +37,7 @@ export default async function BlogPage() {
   return (
     <>
       <JsonLd data={blogJsonLd} />
-      <section className="relative overflow-hidden pt-36 pb-12 md:pt-44">
+      <section className="relative overflow-hidden pt-20 pb-10 sm:pt-28 sm:pb-12 md:pt-40">
         <div aria-hidden className="absolute inset-0 -z-10 mesh-bg opacity-50" />
         <div className="mx-auto max-w-4xl container-p text-center">
           <SectionHeading

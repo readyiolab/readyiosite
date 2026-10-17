@@ -12,9 +12,9 @@ export function Footer() {
     <footer className="relative overflow-hidden pt-12 pb-8 sm:pt-16 sm:pb-12 bg-white text-gray-900 border-t border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Floating Rounded Card matching reference design */}
-        <div className="relative z-10 rounded-3xl border border-gray-100 bg-gray-50/50 p-8 sm:p-12 md:p-14 shadow-xs">
+        <div className="relative z-10 rounded-2xl sm:rounded-3xl border border-gray-100 bg-gray-50/50 p-5 sm:p-10 md:p-14 shadow-xs">
           {/* Main Top Grid */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_2fr] lg:gap-16">
+          <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1.2fr_2fr] lg:gap-16">
             {/* Left Column: Brand, Tagline & Social Icons */}
             <div className="flex flex-col justify-between">
               <div>
@@ -68,7 +68,7 @@ export function Footer() {
             </div>
 
             {/* Right Columns: 3 Navigation Link Columns */}
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-10">
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-10">
               {/* Solutions */}
               <div>
                 <h3 className="font-heading text-sm font-bold tracking-tight text-gray-900">
@@ -207,12 +207,12 @@ export function Footer() {
           </div>
 
           {/* Bottom Bar: Copyright & Legal Links */}
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200/60 pt-6 text-xs text-gray-500 sm:flex-row">
+          <div className="mt-8 sm:mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200/60 pt-6 text-xs text-gray-500 sm:flex-row text-center sm:text-left">
             <div>
               &copy; {currentYear} {SITE.name}. All rights reserved.
             </div>
 
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
               <Link href="/privacy" className="transition-colors hover:text-[#2563EB]">
                 Privacy Policy
               </Link>

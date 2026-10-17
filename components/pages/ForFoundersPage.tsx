@@ -47,7 +47,7 @@ export function ForFoundersPage() {
 
 function FounderHero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden pt-16 pb-8 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
       {/* Soft background aura */}
       <div
         aria-hidden
@@ -55,39 +55,39 @@ function FounderHero() {
       />
 
       <div className="mx-auto max-w-7xl container-p">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
-          <div>
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
+          <div className="text-center sm:text-left">
             <Reveal>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#2563EB]">
                 FOR FOUNDERS
               </span>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h1 className="mt-4 font-heading text-4xl font-bold leading-[1.15] tracking-tight text-[#0F172A] sm:text-5xl lg:text-6xl dark:text-white">
+              <h1 className="mt-3.5 sm:mt-4 font-heading text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.12] sm:leading-[1.15] tracking-tight text-[#0F172A] dark:text-white">
                 Turn your idea into<br />a working product.
               </h1>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-[#5A6376] dark:text-gray-300">
+              <p className="mt-3.5 sm:mt-6 max-w-xl text-xs sm:text-lg leading-relaxed text-[#5A6376] dark:text-gray-300 mx-auto sm:mx-0">
                 You bring the idea, industry knowledge and understanding of the customer. We help you shape the right first version, choose the technology and build a product you can launch—without hiring a complete technology team.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-3 sm:gap-4">
                 <a
                   href={SITE.bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-7 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-700 active:scale-95"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-700 active:scale-95"
                 >
                   Discuss Your Idea
                 </a>
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center gap-2 rounded-xl border border-blue-300/40 bg-transparent px-7 py-3.5 text-xs sm:text-sm font-bold text-[#2563EB] transition-all hover:bg-blue-50/50 active:scale-95 dark:text-blue-300 dark:border-blue-800"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-blue-300/40 bg-transparent px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-[#2563EB] transition-all hover:bg-blue-50/50 active:scale-95 dark:text-blue-300 dark:border-blue-800"
                 >
                   See How It Works
                 </a>
@@ -95,17 +95,17 @@ function FounderHero() {
             </Reveal>
 
             <Reveal delay={0.4}>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs sm:text-sm font-bold text-[#475569] dark:text-gray-400">
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
+              <div className="mt-6 sm:mt-8 flex flex-wrap justify-center sm:justify-start items-center gap-x-5 sm:gap-x-6 gap-y-2.5 text-xs sm:text-sm font-bold text-[#475569] dark:text-gray-400">
+                <span className="flex items-center gap-1.5 sm:gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2563EB]" />
                   Clear scope
                 </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
+                <span className="flex items-center gap-1.5 sm:gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2563EB]" />
                   Milestone-based delivery
                 </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#2563EB]" />
+                <span className="flex items-center gap-1.5 sm:gap-2">
+                  <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2563EB]" />
                   Support after launch
                 </span>
               </div>
@@ -281,9 +281,9 @@ function FounderHero() {
               </div>
 
               {/* Mobile Card Stack Layout (< lg screens) */}
-              <div className="lg:hidden mt-6 flex flex-col gap-4 w-full">
+              <div className="lg:hidden mt-6 flex flex-col gap-3 w-full">
                 {/* 01. Idea Card */}
-                <div className="rounded-2xl border border-gray-200/90 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+                <div className="rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white p-3.5 sm:p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
                       <Lightbulb className="h-4 w-4 text-[#2563EB]" />
@@ -291,44 +291,44 @@ function FounderHero() {
                     </div>
                     <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">Concept</span>
                   </div>
-                  <p className="mt-2.5 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
+                  <p className="mt-2 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
                     A solution that helps coaches manage clients and sessions.
                   </p>
                 </div>
 
                 {/* 02. Wireframe Card */}
-                <div className="rounded-2xl border border-gray-200/90 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 dark:border-gray-800">
+                <div className="rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white p-3.5 sm:p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+                  <div className="flex items-center justify-between border-b border-gray-100 pb-2 dark:border-gray-800">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
                       <Layout className="h-4 w-4 text-[#2563EB]" />
                       <span className="text-xs font-semibold uppercase tracking-wider">02. Wireframe</span>
                     </div>
                     <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">UX Wireframe</span>
                   </div>
-                  <div className="mt-3 space-y-2">
-                    <div className="h-3 w-full rounded-xs bg-gray-100 dark:bg-gray-800" />
-                    <div className="h-10 w-full rounded-md bg-gray-50 dark:bg-gray-800/60" />
+                  <div className="mt-2.5 space-y-1.5">
+                    <div className="h-2.5 w-full rounded-xs bg-gray-100 dark:bg-gray-800" />
+                    <div className="h-8 w-full rounded-md bg-gray-50 dark:bg-gray-800/60" />
                   </div>
                 </div>
 
                 {/* 03. Working Product Card */}
-                <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between border-b border-gray-100 bg-[#F8FAFC] px-5 py-3.5 dark:border-gray-800 dark:bg-gray-900/80">
+                <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
+                  <div className="flex items-center justify-between border-b border-gray-100 bg-[#F8FAFC] px-4 py-2.5 dark:border-gray-800 dark:bg-gray-900/80">
                     <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
                       <Layout className="h-4 w-4 text-[#2563EB]" />
                       <span className="text-xs font-semibold uppercase tracking-wider">03. Working Product</span>
                     </div>
                     <span className="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-bold text-emerald-600">Live App</span>
                   </div>
-                  <div className="p-5 bg-white dark:bg-gray-950">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-3.5 dark:border-gray-800 dark:bg-gray-900">
-                        <span className="text-xs text-gray-400 font-medium block">Upcoming Sessions</span>
-                        <span className="text-lg font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
+                  <div className="p-3.5 sm:p-5 bg-white dark:bg-gray-950">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                      <div className="rounded-lg sm:rounded-xl border border-gray-100 bg-[#F8FAFC] p-2.5 sm:p-3.5 dark:border-gray-800 dark:bg-gray-900">
+                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium block">Upcoming Sessions</span>
+                        <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
                       </div>
-                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-3.5 dark:border-gray-800 dark:bg-gray-900">
-                        <span className="text-xs text-gray-400 font-medium block">Active Clients</span>
-                        <span className="text-lg font-bold text-gray-900 dark:text-white block mt-0.5">48 <span className="text-xs text-emerald-500 font-bold">▲ +12%</span></span>
+                      <div className="rounded-lg sm:rounded-xl border border-gray-100 bg-[#F8FAFC] p-2.5 sm:p-3.5 dark:border-gray-800 dark:bg-gray-900">
+                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium block">Active Clients</span>
+                        <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white block mt-0.5">48 <span className="text-[10px] sm:text-xs text-emerald-500 font-bold">▲ +12%</span></span>
                       </div>
                     </div>
                   </div>
@@ -365,34 +365,34 @@ function FounderProblem() {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-slate-50/60 dark:bg-gray-950/60">
+    <section className="py-12 sm:py-20 md:py-24 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+          <div className="text-center sm:text-left">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               FROM IDEA TO EXECUTION
             </span>
-            <div className="mt-3 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
+            <div className="mt-2 sm:mt-3 grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 lg:items-end">
+              <h2 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A] dark:text-white">
                 A good idea is only<br className="hidden sm:inline" /> the beginning.
               </h2>
-              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#5A6376] dark:text-gray-300">
+              <p className="max-w-xl text-xs sm:text-base leading-relaxed text-[#5A6376] dark:text-gray-300 mx-auto sm:mx-0">
                 Founders often face uncertainty about what to build, which technology to choose, how much it will cost and how to avoid overbuilding.
               </p>
             </div>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 gap-3.5 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {CARDS.map((card, idx) => {
             const Icon = card.icon;
             return (
               <Reveal key={card.text} delay={idx * 0.1}>
-                <div className="flex h-full min-h-[170px] flex-col justify-between rounded-2xl border border-gray-100/90 bg-white p-7 shadow-xs transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+                <div className="flex h-full min-h-[140px] sm:min-h-[170px] flex-col justify-between rounded-xl sm:rounded-2xl border border-gray-100/90 bg-white p-5 sm:p-7 shadow-xs transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
                   <div className="text-[#2563EB] dark:text-blue-400">
-                    <Icon className="h-6 w-6 stroke-[1.75]" />
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.75]" />
                   </div>
-                  <h4 className="mt-8 font-heading text-sm sm:text-base font-bold leading-snug text-[#0F172A] dark:text-white">
+                  <h4 className="mt-5 sm:mt-8 font-heading text-xs sm:text-base font-bold leading-snug text-[#0F172A] dark:text-white">
                     {card.text}
                   </h4>
                 </div>
@@ -436,10 +436,10 @@ function FounderJourney() {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
+    <section id="how-it-works" className="py-12 sm:py-16 md:py-24">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-[#0A0D18] p-6 sm:p-12 lg:p-16 text-white shadow-2xl border border-white/10">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-[#0A0D18] p-5 sm:p-12 lg:p-16 text-white shadow-2xl border border-white/10">
             {/* Ambient background glows */}
             <div
               aria-hidden
@@ -451,17 +451,17 @@ function FounderJourney() {
             />
 
             {/* Section Header */}
-            <div className="relative z-10">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-300">
+            <div className="relative z-10 text-center sm:text-left">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-blue-300">
                 HOW WE HELP
               </span>
-              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mt-2 font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                 From idea to first version.
               </h2>
             </div>
 
             {/* 4 Steps Timeline Flow */}
-            <div className="relative z-10 mt-14 sm:mt-16">
+            <div className="relative z-10 mt-10 sm:mt-16">
 
               {/* Horizontal Connecting Glow Line (Desktop) */}
               <div
@@ -469,27 +469,27 @@ function FounderJourney() {
                 className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#2563EB]/30 via-[#3B82F6] to-[#2563EB]/30 z-0"
               />
 
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
                 {STEPS.map((s, idx) => {
                   const Icon = s.icon;
                   return (
                     <Reveal key={s.num} delay={idx * 0.1}>
-                      <div className="relative flex flex-col items-start lg:items-center text-left lg:text-center group">
+                      <div className="relative flex flex-col items-center sm:items-start lg:items-center text-center sm:text-left lg:text-center group">
 
                         {/* Circular Glowing Icon Node */}
-                        <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-blue-500/40 bg-[#0B1221] text-blue-300 shadow-[0_0_30px_rgba(37,99,235,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:border-blue-400 group-hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
-                          <Icon className="h-7 w-7 stroke-[1.75]" />
+                        <div className="relative z-10 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full border border-blue-500/40 bg-[#0B1221] text-blue-300 shadow-[0_0_30px_rgba(37,99,235,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:border-blue-400 group-hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+                          <Icon className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.75]" />
                           <span className="absolute -bottom-1 h-2 w-2 rounded-full bg-[#3B82F6] shadow-[0_0_8px_#3B82F6]" />
                         </div>
 
                         {/* Step Number & Title */}
-                        <span className="mt-6 font-heading text-xs font-bold text-blue-300">
+                        <span className="mt-4 sm:mt-6 font-heading text-[11px] sm:text-xs font-bold text-blue-300">
                           {s.num}
                         </span>
-                        <h3 className="mt-1 font-heading text-base font-bold text-white">
+                        <h3 className="mt-1 font-heading text-sm sm:text-base font-bold text-white">
                           {s.title}
                         </h3>
-                        <p className="mt-2 text-xs leading-relaxed text-gray-400 max-w-[240px]">
+                        <p className="mt-1.5 sm:mt-2 text-xs leading-relaxed text-gray-400 max-w-[240px]">
                           {s.desc}
                         </p>
 
@@ -512,20 +512,20 @@ function FounderJourney() {
 
 function WhatWeCanBuild() {
   return (
-    <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-gray-950/60">
+    <section className="py-12 sm:py-20 md:py-28 bg-slate-50/60 dark:bg-gray-950/60">
       <div className="mx-auto max-w-7xl container-p">
         <Reveal>
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
+          <div className="text-center sm:text-left">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               HOW WE CAN BUILD
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl lg:text-5xl dark:text-white">
+            <h2 className="mt-2 sm:mt-3 font-heading text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A] dark:text-white">
               The right technology for the stage you are in.
             </h2>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-5">
 
           {/* Card 1: Validation Websites */}
           <Reveal delay={0.1}>

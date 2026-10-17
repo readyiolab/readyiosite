@@ -22,13 +22,52 @@ import {
 } from "lucide-react";
 
 export function HeroVisualHome() {
+  const [activeMobileTab, setActiveMobileTab] = React.useState<"platform" | "dashboard" | "pdf">("platform");
+
   return (
-    <div className="relative w-full max-w-2xl mx-auto py-4 select-none">
+    <div className="relative w-full max-w-2xl mx-auto py-2 sm:py-4 select-none">
       {/* Background Ambient Glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
+
+      {/* Mobile Interactive Tab Bar (Phone Viewport Only) */}
+      <div className="flex sm:hidden items-center justify-between gap-1 p-1 bg-slate-100/90 border border-slate-200/80 rounded-xl mb-3 shadow-2xs">
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab("platform")}
+          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileTab === "platform"
+              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              : "text-slate-600 hover:text-slate-900"
+          }`}
+        >
+          Platform
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab("dashboard")}
+          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileTab === "dashboard"
+              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              : "text-slate-600 hover:text-slate-900"
+          }`}
+        >
+          Dashboard
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab("pdf")}
+          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileTab === "pdf"
+              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              : "text-slate-600 hover:text-slate-900"
+          }`}
+        >
+          VigoPDF
+        </button>
+      </div>
 
       {/* SVG Connecting Circuit Lines */}
       <svg
@@ -96,10 +135,12 @@ export function HeroVisualHome() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative ml-auto w-full max-w-lg rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+          className={`relative ml-auto w-full max-w-lg rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-3.5 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)] ${
+            activeMobileTab === "platform" ? "block" : "hidden sm:block"
+          }`}
         >
           {/* Top Bar */}
-          <div className="flex items-center justify-between border-b border-gray-100 pb-3 mb-3 text-xs text-gray-500">
+          <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 sm:pb-3 mb-2.5 sm:mb-3 text-xs text-gray-500">
             <div className="flex items-center gap-2">
               <div className="h-4 w-4 rounded-sm bg-[#2563EB]/10 flex items-center justify-center text-[#2563EB] font-bold text-[10px]">
                 ▲
@@ -116,23 +157,23 @@ export function HeroVisualHome() {
           </div>
 
           {/* Inner Content Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-            <div className="space-y-2">
-              <h4 className="font-bold text-gray-900 text-base leading-snug">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 items-center">
+            <div className="space-y-1.5 sm:space-y-2">
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base leading-snug">
                 Build what's next for your business
               </h4>
               <p className="text-xs text-gray-500 leading-relaxed">
                 Modern websites and web applications that turn your ideas into real results.
               </p>
               <div className="pt-1">
-                <span className="inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3.5 py-1 text-[11px] font-semibold text-white shadow-xs cursor-pointer hover:bg-blue-700 transition-colors">
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3 py-1 text-[10px] sm:text-[11px] font-semibold text-white shadow-xs cursor-pointer hover:bg-blue-700 transition-colors">
                   Get Started
                 </span>
               </div>
             </div>
 
             {/* AI Modern Platform Screen */}
-            <div className="relative h-28 w-full overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group">
+            <div className="relative h-24 sm:h-28 w-full overflow-hidden rounded-xl border border-gray-100 bg-gray-900 group">
               <Image
                 src="/ai-business-platform.webp"
                 alt="AI Platform Engineering"
@@ -151,14 +192,18 @@ export function HeroVisualHome() {
           </div>
         </motion.div>
 
-        {/* ================= 2. LAYERED FRONT CARDS (OVERLAPPING) ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 sm:-mt-8 lg:-mt-12 relative z-20">
+        {/* ================= 2. LAYERED FRONT CARDS (OVERLAPPING ON DESKTOP, TABBED ON MOBILE) ================= */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 sm:-mt-8 lg:-mt-12 relative z-20 ${
+          activeMobileTab === "platform" ? "hidden sm:grid" : "grid"
+        }`}>
           {/* LEFT CARD: Project Dashboard */}
           <motion.div
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)]"
+            className={`rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] ${
+              activeMobileTab === "dashboard" ? "block" : "hidden sm:block"
+            }`}
           >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
@@ -244,7 +289,9 @@ export function HeroVisualHome() {
             initial={{ opacity: 0, x: 15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] flex flex-col justify-between"
+            className={`rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] flex-col justify-between ${
+              activeMobileTab === "pdf" ? "flex" : "hidden sm:flex"
+            }`}
           >
             {/* Header */}
             <div>

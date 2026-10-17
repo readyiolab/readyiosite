@@ -31,7 +31,7 @@ export function HomePage() {
 /* ---------------- 1. Hero Section ---------------- */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden pt-16 pb-8 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
       {/* Background Asset: SaaS Growth Dashboard clearly visible */}
       <div
         aria-hidden
@@ -57,7 +57,7 @@ function HeroSection() {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
           {/* Left Text Column */}
           <div className="relative z-10">
             {/* Pill Badge */}
@@ -67,25 +67,25 @@ function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.15] tracking-tight text-[#111827] sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px]">
+            <h1 className="mt-4 sm:mt-5 font-heading text-[26px] xs:text-3xl sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[56px] font-bold leading-[1.18] sm:leading-[1.15] tracking-tight text-[#111827]">
               Websites, applications and software that make business{" "}
               <span className="text-[#2563EB]">work better.</span>
             </h1>
 
             {/* Subheading */}
-            <p className="mt-5 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-lg">
+            <p className="mt-3.5 sm:mt-5 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg">
               Zuvigo builds modern websites, custom web applications, cloud and
               desktop software, business automation, and productivity tools for
               growing businesses.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-3.5">
               <Link
                 href="/solutions"
                 className="group relative inline-flex w-full sm:w-auto items-center justify-center overflow-hidden rounded-full p-[1.5px] bg-gradient-to-r from-blue-600 to-blue-500 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.65)] active:scale-[0.98]"
               >
-                <span className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0B0F19] px-7 py-3.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
+                <span className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0B0F19] px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-white transition-colors group-hover:bg-[#0B0F19]/90">
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                   <span>Explore Solutions</span>
                   <ArrowRight className="h-4 w-4 text-blue-400 transition-transform duration-200 group-hover:translate-x-1" />
@@ -94,14 +94,12 @@ function HeroSection() {
 
               <Link
                 href="/software"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-6 py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-5 sm:px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Explore Software</span>
                 <ChevronRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
-
-
           </div>
 
           {/* Right Hero Graphic Mockup */}
@@ -117,33 +115,33 @@ function HeroSection() {
 /* ---------------- 2. Two Ways We Help Businesses ---------------- */
 function CapabilitiesSection() {
   return (
-    <section className="relative py-20 sm:py-24 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50/50">
+    <section className="relative py-14 sm:py-20 lg:py-24 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header Grid */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-end mb-12">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-end mb-8 sm:mb-12">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB]">
               OUR CAPABILITIES
             </span>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
               Two ways we help businesses
             </h2>
           </div>
-          <p className="text-sm sm:text-base leading-relaxed text-gray-600">
+          <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gray-600">
             From custom development and automation to powerful software products,
             Zuvigo gives you the technology to grow, operate and achieve more.
           </p>
         </div>
 
         {/* 2 Split Showcase Cards with 3D Isometric Illustrations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Card 1: Solutions */}
           <Link
             href="/solutions"
-            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-5 sm:p-7 lg:p-9 shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1.5 sm:hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
           >
             {/* Top Visual Showcase */}
-            <div className="relative mb-6 h-64 sm:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/50 via-white to-slate-50/30">
+            <div className="relative mb-5 sm:mb-6 h-48 sm:h-64 lg:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/50 via-white to-slate-50/30">
               <Image
                 src="/isometric-software-dev.webp"
                 alt="Solutions — 3D isometric custom software development, cloud servers, and analytics"
@@ -151,28 +149,25 @@ function CapabilitiesSection() {
                 className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-
             </div>
 
             {/* Content Details */}
             <div>
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
                   Solutions — built for your business
                 </h3>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed text-gray-600">
                 Custom websites, scalable web applications, cloud infrastructure, and autonomous AI integrations engineered around your exact operational workflows.
               </p>
-
-
             </div>
 
             {/* Card Action Link */}
-            <div className="mt-7 flex items-center justify-between border-t border-slate-100 pt-5 text-sm font-bold text-[#2563EB]">
+            <div className="mt-5 sm:mt-7 flex items-center justify-between border-t border-slate-100 pt-4 sm:pt-5 text-xs sm:text-sm font-bold text-[#2563EB]">
               <span>Explore Custom Solutions</span>
-              <div className="grid h-10 w-10 place-items-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <div className="grid h-8 w-8 sm:h-10 sm:w-10 place-items-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
           </Link>
@@ -180,10 +175,10 @@ function CapabilitiesSection() {
           {/* Card 2: Software */}
           <Link
             href="/software"
-            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_10px_30px_rgba(37,99,235,0.04)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-5 sm:p-7 lg:p-9 shadow-[0_10px_30px_rgba(37,99,235,0.04)] transition-all duration-300 hover:-translate-y-1.5 sm:hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.18)]"
           >
             {/* Top Visual Showcase */}
-            <div className="relative mb-6 h-64 sm:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
+            <div className="relative mb-5 sm:mb-6 h-48 sm:h-64 lg:h-72 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b from-blue-50/40 via-white to-slate-50/30">
               <Image
                 src="/isometric-saas-tools.webp"
                 alt="Software — 3D isometric productivity tools, VigoPDF, digital contracts and eSign"
@@ -191,27 +186,25 @@ function CapabilitiesSection() {
                 className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-
             </div>
 
             {/* Content Details */}
             <div>
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-950 group-hover:text-[#2563EB] transition-colors">
                   Software — built by Zuvigo
                 </h3>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed text-gray-600">
                 Ready-to-deploy software products including VigoPDF, digital eSign, and document automation workflows designed to empower modern business teams.
               </p>
-
             </div>
 
             {/* Card Action Link */}
-            <div className="mt-7 flex items-center justify-between border-t border-slate-100 pt-5 text-sm font-bold text-[#2563EB]">
+            <div className="mt-5 sm:mt-7 flex items-center justify-between border-t border-slate-100 pt-4 sm:pt-5 text-xs sm:text-sm font-bold text-[#2563EB]">
               <span>Explore Software Suite</span>
-              <div className="grid h-10 w-10 place-items-center rounded-full bg-blue-50 text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white transition-all">
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <div className="grid h-8 w-8 sm:h-10 sm:w-10 place-items-center rounded-full bg-blue-50 text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
           </Link>
@@ -255,18 +248,18 @@ function SolutionsOverviewSection() {
   ];
 
   return (
-    <section className="relative py-20 sm:py-24 lg:py-28 border-t border-slate-100 bg-white">
+    <section className="relative py-14 sm:py-20 lg:py-28 border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header matching reference image: Title & Subtitle on left, Pill Button on right */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-14">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#2563EB]">
               SOLUTIONS
             </span>
-            <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-950 leading-[1.15]">
+            <h2 className="mt-2 text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-950 leading-[1.18] sm:leading-[1.15]">
               Custom development for real business impact
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
               We design and build technology solutions that solve real problems,
               streamline operations, and help your business grow.
             </p>
@@ -275,50 +268,50 @@ function SolutionsOverviewSection() {
           <div className="shrink-0 self-start md:self-end">
             <Link
               href="/solutions"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0B1221] px-6 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-[#2563EB] transition-all duration-300"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0B1221] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-[#2563EB] transition-all duration-300"
             >
               Explore all solutions
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Link>
           </div>
         </div>
 
         {/* 4 Cards Grid matching reference image */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {cards.map((c) => {
             if (c.isPrimary) {
               return (
                 <Link
                   key={c.title}
                   href={c.href}
-                  className="group relative flex flex-col justify-between rounded-3xl bg-[#0B1221] p-7 sm:p-8 text-white shadow-md border border-slate-800 min-h-[380px] sm:min-h-[420px]"
+                  className="group relative flex flex-col justify-between rounded-3xl bg-[#0B1221] p-5 sm:p-7 lg:p-8 text-white shadow-md border border-slate-800 min-h-0 sm:min-h-[380px] lg:min-h-[420px]"
                 >
                   <div>
                     {/* Custom Asset Icon - Standalone, no border or bg */}
-                    <div className="relative h-12 w-12 shrink-0">
+                    <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0">
                       <Image
                         src={c.iconSrc}
                         alt={c.title}
                         width={48}
                         height={48}
-                        className="h-12 w-12 object-contain"
+                        className="h-full w-full object-contain"
                       />
                     </div>
 
                     {/* Card Title */}
-                    <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-white">
+                    <h3 className="mt-5 sm:mt-8 text-xl sm:text-2xl font-bold leading-snug tracking-tight text-white">
                       {c.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+                    <p className="mt-2.5 sm:mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
                       {c.desc}
                     </p>
                   </div>
 
                   {/* Bottom Pill Button */}
-                  <div className="mt-8 pt-2">
-                    <span className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs sm:text-sm font-semibold text-gray-950 shadow-xs">
+                  <div className="mt-6 sm:mt-8 pt-2">
+                    <span className="inline-flex items-center justify-center rounded-full bg-white px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-gray-950 shadow-xs">
                       Learn More
                     </span>
                   </div>
@@ -330,34 +323,34 @@ function SolutionsOverviewSection() {
               <Link
                 key={c.title}
                 href={c.href}
-                className="group relative flex flex-col justify-between rounded-3xl bg-[#F8FAFC] p-7 sm:p-8 text-gray-900 shadow-xs border border-slate-200/90 min-h-[380px] sm:min-h-[420px]"
+                className="group relative flex flex-col justify-between rounded-3xl bg-[#F8FAFC] p-5 sm:p-7 lg:p-8 text-gray-900 shadow-xs border border-slate-200/90 min-h-0 sm:min-h-[380px] lg:min-h-[420px]"
               >
                 <div>
                   {/* Custom Asset Icon - Standalone, no border or bg */}
-                  <div className="relative h-12 w-12 shrink-0">
+                  <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0">
                     <Image
                       src={c.iconSrc}
                       alt={c.title}
                       width={48}
                       height={48}
-                      className="h-12 w-12 object-contain"
+                      className="h-full w-full object-contain"
                     />
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-950">
+                  <h3 className="mt-5 sm:mt-8 text-xl sm:text-2xl font-bold leading-snug tracking-tight text-gray-950">
                     {c.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-600">
+                  <p className="mt-2.5 sm:mt-4 text-xs sm:text-sm leading-relaxed text-gray-600">
                     {c.desc}
                   </p>
                 </div>
 
                 {/* Bottom Pill Button */}
-                <div className="mt-8 pt-2">
-                  <span className="inline-flex items-center justify-center rounded-full bg-[#0B1221] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs">
+                <div className="mt-6 sm:mt-8 pt-2">
+                  <span className="inline-flex items-center justify-center rounded-full bg-[#0B1221] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs">
                     Learn More
                   </span>
                 </div>

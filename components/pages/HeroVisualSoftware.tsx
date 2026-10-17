@@ -19,13 +19,41 @@ import {
 } from "lucide-react";
 
 export function HeroVisualSoftware() {
+  const [activeMobileTab, setActiveMobileTab] = React.useState<"vigopdf" | "vigoflow">("vigopdf");
+
   return (
-    <div className="relative w-full max-w-2xl mx-auto py-4 select-none">
+    <div className="relative w-full max-w-2xl mx-auto py-2 sm:py-4 select-none">
       {/* Background Ambient Glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
+
+      {/* Mobile Interactive Tab Bar (Phone Viewport Only) */}
+      <div className="flex sm:hidden items-center justify-between gap-1 p-1 bg-slate-100/90 border border-slate-200/80 rounded-xl mb-3 shadow-2xs">
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab("vigopdf")}
+          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileTab === "vigopdf"
+              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              : "text-slate-600 hover:text-slate-900"
+          }`}
+        >
+          VigoPDF Suite
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab("vigoflow")}
+          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+            activeMobileTab === "vigoflow"
+              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              : "text-slate-600 hover:text-slate-900"
+          }`}
+        >
+          VigoFlow Diagrams
+        </button>
+      </div>
 
       {/* SVG Connecting Circuit Lines */}
       <svg
@@ -97,7 +125,9 @@ export function HeroVisualSoftware() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative ml-auto w-full max-w-xl rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+          className={`relative ml-auto w-full max-w-xl rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-3.5 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)] ${
+            activeMobileTab === "vigopdf" ? "block" : "hidden sm:block"
+          }`}
         >
           {/* Top Bar with Tabs and Share */}
           <div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-3 text-xs">
@@ -218,7 +248,9 @@ export function HeroVisualSoftware() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative max-w-lg mx-auto sm:ml-8 mt-4 sm:-mt-6 lg:-mt-10 rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] z-20"
+          className={`relative max-w-lg mx-auto sm:ml-8 sm:-mt-6 lg:-mt-10 rounded-2xl border border-gray-200/90 bg-white p-3.5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] z-20 ${
+            activeMobileTab === "vigoflow" ? "block mt-2" : "hidden sm:block mt-4"
+          }`}
         >
           {/* Top Bar */}
           <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2.5">
