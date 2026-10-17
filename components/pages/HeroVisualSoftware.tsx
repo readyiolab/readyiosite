@@ -29,14 +29,14 @@ export function HeroVisualSoftware() {
         className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-gradient-to-tr from-blue-400/20 via-sky-300/20 to-blue-500/20 blur-3xl opacity-80"
       />
 
-      {/* Mobile Interactive Tab Bar (Phone Viewport Only) */}
-      <div className="flex sm:hidden items-center justify-between gap-1 p-1 bg-slate-100/90 border border-slate-200/80 rounded-xl mb-3 shadow-2xs">
+      {/* Mobile Interactive Tab Bar (Phone Viewport Only) - Stripe-style sleek segmented pill */}
+      <div className="flex sm:hidden items-center justify-between gap-1 p-1 bg-slate-100/90 border border-slate-200/80 rounded-full mb-3.5 shadow-2xs">
         <button
           type="button"
           onClick={() => setActiveMobileTab("vigopdf")}
-          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+          className={`flex-1 py-1.5 px-2 rounded-full text-xs font-semibold transition-all ${
             activeMobileTab === "vigopdf"
-              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              ? "bg-white text-[#2563EB] shadow-2xs font-bold"
               : "text-slate-600 hover:text-slate-900"
           }`}
         >
@@ -45,9 +45,9 @@ export function HeroVisualSoftware() {
         <button
           type="button"
           onClick={() => setActiveMobileTab("vigoflow")}
-          className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all ${
+          className={`flex-1 py-1.5 px-2 rounded-full text-xs font-semibold transition-all ${
             activeMobileTab === "vigoflow"
-              ? "bg-white text-blue-600 shadow-2xs font-bold"
+              ? "bg-white text-[#2563EB] shadow-2xs font-bold"
               : "text-slate-600 hover:text-slate-900"
           }`}
         >

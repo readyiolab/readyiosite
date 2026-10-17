@@ -130,22 +130,23 @@ export function ServicesPage() {
                         </motion.div>
                       ))}
                     </StaggerGroup>
-                    <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-3">
+                    {/* CTA Buttons - Stripe-style compact, content-sized, side-by-side on mobile */}
+                    <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3">
                       <a
                         href={SITE.bookingUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-background transition-all hover:bg-primary"
+                        className="group inline-flex items-center justify-center gap-1.5 rounded-full bg-foreground px-4.5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-background transition-all hover:bg-primary active:scale-[0.98]"
                       >
-                        Discuss this capability
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        <span>Discuss this capability</span>
+                        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                       </a>
                       <a
                         href="#scope-calculator"
-                        className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-full border border-border bg-accent/50 px-4 py-2.5 text-xs font-semibold text-foreground hover:bg-accent transition-colors"
+                        className="inline-flex items-center justify-center gap-1.5 rounded-full border border-border bg-card px-4 sm:px-4.5 py-2.5 sm:py-3 text-xs font-semibold text-foreground hover:bg-accent transition-colors active:scale-[0.98]"
                       >
                         <Calculator className="h-3.5 w-3.5 text-primary" />
-                        Estimate Scope
+                        <span>Estimate Scope</span>
                       </a>
                     </div>
                   </div>

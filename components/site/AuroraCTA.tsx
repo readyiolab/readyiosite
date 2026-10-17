@@ -96,41 +96,41 @@ export function AuroraCTA({
               </p>
             )}
 
-            {/* Two Side-by-Side Pill Action Buttons matching Reference Image */}
-            <div className="relative z-10 mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              {/* Button 1: Outlined Pill Button (Like "Buy now") */}
+            {/* Two Side-by-Side Pill Action Buttons - Stripe-style compact, content-sized */}
+            <div className="relative z-10 mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5">
+              {/* Button 1: Outlined Pill Button */}
               {isPrimaryExt ? (
                 <a
                   href={buttonHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300/90 bg-white px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-slate-800 shadow-2xs hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 active:scale-[0.98]"
                 >
                   {buttonText}
                 </a>
               ) : (
                 <Link
                   href={buttonHref}
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-black bg-white px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-black shadow-2xs hover:bg-slate-50 transition-all duration-200"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300/90 bg-white px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-slate-800 shadow-2xs hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 active:scale-[0.98]"
                 >
                   {buttonText}
                 </Link>
               )}
 
-              {/* Button 2: Filled Black Pill Button (Like "Learn more") */}
+              {/* Button 2: Filled Black Pill Button */}
               {isSecondaryExt ? (
                 <a
                   href={secondaryButtonHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0B0F19] px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-slate-800 transition-all duration-200 active:scale-[0.98]"
                 >
                   {secondaryButtonText}
                 </a>
               ) : (
                 <Link
                   href={secondaryButtonHref}
-                  className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-7 sm:px-8 py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-neutral-800 transition-all duration-200"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0B0F19] px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-xs hover:bg-slate-800 transition-all duration-200 active:scale-[0.98]"
                 >
                   {secondaryButtonText}
                 </Link>

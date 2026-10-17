@@ -95,27 +95,26 @@ function SoftwareHero() {
               simpler and more securely.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+            {/* CTA Buttons - Stripe-style compact, content-sized, side-by-side on mobile */}
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3">
               <a
                 href="https://pdf.zuvigo.com/workspace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-6 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-5px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_-5px_rgba(37,99,235,0.6)] active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-4.5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-[0_4px_16px_rgba(37,99,235,0.25)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_6px_22px_rgba(37,99,235,0.4)] active:scale-[0.98]"
               >
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 <span>Explore Productivity Suite</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
               </a>
 
               <a
                 href="https://pdf.zuvigo.com/desktop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/90 backdrop-blur-xs px-5 sm:px-6 py-3 sm:py-3.5 text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-300 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-1.5 rounded-full border border-slate-200/90 bg-white/95 backdrop-blur-xs px-4.5 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 hover:text-black active:scale-[0.98]"
               >
                 <span>View Desktop Software</span>
-                <ChevronRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5" />
+                <ChevronRight className="h-3.5 w-3.5 text-slate-400 transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>
           </div>

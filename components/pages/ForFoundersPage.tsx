@@ -76,20 +76,22 @@ function FounderHero() {
             </Reveal>
 
             <Reveal delay={0.3}>
-              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-3 sm:gap-4">
+              {/* CTA Buttons - Stripe-style compact, content-sized, side-by-side on mobile */}
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3.5">
                 <a
                   href={SITE.bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-700 active:scale-95"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#2563EB] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition-all hover:bg-blue-600 active:scale-95"
                 >
-                  Discuss Your Idea
+                  <span>Discuss Your Idea</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
                 <a
                   href="#how-it-works"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-blue-300/40 bg-transparent px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-[#2563EB] transition-all hover:bg-blue-50/50 active:scale-95 dark:text-blue-300 dark:border-blue-800"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full border border-slate-300/80 bg-white px-4.5 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-slate-700 shadow-2xs transition-all hover:bg-slate-50 hover:text-slate-950 active:scale-95 dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800"
                 >
-                  See How It Works
+                  <span>See How It Works</span>
                 </a>
               </div>
             </Reveal>

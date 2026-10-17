@@ -186,14 +186,14 @@ function BelowFoldTrustStrip() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto flex-shrink-0">
+            <div className="flex items-center justify-center lg:justify-start gap-3 w-auto flex-shrink-0">
               <Link
                 href="/contact"
                 aria-label="Let's Talk"
-                className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-6 sm:px-8 py-3.5 sm:py-4 text-xs sm:text-sm font-bold text-white shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(37,99,235,0.6)] active:scale-95"
+                className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-5 sm:px-7 py-2.5 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-95"
               >
                 <span>Let&apos;s Talk</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Link>
             </div>
           </div>
@@ -477,14 +477,15 @@ function ForFoundersBanner() {
                   We help founders shape the right first version, choose the technology and launch without unnecessary complexity.
                 </p>
 
-                <div className="mt-6 sm:mt-8">
+                <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
                   <a
                     href={SITE.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-[#2563EB] px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_20px_rgba(37,99,235,0.4)] transition-all hover:bg-[#1D4ED8] active:scale-95"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#2563EB] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-blue-600 active:scale-95"
                   >
-                    Discuss Your Idea
+                    <span>Discuss Your Idea</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </a>
                 </div>
               </div>
