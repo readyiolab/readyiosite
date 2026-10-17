@@ -31,7 +31,7 @@ export function HomePage() {
 /* ---------------- 1. Hero Section ---------------- */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-8 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
       {/* Background Asset: SaaS Growth Dashboard clearly visible */}
       <div
         aria-hidden
@@ -57,7 +57,7 @@ function HeroSection() {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-6 sm:gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
           {/* Left Text Column */}
           <div className="relative z-10">
             {/* Pill Badge */}

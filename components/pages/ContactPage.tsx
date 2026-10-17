@@ -91,7 +91,7 @@ export function ContactPage() {
   return (
     <>
       {/* Main Reference Layout Frame */}
-      <section className="pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+      <section className="relative min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="mx-auto max-w-7xl container-p">
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-border/80 bg-card p-4 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.35)]">

@@ -125,7 +125,7 @@ export function HeroVisualSoftware() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`relative ml-auto w-full max-w-xl rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-3.5 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)] ${
+          className={`relative mx-auto lg:ml-auto w-full max-w-xl rounded-2xl border border-gray-200/80 bg-white/95 backdrop-blur-sm p-3.5 sm:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.06)] ${
             activeMobileTab === "vigopdf" ? "block" : "hidden sm:block"
           }`}
         >

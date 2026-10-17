@@ -48,7 +48,7 @@ export function ForFoundersPage() {
 
 function FounderHero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-8 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
       {/* Soft background aura */}
       <div
         aria-hidden
@@ -56,7 +56,7 @@ function FounderHero() {
       />
 
       <div className="mx-auto max-w-7xl container-p">
-        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-6 sm:gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-10">
           <div className="text-center sm:text-left">
             <Reveal>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#2563EB]">
@@ -283,55 +283,48 @@ function FounderHero() {
 
               </div>
 
-              {/* Mobile Card Stack Layout (< lg screens) */}
-              <div className="lg:hidden mt-6 flex flex-col gap-3 w-full">
-                {/* 01. Idea Card */}
-                <div className="rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white p-3.5 sm:p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Lightbulb className="h-4 w-4 text-[#2563EB]" />
-                      <span className="text-xs font-semibold uppercase tracking-wider">01. Idea</span>
+              {/* Mobile Card Layout (< lg screens) - Sleek unified idea-to-product showcase */}
+              <div className="lg:hidden mt-5 sm:mt-6 w-full max-w-md mx-auto">
+                <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
+                  {/* Step Journey Indicator Header */}
+                  <div className="flex items-center justify-between border-b border-gray-100 bg-slate-50/90 px-3.5 py-2.5 dark:border-gray-800 dark:bg-gray-900/80">
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold text-gray-700 dark:text-gray-300">
+                      <span className="text-[#2563EB]">01. Idea</span>
+                      <span className="text-gray-300 dark:text-gray-600">→</span>
+                      <span className="text-gray-500">02. Design</span>
+                      <span className="text-gray-300 dark:text-gray-600">→</span>
+                      <span className="text-emerald-600 font-bold">03. Launch</span>
                     </div>
-                    <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">Concept</span>
+                    <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[9px] font-bold text-emerald-600">
+                      Live App
+                    </span>
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-                    A solution that helps coaches manage clients and sessions.
-                  </p>
-                </div>
 
-                {/* 02. Wireframe Card */}
-                <div className="rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white p-3.5 sm:p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between border-b border-gray-100 pb-2 dark:border-gray-800">
-                    <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Layout className="h-4 w-4 text-[#2563EB]" />
-                      <span className="text-xs font-semibold uppercase tracking-wider">02. Wireframe</span>
-                    </div>
-                    <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-[#2563EB]">UX Wireframe</span>
-                  </div>
-                  <div className="mt-2.5 space-y-1.5">
-                    <div className="h-2.5 w-full rounded-xs bg-gray-100 dark:bg-gray-800" />
-                    <div className="h-8 w-full rounded-md bg-gray-50 dark:bg-gray-800/60" />
-                  </div>
-                </div>
-
-                {/* 03. Working Product Card */}
-                <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-gray-200/90 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
-                  <div className="flex items-center justify-between border-b border-gray-100 bg-[#F8FAFC] px-4 py-2.5 dark:border-gray-800 dark:bg-gray-900/80">
-                    <div className="flex items-center gap-2 text-[#0F172A] dark:text-white">
-                      <Layout className="h-4 w-4 text-[#2563EB]" />
-                      <span className="text-xs font-semibold uppercase tracking-wider">03. Working Product</span>
-                    </div>
-                    <span className="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-bold text-emerald-600">Live App</span>
-                  </div>
-                  <div className="p-3.5 sm:p-5 bg-white dark:bg-gray-950">
-                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                      <div className="rounded-lg sm:rounded-xl border border-gray-100 bg-[#F8FAFC] p-2.5 sm:p-3.5 dark:border-gray-800 dark:bg-gray-900">
-                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium block">Upcoming Sessions</span>
-                        <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
+                  {/* Product Preview Card */}
+                  <div className="p-3.5 bg-white dark:bg-gray-950">
+                    <div className="flex items-center justify-between mb-2.5">
+                      <div className="flex items-center gap-2">
+                        <div className="h-6 w-6 rounded-lg bg-blue-500/10 flex items-center justify-center text-[#2563EB]">
+                          <Layout className="h-3.5 w-3.5" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-bold text-gray-900 dark:text-white">CoachFlow Platform</h4>
+                          <span className="text-[10px] text-gray-400">Launched in 4 weeks</span>
+                        </div>
                       </div>
-                      <div className="rounded-lg sm:rounded-xl border border-gray-100 bg-[#F8FAFC] p-2.5 sm:p-3.5 dark:border-gray-800 dark:bg-gray-900">
-                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium block">Active Clients</span>
-                        <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white block mt-0.5">48 <span className="text-[10px] sm:text-xs text-emerald-500 font-bold">▲ +12%</span></span>
+                      <span className="text-[10px] font-semibold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-full">Active</span>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-2 dark:border-gray-800 dark:bg-gray-900">
+                        <span className="text-[9px] text-gray-400 font-medium block">Sessions Booked</span>
+                        <span className="text-sm font-bold text-gray-900 dark:text-white block mt-0.5">12</span>
+                      </div>
+                      <div className="rounded-xl border border-gray-100 bg-[#F8FAFC] p-2 dark:border-gray-800 dark:bg-gray-900">
+                        <span className="text-[9px] text-gray-400 font-medium block">Active Clients</span>
+                        <span className="text-sm font-bold text-gray-900 dark:text-white block mt-0.5">
+                          48 <span className="text-[9px] text-emerald-500 font-bold">▲ +12%</span>
+                        </span>
                       </div>
                     </div>
                   </div>

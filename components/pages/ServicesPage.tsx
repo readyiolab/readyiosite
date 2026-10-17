@@ -83,15 +83,29 @@ const SERVICES = [
 export function ServicesPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-16 pb-8 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+      <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
         <div aria-hidden className="absolute inset-0 -z-10 mesh-bg opacity-60" />
-        <div className="mx-auto max-w-7xl container-p text-center">
+        <div className="mx-auto max-w-7xl container-p text-center flex flex-col items-center justify-center">
           <SectionHeading
             eyebrow="Services"
             as="h1"
             title={<>Every system your business runs on — <span className="text-gradient">under one team</span>.</>}
             subtitle="Pick one capability or lean on all four. Zuvigo scales with the scope."
           />
+
+          {/* Service quick navigation pill badges on mobile & tablet */}
+          <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-2xl mx-auto">
+            {SERVICES.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200/90 bg-white/95 backdrop-blur-xs px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs font-semibold text-gray-700 shadow-2xs hover:border-[#2563EB] hover:text-[#2563EB] transition-all"
+              >
+                <span>{s.tag}</span>
+                <span className="text-[10px] text-gray-400">↓</span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
