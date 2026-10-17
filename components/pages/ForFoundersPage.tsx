@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { SITE } from "@/lib/site";
 import {
+  ArrowRight,
   Check,
   CheckCircle2,
   ChevronUp,
