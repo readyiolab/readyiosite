@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   ArrowRight,
   ChevronDown,
   Monitor,
   LayoutGrid,
+  Cloud,
+  Zap,
   FileText,
   Mail,
   PenLine,
@@ -31,28 +32,28 @@ export const SOLUTIONS_ITEMS = [
     desc: "Modern, high-converting websites for growing businesses.",
     badge: "High Performance",
     href: "/solutions#websites",
-    iconSrc: "/icons/website-development.webp",
+    icon: Monitor,
   },
   {
     title: "Web Application Development",
     desc: "Custom web applications tailored to your workflows.",
     badge: "Custom Workflows",
     href: "/solutions#web-apps",
-    iconSrc: "/icons/web-application-development.webp",
+    icon: LayoutGrid,
   },
   {
     title: "Cloud & Desktop Software Development",
     desc: "Scalable cloud and desktop software solutions.",
     badge: "Resilient Arch",
     href: "/solutions#cloud-desktop",
-    iconSrc: "/icons/cloud-desktop-software-development.webp",
+    icon: Cloud,
   },
   {
     title: "Business & AI Automation",
     desc: "Automate processes and unlock new efficiency with AI.",
     badge: "AI Powered",
     href: "/solutions#automation",
-    iconSrc: "/icons/business-ai-automation.webp",
+    icon: Zap,
   },
 ];
 
@@ -248,35 +249,32 @@ export function Nav() {
                         </div>
 
                         <div className="space-y-1">
-                          {SOLUTIONS_ITEMS.map((item) => (
-                            <Link
-                              key={item.title}
-                              href={item.href}
-                              onClick={() => setActiveDropdown(null)}
-                              className="group flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
-                            >
-                              <div className="relative h-10 w-10 shrink-0 flex items-center justify-center">
-                                <Image
-                                  src={item.iconSrc}
-                                  alt={item.title}
-                                  width={40}
-                                  height={40}
-                                  className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-110"
-                                />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-center justify-between">
-                                  <span className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors">
-                                    {item.title}
-                                  </span>
-                                  <ArrowRight className="h-3.5 w-3.5 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#2563EB] transition-all" />
+                          {SOLUTIONS_ITEMS.map((item) => {
+                            const Icon = item.icon;
+                            return (
+                              <Link
+                                key={item.title}
+                                href={item.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className="group flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-gradient-to-r hover:from-blue-50/60 hover:to-indigo-50/30 hover:shadow-xs border border-transparent hover:border-blue-100/70"
+                              >
+                                <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-blue-100/90 bg-blue-50/80 text-[#2563EB] shadow-2xs group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white group-hover:border-[#2563EB] transition-all">
+                                  <Icon className="h-4 w-4" />
                                 </div>
-                                <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
-                                  {item.desc}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between">
+                                    <span className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-[#2563EB] transition-colors">
+                                      {item.title}
+                                    </span>
+                                    <ArrowRight className="h-3.5 w-3.5 text-gray-300 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#2563EB] transition-all" />
+                                  </div>
+                                  <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
+                                    {item.desc}
+                                  </p>
+                                </div>
+                              </Link>
+                            );
+                          })}
                         </div>
 
 
@@ -505,14 +503,8 @@ export function Nav() {
                       onClick={() => setOpen(false)}
                       className="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-[#2563EB]"
                     >
-                      <div className="relative h-8 w-8 shrink-0 flex items-center justify-center">
-                        <Image
-                          src="/icons/website-development.webp"
-                          alt="Solutions"
-                          width={32}
-                          height={32}
-                          className="h-8 w-8 object-contain"
-                        />
+                      <div className="grid h-8 w-8 place-items-center rounded-lg bg-blue-100/70 text-[#2563EB]">
+                        <Monitor className="h-4 w-4" />
                       </div>
                       <span>Solutions</span>
                     </Link>
@@ -539,32 +531,29 @@ export function Nav() {
                         transition={{ duration: 0.2 }}
                         className="border-t border-slate-200/70 bg-white p-3 space-y-1.5"
                       >
-                        {SOLUTIONS_ITEMS.map((item) => (
-                          <Link
-                            key={item.title}
-                            href={item.href}
-                            onClick={() => setOpen(false)}
-                            className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
-                          >
-                            <div className="relative h-8 w-8 shrink-0 flex items-center justify-center">
-                              <Image
-                                src={item.iconSrc}
-                                alt={item.title}
-                                width={32}
-                                height={32}
-                                className="h-8 w-8 object-contain"
-                              />
-                            </div>
-                            <div className="flex-1">
-                              <div className="text-xs font-bold text-slate-800">
-                                {item.title}
+                        {SOLUTIONS_ITEMS.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={item.title}
+                              href={item.href}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center gap-3 rounded-xl p-2.5 hover:bg-blue-50/50 transition-colors"
+                            >
+                              <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-blue-50 text-[#2563EB]">
+                                <Icon className="h-3.5 w-3.5" />
                               </div>
-                              <div className="text-[10px] text-slate-500 line-clamp-1">
-                                {item.desc}
+                              <div className="flex-1">
+                                <div className="text-xs font-bold text-slate-800">
+                                  {item.title}
+                                </div>
+                                <div className="text-[10px] text-slate-500 line-clamp-1">
+                                  {item.desc}
+                                </div>
                               </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          );
+                        })}
 
                         <div className="pt-2 border-t border-slate-100">
                           <Link
