@@ -25,14 +25,14 @@ Zuvigo builds modern websites, custom web applications, cloud and desktop softwa
 
 ## Software Products
 
-- [VigoPDF](https://pdf.zuvigo.com/): Document editing and PDF workflows.
-- [Productivity Workspace](https://pdf.zuvigo.com/workspace): Unified productivity suite.
-- [eSign](https://pdf.zuvigo.com/esign): Digital signatures and contracts.
-- [VigoLetters](https://pdf.zuvigo.com/letters): Letter and document automation.
-- [VigoFlow](https://pdf.zuvigo.com/diagrams): Diagrams and workflow tooling.
-- [Web Reports](https://pdf.zuvigo.com/webreports): Reporting for modern teams.
-- [Enterprise](https://pdf.zuvigo.com/enterprise): Private-cloud and enterprise deployments.
-- [Desktop Software](https://pdf.zuvigo.com/desktop): Offline-first desktop applications.
+- [VigoPDF](https://vigodesk.com/): Document editing and PDF workflows.
+- [Productivity Workspace](https://vigodesk.com/workspace): Unified productivity suite.
+- [eSign](https://vigodesk.com/esign): Digital signatures and contracts.
+- [VigoLetters](https://vigodesk.com/letters): Letter and document automation.
+- [VigoFlow](https://vigodesk.com/diagrams): Diagrams and workflow tooling.
+- [Web Reports](https://vigodesk.com/webreports): Reporting for modern teams.
+- [Enterprise](https://vigodesk.com/enterprise): Private-cloud and enterprise deployments.
+- [Desktop Software](https://vigodesk.com/desktop): Offline-first desktop applications.
 
 ## Contact Information
 

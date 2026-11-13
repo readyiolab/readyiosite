@@ -147,7 +147,7 @@ export function HeroVisualSoftware() {
               </div>
             </div>
             <a
-              href="https://pdf.zuvigo.com/"
+              href="https://vigodesk.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 rounded-full bg-[#2563EB] px-3 py-1 text-[11px] font-semibold text-white shadow-xs hover:bg-blue-700"
@@ -200,7 +200,7 @@ export function HeroVisualSoftware() {
             {/* Right Tools Panel */}
             <div className="col-span-3 hidden sm:flex flex-col gap-1 text-[10px] text-gray-600 pl-1">
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 p-1 rounded hover:bg-blue-50 hover:text-[#2563EB]"
@@ -208,7 +208,7 @@ export function HeroVisualSoftware() {
                 <FileDown className="h-3 w-3" /> Export PDF
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 p-1 rounded hover:bg-blue-50 hover:text-[#2563EB]"
@@ -216,7 +216,7 @@ export function HeroVisualSoftware() {
                 <Edit2 className="h-3 w-3" /> Edit PDF
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 p-1 rounded hover:bg-blue-50 hover:text-[#2563EB]"
@@ -224,7 +224,7 @@ export function HeroVisualSoftware() {
                 <RefreshCw className="h-3 w-3" /> Convert
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 p-1 rounded hover:bg-blue-50 hover:text-[#2563EB]"
@@ -232,7 +232,7 @@ export function HeroVisualSoftware() {
                 <FolderTree className="h-3 w-3" /> Organize
               </a>
               <a
-                href="https://pdf.zuvigo.com/esign"
+                href="https://vigodesk.com/esign"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 p-1 rounded hover:bg-blue-50 hover:text-[#2563EB]"
@@ -264,7 +264,7 @@ export function HeroVisualSoftware() {
                 <span className="h-4 w-4 rounded-full bg-sky-400 border border-white" />
               </div>
               <a
-                href="https://pdf.zuvigo.com/diagrams"
+                href="https://vigodesk.com/diagrams"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-[#2563EB] px-2 py-0.5 text-[9px] font-semibold text-white"

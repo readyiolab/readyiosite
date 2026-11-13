@@ -61,7 +61,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "VigoPDF",
     desc: "Create, edit, convert and manage PDF documents.",
-    href: "https://pdf.zuvigo.com/",
+    href: "https://vigodesk.com/",
     icon: FileText,
     badge: "Documents",
     external: true,
@@ -69,7 +69,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "eSign",
     desc: "Prepare, sign and manage electronic documents.",
-    href: "https://pdf.zuvigo.com/esign",
+    href: "https://vigodesk.com/esign",
     icon: PenLine,
     badge: "Signatures",
     external: true,
@@ -77,7 +77,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "VigoFlow",
     desc: "Flowcharts, process maps and diagrams.",
-    href: "https://pdf.zuvigo.com/diagrams",
+    href: "https://vigodesk.com/diagrams",
     icon: GitBranch,
     badge: "Canvas",
     external: true,
@@ -85,7 +85,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "VigoLetters",
     desc: "Create personalized letters and documents in bulk.",
-    href: "https://pdf.zuvigo.com/letters",
+    href: "https://vigodesk.com/letters",
     icon: Mail,
     badge: "Bulk Mail",
     external: true,
@@ -93,7 +93,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "Productivity Suite",
     desc: "VigoPDF, eSign, VigoFlow, VigoLetters and more in one workspace.",
-    href: "https://pdf.zuvigo.com/workspace",
+    href: "https://vigodesk.com/workspace",
     icon: LayoutGrid,
     flagship: true,
     external: true,
@@ -101,7 +101,7 @@ export const SOFTWARE_ITEMS = [
   {
     title: "Desktop Software",
     desc: "Downloadable PDF and diagram applications.",
-    href: "https://pdf.zuvigo.com/desktop",
+    href: "https://vigodesk.com/desktop",
     icon: MonitorDown,
     badge: "Offline",
     external: true,

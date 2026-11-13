@@ -284,7 +284,7 @@ export function HeroVisualHome() {
             </div>
           </motion.div>
 
-          {/* RIGHT CARD: VigoPDF (Direct Link to https://pdf.zuvigo.com/) */}
+          {/* RIGHT CARD: VigoPDF (Direct Link to https://vigodesk.com/) */}
           <motion.div
             initial={{ opacity: 0, x: 15 }}
             animate={{ opacity: 1, x: 0 }}
@@ -316,10 +316,10 @@ export function HeroVisualHome() {
                 </p>
               </div>
 
-              {/* Action Button linking to pdf.zuvigo.com */}
+              {/* Action Button linking to vigodesk.com */}
               <div className="mt-2.5">
                 <a
-                  href="https://pdf.zuvigo.com/"
+                  href="https://vigodesk.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full bg-[#2563EB] px-3.5 py-1 text-[11px] font-semibold text-white shadow-xs hover:bg-blue-700 transition-colors"
@@ -333,7 +333,7 @@ export function HeroVisualHome() {
             {/* 4 Tool Chips below */}
             <div className="mt-3 grid grid-cols-4 gap-1 pt-2.5 border-t border-gray-100 text-center">
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-gray-100 bg-gray-50/80 p-1 hover:border-blue-200 hover:bg-blue-50 transition-colors"
@@ -341,7 +341,7 @@ export function HeroVisualHome() {
                 <div className="text-[8px] font-semibold text-gray-800">Edit PDF</div>
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-gray-100 bg-gray-50/80 p-1 hover:border-blue-200 hover:bg-blue-50 transition-colors"
@@ -349,7 +349,7 @@ export function HeroVisualHome() {
                 <div className="text-[8px] font-semibold text-gray-800">Convert</div>
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-gray-100 bg-gray-50/80 p-1 hover:border-blue-200 hover:bg-blue-50 transition-colors"
@@ -357,7 +357,7 @@ export function HeroVisualHome() {
                 <div className="text-[8px] font-semibold text-gray-800">Merge</div>
               </a>
               <a
-                href="https://pdf.zuvigo.com/"
+                href="https://vigodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-gray-100 bg-gray-50/80 p-1 hover:border-blue-200 hover:bg-blue-50 transition-colors"

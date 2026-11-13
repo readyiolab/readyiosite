@@ -98,7 +98,7 @@ function SoftwareHero() {
             {/* CTA Buttons - Stripe-style compact, content-sized, side-by-side on mobile */}
             <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3">
               <a
-                href="https://pdf.zuvigo.com/workspace"
+                href="https://vigodesk.com/workspace"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 px-4.5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-[0_4px_16px_rgba(37,99,235,0.25)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_6px_22px_rgba(37,99,235,0.4)] active:scale-[0.98]"
@@ -108,7 +108,7 @@ function SoftwareHero() {
               </a>
 
               <a
-                href="https://pdf.zuvigo.com/desktop"
+                href="https://vigodesk.com/desktop"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-1.5 rounded-full border border-slate-200/90 bg-white/95 backdrop-blur-xs px-4.5 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-gray-800 shadow-2xs transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 hover:text-black active:scale-[0.98]"
@@ -137,7 +137,7 @@ function SixProductsSection() {
       desc: "Create, edit, convert, merge, compress and manage PDF documents effortlessly.",
       badge: "Document Suite",
       icon: FileText,
-      href: "https://pdf.zuvigo.com/",
+      href: "https://vigodesk.com/",
       flagship: false,
     },
     {
@@ -145,7 +145,7 @@ function SixProductsSection() {
       desc: "Prepare, sign and audit electronic signatures with strict compliance guardrails.",
       badge: "Secure Signatures",
       icon: PenLine,
-      href: "https://pdf.zuvigo.com/esign",
+      href: "https://vigodesk.com/esign",
       flagship: false,
     },
     {
@@ -153,7 +153,7 @@ function SixProductsSection() {
       desc: "Interactive flowcharting, architectural diagrams, process mapping and mind maps.",
       badge: "Visual Canvas",
       icon: GitBranch,
-      href: "https://pdf.zuvigo.com/diagrams",
+      href: "https://vigodesk.com/diagrams",
       flagship: false,
     },
     {
@@ -161,7 +161,7 @@ function SixProductsSection() {
       desc: "Generate personalized letters, contracts, and business documents in automated bulk.",
       badge: "Bulk Automation",
       icon: Mail,
-      href: "https://pdf.zuvigo.com/letters",
+      href: "https://vigodesk.com/letters",
       flagship: false,
     },
     {
@@ -169,7 +169,7 @@ function SixProductsSection() {
       desc: "VigoPDF, eSign, VigoFlow, VigoLetters, and team collaboration united in one single workspace.",
       badge: "All-In-One",
       icon: LayoutGrid,
-      href: "https://pdf.zuvigo.com/workspace",
+      href: "https://vigodesk.com/workspace",
       flagship: true,
     },
     {
@@ -177,7 +177,7 @@ function SixProductsSection() {
       desc: "Downloadable native desktop applications for offline speed and local file performance.",
       badge: "Offline Native",
       icon: MonitorDown,
-      href: "https://pdf.zuvigo.com/desktop",
+      href: "https://vigodesk.com/desktop",
       flagship: false,
     },
   ];
@@ -263,7 +263,7 @@ function DeploymentOptionsSection() {
       icon: Cloud,
       features: ["Instant browser access", "Automated cloud backup", "Collaborative team rooms"],
       badge: "Zero Setup",
-      href: "https://pdf.zuvigo.com/workspace",
+      href: "https://vigodesk.com/workspace",
     },
     {
       title: "Desktop",
@@ -271,7 +271,7 @@ function DeploymentOptionsSection() {
       icon: Monitor,
       features: ["100% offline functionality", "Zero file upload latency", "macOS & Windows native"],
       badge: "Fast & Offline",
-      href: "https://pdf.zuvigo.com/desktop",
+      href: "https://vigodesk.com/desktop",
     },
     {
       title: "Your Cloud",
@@ -279,7 +279,7 @@ function DeploymentOptionsSection() {
       icon: Server,
       features: ["Dedicated VPC deployment", "Enterprise SSO & audit logs", "Full sovereignty"],
       badge: "Enterprise Grade",
-      href: "https://pdf.zuvigo.com/enterprise",
+      href: "https://vigodesk.com/enterprise",
     },
   ];
 
@@ -437,7 +437,7 @@ function FeaturedVigoPdfSection() {
             </div>
 
             <a
-              href="https://pdf.zuvigo.com/"
+              href="https://vigodesk.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full bg-[#2563EB] px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition-colors"
@@ -513,7 +513,7 @@ function FeaturedVigoPdfSection() {
 
               <div className="pt-1.5 sm:pt-2">
                 <a
-                  href="https://pdf.zuvigo.com/"
+                  href="https://vigodesk.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0B0F19] px-4 py-2.5 sm:py-3 text-xs font-semibold text-white shadow-xs hover:bg-black transition-colors"

@@ -106,7 +106,7 @@ export function Footer() {
                 <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-gray-600">
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/"
+                      href="https://vigodesk.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
@@ -116,7 +116,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/workspace"
+                      href="https://vigodesk.com/workspace"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
@@ -126,7 +126,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/esign"
+                      href="https://vigodesk.com/esign"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
@@ -136,7 +136,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/letters"
+                      href="https://vigodesk.com/letters"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
@@ -146,7 +146,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/diagrams"
+                      href="https://vigodesk.com/diagrams"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
@@ -156,7 +156,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://pdf.zuvigo.com/desktop"
+                      href="https://vigodesk.com/desktop"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-[#2563EB]"
