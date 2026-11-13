@@ -1,4 +1,5 @@
 import { ContactPage } from "@/components/pages/ContactPage"
+import { PageBreadcrumbs } from "@/components/site/PageBreadcrumbs"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
@@ -12,5 +13,10 @@ export const metadata = pageMetadata({
 })
 
 export default function Page() {
-  return <ContactPage />
+  return (
+    <>
+      <PageBreadcrumbs items={[{ name: "Contact", href: "/contact" }]} />
+      <ContactPage />
+    </>
+  )
 }

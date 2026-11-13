@@ -4,7 +4,9 @@ import { SITE_URL } from "@/lib/site"
 
 const PAGES: Array<{ path: string; changeFrequency: "daily" | "weekly" | "monthly" | "yearly"; priority: number }> = [
   { path: "/", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/solutions", changeFrequency: "monthly", priority: 0.9 },
   { path: "/services", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/software", changeFrequency: "monthly", priority: 0.9 },
   { path: "/for-founders", changeFrequency: "monthly", priority: 0.9 },
   { path: "/blog", changeFrequency: "daily", priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.7 },

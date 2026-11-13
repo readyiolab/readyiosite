@@ -58,7 +58,7 @@ export function SoftwarePage() {
 /* ---------------- 1. Software Hero Section ---------------- */
 function SoftwareHero() {
   return (
-    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20">
       {/* Radiant ambient glow */}
       <div
         aria-hidden

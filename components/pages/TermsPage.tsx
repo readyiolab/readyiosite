@@ -3,7 +3,7 @@ import { Scale, ShieldAlert, FileCode, AlertTriangle, ExternalLink, Mail, Refres
 
 export function TermsPage() {
   return (
-    <div className="pt-16 pb-12 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24">
+    <div className="pt-8 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-24">
       <div className="mx-auto max-w-5xl container-p">
         {/* Page Header */}
         <Reveal>

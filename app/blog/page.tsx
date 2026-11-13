@@ -1,5 +1,6 @@
 import { BlogListing } from "@/components/blog/BlogListing"
 import { JsonLd } from "@/components/site/JsonLd"
+import { PageBreadcrumbs } from "@/components/site/PageBreadcrumbs"
 import { SectionHeading } from "@/components/site/SectionHeading"
 import { AuroraCTA } from "@/components/site/AuroraCTA"
 import { getAllPublishedPosts, getBlogCategories } from "@/lib/blog"
@@ -37,7 +38,8 @@ export default async function BlogPage() {
   return (
     <>
       <JsonLd data={blogJsonLd} />
-      <section className="relative overflow-hidden pt-20 pb-10 sm:pt-28 sm:pb-12 md:pt-40">
+      <PageBreadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
+      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-16 sm:pb-12 md:pt-24">
         <div aria-hidden className="absolute inset-0 -z-10 mesh-bg opacity-50" />
         <div className="mx-auto max-w-4xl container-p text-center">
           <SectionHeading

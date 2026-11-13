@@ -1,4 +1,5 @@
 import { CookiePolicyPage } from "@/components/pages/CookiePolicyPage"
+import { PageBreadcrumbs } from "@/components/site/PageBreadcrumbs"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
@@ -8,5 +9,10 @@ export const metadata = pageMetadata({
 })
 
 export default function Page() {
-  return <CookiePolicyPage />
+  return (
+    <>
+      <PageBreadcrumbs items={[{ name: "Cookie Policy", href: "/cookies" }]} />
+      <CookiePolicyPage />
+    </>
+  )
 }

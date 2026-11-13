@@ -1,4 +1,7 @@
 import { ForFoundersPage } from "@/components/pages/ForFoundersPage"
+import { JsonLd } from "@/components/site/JsonLd"
+import { PageBreadcrumbs } from "@/components/site/PageBreadcrumbs"
+import { faqPageJsonLd, FOUNDER_FAQS } from "@/lib/faqs"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
@@ -10,5 +13,11 @@ export const metadata = pageMetadata({
 })
 
 export default function Page() {
-  return <ForFoundersPage />
+  return (
+    <>
+      <JsonLd data={faqPageJsonLd(FOUNDER_FAQS)} />
+      <PageBreadcrumbs items={[{ name: "For Founders", href: "/for-founders" }]} />
+      <ForFoundersPage />
+    </>
+  )
 }

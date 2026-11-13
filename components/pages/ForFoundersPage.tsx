@@ -26,6 +26,7 @@ import {
 
 import { Reveal } from "@/components/site/Reveal";
 import { AuroraCTA } from "@/components/site/AuroraCTA";
+import { FOUNDER_FAQS } from "@/lib/faqs";
 
 export function ForFoundersPage() {
   return (
@@ -48,7 +49,7 @@ export function ForFoundersPage() {
 
 function FounderHero() {
   return (
-    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <section className="relative overflow-hidden min-h-[calc(100svh-4.5rem)] sm:min-h-0 flex flex-col justify-center pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20">
       {/* Soft background aura */}
       <div
         aria-hidden
@@ -1020,29 +1021,7 @@ function SelectedFounderWork() {
 /* ---------------- 9. Founder FAQ ---------------- */
 
 function FounderFAQ() {
-  const FAQS = [
-    {
-      q: "How do you help validate my idea?",
-      a: "We help you define your core value proposition, identify key user journeys, and build a high-converting validation website or MVP to test real market demand before heavy development.",
-    },
-    {
-      q: "How do you decide what to build first?",
-      a: "We prioritize features based on user impact and core business goals. Unnecessary complexity is deferred so you launch the smallest credible product fast.",
-    },
-    {
-      q: "What technologies do you use?",
-      a: "We use modern, scalable web technologies like React, TypeScript, Node.js, Next.js/Vite, Tailwind, and MySQL/PostgreSQL paired with cloud infrastructure.",
-    },
-    {
-      q: "How do you work together?",
-      a: "We work as your dedicated technical delivery team. You get clear milestone-based scopes, regular demonstrations, and transparent communication throughout.",
-    },
-    {
-      q: "Do you provide support after launch?",
-      a: "Yes! We stay with you after launch to monitor stability, improve feature sets based on user feedback, and scale infrastructure as your business grows.",
-    },
-  ];
-
+  const FAQS = FOUNDER_FAQS;
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (

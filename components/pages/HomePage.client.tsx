@@ -24,6 +24,7 @@ import {
   WEBSITE_PROJECTS,
   type Project,
 } from "@/data/projects";
+import { HOME_FAQS } from "@/lib/faqs";
 
 export function HomeSections() {
   return (
@@ -968,33 +969,7 @@ function ProcessSection() {
 
 function HomepageFAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0);
-
-  const FAQS = [
-    {
-      q: "What services does Zuvigo specialize in?",
-      a: "Zuvigo is a dedicated technology partner specializing in custom website design, high-performance web applications, tailored CRM/ERP systems, and AI-driven automation workflows. We handle architecture, UI/UX design, engineering, integration, and post-launch maintenance under one unified team.",
-    },
-    {
-      q: "Why choose one accountable team instead of hiring multiple agencies?",
-      a: "Splitting projects across multiple specialized agencies leads to translation loss, disjointed user experiences, conflicting technical stacks, and endless vendor coordination. Zuvigo ensures your marketing site, sales CRM, and AI automations seamlessly synchronize without handoff friction.",
-    },
-    {
-      q: "How long does a typical custom website or CRM implementation take?",
-      a: "Most custom marketing websites and initial product versions (MVPs) are designed, built, and launched in 3 to 6 weeks. Comprehensive custom CRM systems, ERPs, or advanced AI agents typically launch within 6 to 12 weeks with milestone-based delivery and continuous progress visibility.",
-    },
-    {
-      q: "How do AI automations integrate with our existing CRM and software tools?",
-      a: "We integrate directly with your current technology stack (HubSpot, Salesforce, custom PostgreSQL/MongoDB databases, Google Workspace, Slack, n8n, etc.) or deploy custom AI agents that automate repetitive customer support, lead qualification, and reporting tasks with strict guardrails.",
-    },
-    {
-      q: "Can Zuvigo act as the technical partner for non-technical founders?",
-      a: "Yes! Our 'For Founders' program is purpose-built for domain experts and entrepreneurs. We help you scope the right first version, choose the ideal tech stack, develop the product, and assist through launch without the overhead of hiring an in-house engineering team.",
-    },
-    {
-      q: "How does pricing and engagement work?",
-      a: "We offer transparent, milestone-based fixed pricing for scoped builds, as well as flexible monthly retainers for ongoing development and support. Schedule a free 30-minute discovery call to receive a detailed scope and estimate.",
-    },
-  ];
+  const FAQS = HOME_FAQS;
 
   return (
     <section className="py-14 sm:py-20 md:py-28 bg-white dark:bg-[#0B0F17]">

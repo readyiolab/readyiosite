@@ -6,7 +6,20 @@ import { isOptimizable } from "@/lib/images";
 
 export const FALLBACK_COVER = "/og-image.webp";
 
+function formatDate(value: string | null) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
 export function PostCard({ post }: { post: BlogPostSummary }) {
+  const published = formatDate(post.published_at);
+
   return (
     <a
       href={blogPostUrl(post.slug)}
@@ -39,6 +52,13 @@ export function PostCard({ post }: { post: BlogPostSummary }) {
         </h3>
         {post.excerpt && (
           <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
+        )}
+        {(post.author_name || published) && (
+          <p className="mt-4 text-xs text-muted-foreground">
+            {post.author_name ? <span>By {post.author_name}</span> : null}
+            {post.author_name && published ? <span> · </span> : null}
+            {published ? <time dateTime={post.published_at ?? undefined}>{published}</time> : null}
+          </p>
         )}
       </div>
     </a>

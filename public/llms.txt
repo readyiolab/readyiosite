@@ -1,31 +1,44 @@
 # Zuvigo
 
-> AI Website Design Company & Smart CRM Automation
+> Websites, applications and software that make business work better.
 
-Zuvigo designs and builds high-converting custom websites, tailored CRM systems, and practical AI workflow automations through one accountable technology team.
+Zuvigo builds modern websites, custom web applications, cloud and desktop software, business automation, and productivity tools for growing businesses — through one accountable technology team.
 
 ## Core Capabilities
 
 - **Custom Website Design & Web Applications**: Modern, responsive, high-performance web applications, customer portals, and landing pages designed for conversion and speed.
-- **CRM & Business Systems**: Custom internal platforms, sales pipelines, lead routing, customer databases, and integrations built around how teams actually operate.
-- **AI & Workflow Automation**: Production-grade AI chat and voice agents, automated lead follow-ups, document processing, and multi-tool workflow automations (n8n, Zapier, custom APIs).
+- **Cloud & Desktop Software**: Practical document tools, offline-first desktop apps, and private-cloud deployments for teams that need control and reliability.
+- **Business & AI Automation**: Production-grade AI chat and voice agents, automated lead follow-ups, document processing, and multi-tool workflow automations.
 - **Tech Partner For Founders**: Turn ideas into working first-version products (MVPs), milestone-based development, and launch support.
 
-## Key Pages & Resources
+## Main Pages
 
-- [Homepage](https://zuvigo.com/): AI website design and smart CRM automation overview.
-- [Services Overview](https://zuvigo.com/services): End-to-end custom websites, CRM platforms, and AI automation workflows.
+- [Homepage](https://zuvigo.com/): Overview of Zuvigo solutions and software.
+- [Solutions](https://zuvigo.com/solutions): Websites, web applications, cloud & desktop software, and business & AI automation.
+- [Software](https://zuvigo.com/software): VigoPDF, eSign, VigoFlow, VigoLetters, Productivity Suite, and Desktop Software.
+- [Services](https://zuvigo.com/services): End-to-end custom digital solutions (alias of Solutions).
 - [For Founders](https://zuvigo.com/for-founders): MVP development, milestone-based delivery, and launch support for startups.
-- [Contact & Discovery Call](https://zuvigo.com/contact): Schedule a free 30-minute discovery call and get a clear project estimate.
-- [Insights & Blog](https://zuvigo.com/blog): Articles, technical guides, and industry insights on web, CRM, and AI.
+- [Contact & Discovery Call](https://zuvigo.com/contact): Schedule a free discovery call and get a clear project estimate.
+- [Insights & Blog](https://zuvigo.com/blog): Articles and guides on web, CRM, software, and AI.
 - [Full Blog Articles](https://blog.zuvigo.com/): Long-form articles and engineering case studies.
 - [Sitemap](https://zuvigo.com/sitemap.xml): Complete machine-readable XML sitemap.
+
+## Software Products
+
+- [VigoPDF](https://pdf.zuvigo.com/): Document editing and PDF workflows.
+- [Productivity Workspace](https://pdf.zuvigo.com/workspace): Unified productivity suite.
+- [eSign](https://pdf.zuvigo.com/esign): Digital signatures and contracts.
+- [VigoLetters](https://pdf.zuvigo.com/letters): Letter and document automation.
+- [VigoFlow](https://pdf.zuvigo.com/diagrams): Diagrams and workflow tooling.
+- [Web Reports](https://pdf.zuvigo.com/webreports): Reporting for modern teams.
+- [Enterprise](https://pdf.zuvigo.com/enterprise): Private-cloud and enterprise deployments.
+- [Desktop Software](https://pdf.zuvigo.com/desktop): Offline-first desktop applications.
 
 ## Contact Information
 
 - [Website](https://zuvigo.com): Official Zuvigo website
 - Email: hello@zuvigo.com
 - Phone: +91 90543 97134
-- [Let's Talk](https://zuvigo.com/contact): Free 30-minute discovery session
+- [Let's Talk](https://zuvigo.com/contact): Free discovery session
 - [LinkedIn](https://linkedin.com/company/zuvigo): Zuvigo on LinkedIn
 - [Instagram](https://www.instagram.com/zuvigofficial): Zuvigo on Instagram

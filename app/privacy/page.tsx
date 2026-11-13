@@ -1,4 +1,5 @@
 import { PrivacyPage } from "@/components/pages/PrivacyPage"
+import { PageBreadcrumbs } from "@/components/site/PageBreadcrumbs"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata = pageMetadata({
@@ -8,5 +9,10 @@ export const metadata = pageMetadata({
 })
 
 export default function Page() {
-  return <PrivacyPage />
+  return (
+    <>
+      <PageBreadcrumbs items={[{ name: "Privacy Policy", href: "/privacy" }]} />
+      <PrivacyPage />
+    </>
+  )
 }
